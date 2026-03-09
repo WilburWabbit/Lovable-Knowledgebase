@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { DeleteConfirm } from "./DeleteConfirm";
 import { useDeleteEndpoint } from "@/hooks/useApiData";
 import { toast } from "sonner";
+import { EndpointDocuments } from "./EndpointDocuments";
 
 interface EndpointDetailProps {
   endpoint: ApiEndpoint;
