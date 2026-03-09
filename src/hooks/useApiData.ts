@@ -72,6 +72,23 @@ export function useAddCollection() {
   });
 }
 
+export function useUpdateCollection() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: async (col: { id: string; name: string; description: string; baseUrl: string; version: string }) => {
+      const { data, error } = await supabase
+        .from("api_collections")
+        .update({ name: col.name, description: col.description, base_url: col.baseUrl, version: col.version })
+        .eq("id", col.id)
+        .select()
+        .single();
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["api-collections"] }),
+  });
+}
+
 export function useAddEndpoint() {
   const queryClient = useQueryClient();
   return useMutation({
@@ -99,6 +116,42 @@ export function useAddEndpoint() {
           response_example: ep.responseExample,
           tags: ep.tags,
         })
+        .select()
+        .single();
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["api-collections"] }),
+  });
+}
+
+export function useUpdateEndpoint() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: async (ep: {
+      id: string;
+      method: HttpMethod;
+      path: string;
+      summary: string;
+      description: string;
+      parameters: ApiParameter[];
+      requestBody?: string;
+      responseExample: string;
+      tags: string[];
+    }) => {
+      const { data, error } = await supabase
+        .from("api_endpoints")
+        .update({
+          method: ep.method,
+          path: ep.path,
+          summary: ep.summary,
+          description: ep.description,
+          parameters: ep.parameters as unknown as Json,
+          request_body: ep.requestBody ?? null,
+          response_example: ep.responseExample,
+          tags: ep.tags,
+        })
+        .eq("id", ep.id)
         .select()
         .single();
       if (error) throw error;
