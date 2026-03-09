@@ -205,10 +205,11 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
 
     if (results.length > 0 && errors.length === 0) {
       const totalEps = results.reduce((sum, r) => sum + r.endpoints, 0);
+      const verb = results[0]?.mode === "updated" ? "Updated" : "Imported";
       toast.success(
         isBatch
-          ? `Imported ${results.length} APIs with ${totalEps} total endpoints`
-          : `Imported "${results[0].name}" with ${results[0].endpoints} endpoints`,
+          ? `Processed ${results.length} APIs with ${totalEps} total endpoints`
+          : `${verb} "${results[0].name}" with ${results[0].endpoints} endpoints`,
         { id: toastId }
       );
     } else if (results.length > 0 && errors.length > 0) {
