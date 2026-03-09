@@ -80,10 +80,12 @@ export function useCollections() {
 export function useAddCollection() {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: async (col: { name: string; description: string; baseUrl: string; version: string }) => {
+    mutationFn: async (col: { name: string; description: string; baseUrl: string; version: string; parentId?: string | null }) => {
+      const insertData: any = { name: col.name, description: col.description, base_url: col.baseUrl, version: col.version };
+      if (col.parentId) insertData.parent_id = col.parentId;
       const { data, error } = await supabase
         .from("api_collections")
-        .insert({ name: col.name, description: col.description, base_url: col.baseUrl, version: col.version })
+        .insert(insertData)
         .select()
         .single();
       if (error) throw error;
