@@ -185,6 +185,7 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
         description: collection.description,
         baseUrl: collection.base_url,
         version: collection.version,
+        parentId,
       });
       colId = col.id;
 
