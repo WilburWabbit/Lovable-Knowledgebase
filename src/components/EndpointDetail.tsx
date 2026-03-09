@@ -147,6 +147,9 @@ export function EndpointDetail({ endpoint, collection, onEdit, onDeleted }: Endp
         <h3 className="text-sm font-semibold text-foreground mb-3">Response Example</h3>
         <CodeBlock code={endpoint.responseExample} label="200 OK" />
       </div>
+
+      {/* Documentation Files */}
+      <EndpointDocuments endpointId={endpoint.id} />
     </div>
   );
 }
