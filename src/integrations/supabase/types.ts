@@ -21,6 +21,7 @@ export type Database = {
           description: string
           id: string
           name: string
+          parent_id: string | null
           updated_at: string
           version: string
         }
@@ -30,6 +31,7 @@ export type Database = {
           description?: string
           id?: string
           name: string
+          parent_id?: string | null
           updated_at?: string
           version?: string
         }
@@ -39,10 +41,19 @@ export type Database = {
           description?: string
           id?: string
           name?: string
+          parent_id?: string | null
           updated_at?: string
           version?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "api_collections_parent_id_fkey"
+            columns: ["parent_id"]
+            isOneToOne: false
+            referencedRelation: "api_collections"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       api_endpoints: {
         Row: {
