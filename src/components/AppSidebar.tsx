@@ -1,4 +1,5 @@
 import { Search, BookOpen, ChevronRight, Plus } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { ImportSpecButton } from "./ImportSpecButton";
 import { ApiCollection } from "@/data/sampleSpecs";
 
