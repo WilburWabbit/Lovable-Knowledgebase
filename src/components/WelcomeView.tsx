@@ -26,29 +26,28 @@ export function WelcomeView({ collections, onSelectCollection }: WelcomeViewProp
         )}
       </p>
 
-      {collections.length === 0 && (
-        <div className="mb-10">
-          <SeedButton />
+      {collections.length > 0 && (
+        <div className="grid gap-3">
+          {collections.map((col) => (
+            <button
+              key={col.id}
+              onClick={() => onSelectCollection(col.id)}
+              className="flex items-center justify-between p-5 rounded-xl border border-border bg-card hover:bg-accent transition-all text-left group hover:shadow-sm"
+            >
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">{col.name}</h3>
+                <p className="text-xs text-muted-foreground">{col.description}</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-xs font-mono text-muted-foreground">
+                  {col.endpoints.length} endpoints
+                </span>
+                <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 transition-all" />
+              </div>
+            </button>
+          ))}
         </div>
       )}
-          <button
-            key={col.id}
-            onClick={() => onSelectCollection(col.id)}
-            className="flex items-center justify-between p-5 rounded-xl border border-border bg-card hover:bg-accent transition-all text-left group hover:shadow-sm"
-          >
-            <div>
-              <h3 className="font-semibold text-foreground mb-1">{col.name}</h3>
-              <p className="text-xs text-muted-foreground">{col.description}</p>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-xs font-mono text-muted-foreground">
-                {col.endpoints.length} endpoints
-              </span>
-              <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 transition-all" />
-            </div>
-          </button>
-        ))}
-      </div>
     </div>
   );
 }
