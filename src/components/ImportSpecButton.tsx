@@ -5,6 +5,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAddCollection, useAddEndpoint } from "@/hooks/useApiData";
 import { toast } from "sonner";
 import { HttpMethod, ApiParameter } from "@/data/sampleSpecs";
+import { Json } from "@/integrations/supabase/types";
+import { useQueryClient } from "@tanstack/react-query";
 
 interface ImportSpecButtonProps {
   variant?: "default" | "outline" | "ghost";
@@ -18,8 +20,9 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
   const fileRef = useRef<HTMLInputElement>(null);
   const addCollection = useAddCollection();
   const addEndpoint = useAddEndpoint();
+  const queryClient = useQueryClient();
 
-  const importSingleFile = async (file: File): Promise<{ name: string; endpoints: number }> => {
+  const importSingleFile = async (file: File): Promise<{ name: string; endpoints: number; mode: "created" | "updated" }> => {
     const content = await file.text();
     const format = file.name.endsWith(".json") ? "json" : "yaml";
 
@@ -29,7 +32,6 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
 
     // Surface specific error messages from the edge function
     if (error) {
-      // Try to extract the actual error message from the response
       const msg = data?.error || error.message || "Unknown error";
       const isFatal = msg.includes("credits") || msg.includes("Rate limit");
       const err = new Error(msg);
@@ -45,38 +47,123 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
 
     const { collection, endpoints } = data;
 
-    const col = await addCollection.mutateAsync({
-      name: collection.name,
-      description: collection.description,
-      baseUrl: collection.base_url,
-      version: collection.version,
-    });
+    // Check if a collection with the same name already exists
+    const { data: existingCols } = await supabase
+      .from("api_collections")
+      .select("id, name")
+      .eq("name", collection.name)
+      .limit(1);
 
-    let created = 0;
-    for (const ep of endpoints) {
-      try {
-        await addEndpoint.mutateAsync({
-          collectionId: col.id,
-          method: ep.method as HttpMethod,
-          path: ep.path,
-          summary: ep.summary || ep.path,
-          description: ep.description || "",
-          parameters: (ep.parameters || []) as ApiParameter[],
-          requestBody: ep.request_body || undefined,
-          responseExample: ep.response_example || "{}",
-          tags: ep.tags || [],
-        });
-        created++;
-      } catch (e) {
-        console.warn("Failed to create endpoint:", ep.path, e);
+    const existingCol = existingCols?.[0];
+    let colId: string;
+    let mode: "created" | "updated";
+
+    if (existingCol) {
+      // Update existing collection metadata
+      colId = existingCol.id;
+      mode = "updated";
+      await supabase
+        .from("api_collections")
+        .update({
+          description: collection.description,
+          base_url: collection.base_url,
+          version: collection.version,
+        })
+        .eq("id", colId);
+
+      // Fetch existing endpoints for matching
+      const { data: existingEndpoints } = await supabase
+        .from("api_endpoints")
+        .select("id, method, path")
+        .eq("collection_id", colId);
+
+      const existingMap = new Map(
+        (existingEndpoints ?? []).map((ep) => [`${ep.method.toUpperCase()}:${ep.path}`, ep.id])
+      );
+
+      let upserted = 0;
+      for (const ep of endpoints) {
+        const key = `${(ep.method as string).toUpperCase()}:${ep.path}`;
+        const existingId = existingMap.get(key);
+        try {
+          if (existingId) {
+            // Update existing endpoint
+            await supabase
+              .from("api_endpoints")
+              .update({
+                summary: ep.summary || ep.path,
+                description: ep.description || "",
+                parameters: (ep.parameters || []) as unknown as Json,
+                request_body: ep.request_body || null,
+                response_example: ep.response_example || "{}",
+                tags: ep.tags || [],
+              })
+              .eq("id", existingId);
+          } else {
+            // Create new endpoint
+            await addEndpoint.mutateAsync({
+              collectionId: colId,
+              method: ep.method as HttpMethod,
+              path: ep.path,
+              summary: ep.summary || ep.path,
+              description: ep.description || "",
+              parameters: (ep.parameters || []) as ApiParameter[],
+              requestBody: ep.request_body || undefined,
+              responseExample: ep.response_example || "{}",
+              tags: ep.tags || [],
+            });
+          }
+          upserted++;
+        } catch (e) {
+          console.warn("Failed to upsert endpoint:", ep.path, e);
+        }
       }
+
+      // Invalidate queries to refresh UI
+      queryClient.invalidateQueries({ queryKey: ["api-collections"] });
+
+      const filePath = `${colId}/${file.name}`;
+      await supabase.storage.from("endpoint-docs").upload(filePath, file, { upsert: true });
+
+      onImported?.(colId);
+      return { name: collection.name, endpoints: upserted, mode };
+    } else {
+      // Create new collection
+      mode = "created";
+      const col = await addCollection.mutateAsync({
+        name: collection.name,
+        description: collection.description,
+        baseUrl: collection.base_url,
+        version: collection.version,
+      });
+      colId = col.id;
+
+      let created = 0;
+      for (const ep of endpoints) {
+        try {
+          await addEndpoint.mutateAsync({
+            collectionId: colId,
+            method: ep.method as HttpMethod,
+            path: ep.path,
+            summary: ep.summary || ep.path,
+            description: ep.description || "",
+            parameters: (ep.parameters || []) as ApiParameter[],
+            requestBody: ep.request_body || undefined,
+            responseExample: ep.response_example || "{}",
+            tags: ep.tags || [],
+          });
+          created++;
+        } catch (e) {
+          console.warn("Failed to create endpoint:", ep.path, e);
+        }
+      }
+
+      const filePath = `${colId}/${file.name}`;
+      await supabase.storage.from("endpoint-docs").upload(filePath, file);
+
+      onImported?.(colId);
+      return { name: collection.name, endpoints: created, mode };
     }
-
-    const filePath = `${col.id}/${file.name}`;
-    await supabase.storage.from("endpoint-docs").upload(filePath, file);
-
-    onImported?.(col.id);
-    return { name: collection.name, endpoints: created };
   };
 
   const handleFiles = async (files: FileList) => {
@@ -89,7 +176,7 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
       isBatch ? `Importing ${fileArray.length} specs...` : "Parsing API spec..."
     );
 
-    const results: { name: string; endpoints: number }[] = [];
+    const results: { name: string; endpoints: number; mode: "created" | "updated" }[] = [];
     const errors: string[] = [];
 
     for (let i = 0; i < fileArray.length; i++) {
@@ -118,10 +205,11 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
 
     if (results.length > 0 && errors.length === 0) {
       const totalEps = results.reduce((sum, r) => sum + r.endpoints, 0);
+      const verb = results[0]?.mode === "updated" ? "Updated" : "Imported";
       toast.success(
         isBatch
-          ? `Imported ${results.length} APIs with ${totalEps} total endpoints`
-          : `Imported "${results[0].name}" with ${results[0].endpoints} endpoints`,
+          ? `Processed ${results.length} APIs with ${totalEps} total endpoints`
+          : `${verb} "${results[0].name}" with ${results[0].endpoints} endpoints`,
         { id: toastId }
       );
     } else if (results.length > 0 && errors.length > 0) {
