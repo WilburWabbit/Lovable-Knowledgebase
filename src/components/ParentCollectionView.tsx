@@ -1,4 +1,8 @@
 import { ApiCollection } from "@/data/sampleSpecs";
+
+function countEndpoints(col: ApiCollection): number {
+  return col.endpoints.length + (col.children ?? []).reduce((sum, c) => sum + countEndpoints(c), 0);
+}
 import { Globe, Tag, Pencil, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DeleteConfirm } from "./DeleteConfirm";
@@ -73,7 +77,7 @@ export function ParentCollectionView({
             </div>
             <div className="flex items-center gap-3">
               <span className="text-xs font-mono text-muted-foreground">
-                {child.endpoints.length} endpoints
+                {countEndpoints(child)} endpoints
               </span>
               <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 transition-all" />
             </div>
