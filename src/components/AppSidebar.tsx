@@ -1,4 +1,5 @@
 import { Search, BookOpen, ChevronRight, Plus } from "lucide-react";
+import { ImportSpecButton } from "./ImportSpecButton";
 import { ApiCollection } from "@/data/sampleSpecs";
 
 interface AppSidebarProps {
