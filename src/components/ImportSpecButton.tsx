@@ -88,11 +88,11 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
     // Check if a collection with the same name already exists (under the same parent)
     let existingCols: any[] | null = null;
     if (parentId) {
-      const { data } = await supabase
+      const { data } = await (supabase
         .from("api_collections")
-        .select("id, name")
+        .select("id, name") as any)
         .eq("name", collection.name)
-        .eq("parent_id" as any, parentId)
+        .eq("parent_id", parentId)
         .limit(1);
       existingCols = data;
     } else {
