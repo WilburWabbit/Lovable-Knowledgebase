@@ -20,6 +20,7 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
   const fileRef = useRef<HTMLInputElement>(null);
   const addCollection = useAddCollection();
   const addEndpoint = useAddEndpoint();
+  const queryClient = useQueryClient();
 
   const importSingleFile = async (file: File): Promise<{ name: string; endpoints: number; mode: "created" | "updated" }> => {
     const content = await file.text();
