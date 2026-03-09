@@ -32,6 +32,7 @@ export function WelcomeView({ collections, onSelectCollection, onNewCollection }
       {collections.length === 0 && (
         <div className="flex items-center justify-center gap-3 mb-10">
           <SeedButton />
+          <ImportSpecButton onImported={onSelectCollection} />
           <Button variant="outline" className="gap-1.5" onClick={onNewCollection}>
             <Plus className="w-4 h-4" /> New Collection
           </Button>
