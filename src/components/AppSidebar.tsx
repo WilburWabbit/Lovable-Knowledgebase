@@ -158,6 +158,16 @@ function CollectionItem({
   );
 }
 
+function SignOutButton() {
+  const { signOut } = useAuth();
+  return (
+    <Button variant="ghost" size="sm" className="w-full gap-1.5 text-sidebar-muted" onClick={signOut}>
+      <LogOut className="w-3.5 h-3.5" />
+      Sign Out
+    </Button>
+  );
+}
+
 function countAllEndpoints(collections: ApiCollection[]): number {
   return collections.reduce((acc, c) => acc + c.endpoints.length + countAllEndpoints(c.children ?? []), 0);
 }
