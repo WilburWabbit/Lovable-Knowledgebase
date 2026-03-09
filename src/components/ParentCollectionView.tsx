@@ -1,4 +1,8 @@
 import { ApiCollection } from "@/data/sampleSpecs";
+
+function countEndpoints(col: ApiCollection): number {
+  return col.endpoints.length + (col.children ?? []).reduce((sum, c) => sum + countEndpoints(c), 0);
+}
 import { Globe, Tag, Pencil, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DeleteConfirm } from "./DeleteConfirm";
