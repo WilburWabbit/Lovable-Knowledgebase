@@ -1,16 +1,19 @@
 import { useState } from "react";
-import { sampleCollections } from "@/data/sampleSpecs";
+import { useCollections } from "@/hooks/useApiData";
 import { AppSidebar } from "@/components/AppSidebar";
 import { EndpointDetail } from "@/components/EndpointDetail";
 import { CollectionOverview } from "@/components/CollectionOverview";
 import { WelcomeView } from "@/components/WelcomeView";
+import { SeedButton } from "@/components/SeedButton";
 
 const Index = () => {
   const [activeCollectionId, setActiveCollectionId] = useState<string | null>(null);
   const [activeEndpointId, setActiveEndpointId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const activeCollection = sampleCollections.find((c) => c.id === activeCollectionId) ?? null;
+  const { data: collections = [], isLoading } = useCollections();
+
+  const activeCollection = collections.find((c) => c.id === activeCollectionId) ?? null;
   const activeEndpoint = activeCollection?.endpoints.find((e) => e.id === activeEndpointId) ?? null;
 
   const handleSelectCollection = (id: string) => {
@@ -23,10 +26,18 @@ const Index = () => {
     setActiveEndpointId(endpointId);
   };
 
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-background">
+        <p className="text-muted-foreground animate-pulse">Loading knowledge base...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="flex min-h-screen bg-background">
       <AppSidebar
-        collections={sampleCollections}
+        collections={collections}
         activeCollectionId={activeCollectionId}
         activeEndpointId={activeEndpointId}
         searchQuery={searchQuery}
@@ -45,7 +56,7 @@ const Index = () => {
             />
           ) : (
             <WelcomeView
-              collections={sampleCollections}
+              collections={collections}
               onSelectCollection={handleSelectCollection}
             />
           )}
