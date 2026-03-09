@@ -52,16 +52,17 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
     try {
       const hostname = new URL(collection.base_url).hostname; // e.g. "api.ebay.com"
       const parts = hostname.split(".");
-      // Extract system name from domain: "api.ebay.com" → "eBay", "api.stripe.com" → "Stripe"
+      // Extract registered domain: "api.ebay.com" → "ebay.com", "apiz.ebay.com" → "ebay.com"
+      const domain = parts.length >= 2 ? parts.slice(-2).join(".") : null;
       const domainName = parts.length >= 2 ? parts[parts.length - 2] : null;
-      if (domainName && domainName.length > 1) {
+      if (domain && domainName && domainName.length > 1) {
         const systemName = domainName.charAt(0).toUpperCase() + domainName.slice(1);
-        // Find or create parent collection for this system
+        // Find existing parent by matching base_url domain, not name
         const { data: existingParents } = await (supabase
           .from("api_collections")
           .select("id, name") as any)
           .is("parent_id", null)
-          .ilike("name", systemName)
+          .ilike("base_url", `%${domain}%`)
           .limit(1);
 
         if (existingParents?.length) {
@@ -73,7 +74,7 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
             .insert({
               name: systemName,
               description: `${systemName} APIs`,
-              base_url: `https://${parts.slice(-2).join(".")}`,
+              base_url: `https://${domain}`,
               version: "1.0.0",
             })
             .select("id")
