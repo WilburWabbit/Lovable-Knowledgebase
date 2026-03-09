@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Search, BookOpen, ChevronRight, ChevronDown, Plus, Layers } from "lucide-react";
+import { Search, BookOpen, ChevronRight, ChevronDown, Plus, Layers, LogOut } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { ImportSpecButton } from "./ImportSpecButton";
 import { ApiCollection } from "@/data/sampleSpecs";
