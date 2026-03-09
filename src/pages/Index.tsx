@@ -101,6 +101,16 @@ const Index = () => {
               }}
               onDeleted={() => setActiveEndpointId(null)}
             />
+          ) : activeCollection && (activeCollection.children?.length ?? 0) > 0 ? (
+            <ParentCollectionView
+              collection={activeCollection}
+              onSelectCollection={handleSelectCollection}
+              onEditCollection={openEditCollection}
+              onCollectionDeleted={() => {
+                setActiveCollectionId(null);
+                setActiveEndpointId(null);
+              }}
+            />
           ) : activeCollection ? (
             <CollectionOverview
               collection={activeCollection}
