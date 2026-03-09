@@ -3,10 +3,20 @@ import { useCollections } from "@/hooks/useApiData";
 import { AppSidebar } from "@/components/AppSidebar";
 import { EndpointDetail } from "@/components/EndpointDetail";
 import { CollectionOverview } from "@/components/CollectionOverview";
+import { ParentCollectionView } from "@/components/ParentCollectionView";
 import { WelcomeView } from "@/components/WelcomeView";
 import { CollectionDialog } from "@/components/CollectionDialog";
 import { EndpointDialog } from "@/components/EndpointDialog";
 import { ApiCollection, ApiEndpoint } from "@/data/sampleSpecs";
+
+function findCollection(collections: ApiCollection[], id: string): ApiCollection | null {
+  for (const c of collections) {
+    if (c.id === id) return c;
+    const found = findCollection(c.children ?? [], id);
+    if (found) return found;
+  }
+  return null;
+}
 
 const Index = () => {
   const [activeCollectionId, setActiveCollectionId] = useState<string | null>(null);
@@ -21,7 +31,7 @@ const Index = () => {
 
   const { data: collections = [], isLoading } = useCollections();
 
-  const activeCollection = collections.find((c) => c.id === activeCollectionId) ?? null;
+  const activeCollection = findCollection(collections, activeCollectionId ?? "") ?? null;
   const activeEndpoint = activeCollection?.endpoints.find((e) => e.id === activeEndpointId) ?? null;
 
   const handleSelectCollection = (id: string) => {
