@@ -236,10 +236,11 @@ export function AppSidebar({
       </nav>
 
       {/* Footer */}
-      <div className="p-4 border-t border-sidebar-border">
+      <div className="p-4 border-t border-sidebar-border space-y-2">
         <p className="text-[10px] text-sidebar-muted text-center">
           {countAllEndpoints(collections)} endpoints across {countAllApis(collections)} APIs
         </p>
+        <SignOutButton />
       </div>
     </aside>
   );
