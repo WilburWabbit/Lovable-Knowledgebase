@@ -32,26 +32,47 @@ export function useCollections() {
 
       if (epError) throw epError;
 
-      return collections.map((col) => ({
-        id: col.id,
-        name: col.name,
-        description: col.description,
-        baseUrl: col.base_url,
-        version: col.version,
-        endpoints: (endpoints ?? [])
-          .filter((ep) => ep.collection_id === col.id)
-          .map((ep) => ({
-            id: ep.id,
-            method: ep.method as HttpMethod,
-            path: ep.path,
-            summary: ep.summary,
-            description: ep.description,
-            parameters: parseParameters(ep.parameters),
-            requestBody: ep.request_body ?? undefined,
-            responseExample: ep.response_example,
-            tags: ep.tags ?? [],
-          })),
-      }));
+      // Build flat collection map
+      const colMap = new Map<string, ApiCollection>();
+      for (const col of collections) {
+        colMap.set(col.id, {
+          id: col.id,
+          name: col.name,
+          description: col.description,
+          baseUrl: col.base_url,
+          version: col.version,
+          parentId: (col as any).parent_id ?? null,
+          endpoints: (endpoints ?? [])
+            .filter((ep) => ep.collection_id === col.id)
+            .map((ep) => ({
+              id: ep.id,
+              method: ep.method as HttpMethod,
+              path: ep.path,
+              summary: ep.summary,
+              description: ep.description,
+              parameters: parseParameters(ep.parameters),
+              requestBody: ep.request_body ?? undefined,
+              responseExample: ep.response_example,
+              tags: ep.tags ?? [],
+            })),
+          children: [],
+        });
+      }
+
+      // Build tree: attach children to parents
+      const roots: ApiCollection[] = [];
+      for (const col of colMap.values()) {
+        if (col.parentId && colMap.has(col.parentId)) {
+          colMap.get(col.parentId)!.children!.push(col);
+        } else if (!col.parentId) {
+          roots.push(col);
+        } else {
+          // orphan — show at root
+          roots.push(col);
+        }
+      }
+
+      return roots;
     },
   });
 }
