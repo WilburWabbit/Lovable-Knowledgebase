@@ -27,8 +27,21 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
       body: { content, format },
     });
 
-    if (error) throw new Error(error.message);
-    if (data?.error) throw new Error(data.error);
+    // Surface specific error messages from the edge function
+    if (error) {
+      // Try to extract the actual error message from the response
+      const msg = data?.error || error.message || "Unknown error";
+      const isFatal = msg.includes("credits") || msg.includes("Rate limit");
+      const err = new Error(msg);
+      (err as any).fatal = isFatal;
+      throw err;
+    }
+    if (data?.error) {
+      const isFatal = data.error.includes("credits") || data.error.includes("Rate limit");
+      const err = new Error(data.error);
+      (err as any).fatal = isFatal;
+      throw err;
+    }
 
     const { collection, endpoints } = data;
 
@@ -89,8 +102,16 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
       try {
         const result = await importSingleFile(file);
         results.push(result);
-      } catch (e) {
+      } catch (e: any) {
         console.error(`Import error for ${file.name}:`, e);
+        // Stop batch on fatal errors (credits exhausted, rate limited)
+        if (e?.fatal) {
+          toast.error(e.message, { id: toastId });
+          setLoading(false);
+          setProgress("");
+          if (fileRef.current) fileRef.current.value = "";
+          return;
+        }
         errors.push(file.name);
       }
     }
