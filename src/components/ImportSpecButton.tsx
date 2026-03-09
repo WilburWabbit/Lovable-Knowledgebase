@@ -5,7 +5,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAddCollection, useAddEndpoint } from "@/hooks/useApiData";
 import { toast } from "sonner";
 import { HttpMethod, ApiParameter } from "@/data/sampleSpecs";
-import { Json } from "@/integrations/supabase/types";
 
 interface ImportSpecButtonProps {
   variant?: "default" | "outline" | "ghost";
@@ -15,70 +14,107 @@ interface ImportSpecButtonProps {
 
 export function ImportSpecButton({ variant = "outline", size = "default", onImported }: ImportSpecButtonProps) {
   const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState("");
   const fileRef = useRef<HTMLInputElement>(null);
   const addCollection = useAddCollection();
   const addEndpoint = useAddEndpoint();
 
-  const handleFile = async (file: File) => {
+  const importSingleFile = async (file: File): Promise<{ name: string; endpoints: number }> => {
+    const content = await file.text();
+    const format = file.name.endsWith(".json") ? "json" : "yaml";
+
+    const { data, error } = await supabase.functions.invoke("parse-openapi", {
+      body: { content, format },
+    });
+
+    if (error) throw new Error(error.message);
+    if (data?.error) throw new Error(data.error);
+
+    const { collection, endpoints } = data;
+
+    const col = await addCollection.mutateAsync({
+      name: collection.name,
+      description: collection.description,
+      baseUrl: collection.base_url,
+      version: collection.version,
+    });
+
+    let created = 0;
+    for (const ep of endpoints) {
+      try {
+        await addEndpoint.mutateAsync({
+          collectionId: col.id,
+          method: ep.method as HttpMethod,
+          path: ep.path,
+          summary: ep.summary || ep.path,
+          description: ep.description || "",
+          parameters: (ep.parameters || []) as ApiParameter[],
+          requestBody: ep.request_body || undefined,
+          responseExample: ep.response_example || "{}",
+          tags: ep.tags || [],
+        });
+        created++;
+      } catch (e) {
+        console.warn("Failed to create endpoint:", ep.path, e);
+      }
+    }
+
+    const filePath = `${col.id}/${file.name}`;
+    await supabase.storage.from("endpoint-docs").upload(filePath, file);
+
+    onImported?.(col.id);
+    return { name: collection.name, endpoints: created };
+  };
+
+  const handleFiles = async (files: FileList) => {
+    const fileArray = Array.from(files);
+    if (fileArray.length === 0) return;
+
     setLoading(true);
-    const toastId = toast.loading("Parsing API spec...");
+    const isBatch = fileArray.length > 1;
+    const toastId = toast.loading(
+      isBatch ? `Importing ${fileArray.length} specs...` : "Parsing API spec..."
+    );
 
-    try {
-      const content = await file.text();
-      const format = file.name.endsWith(".json") ? "json" : "yaml";
+    const results: { name: string; endpoints: number }[] = [];
+    const errors: string[] = [];
 
-      // Call edge function
-      const { data, error } = await supabase.functions.invoke("parse-openapi", {
-        body: { content, format },
-      });
-
-      if (error) throw new Error(error.message);
-      if (data?.error) throw new Error(data.error);
-
-      const { collection, endpoints } = data;
-
-      // Create collection
-      const col = await addCollection.mutateAsync({
-        name: collection.name,
-        description: collection.description,
-        baseUrl: collection.base_url,
-        version: collection.version,
-      });
-
-      // Create endpoints
-      let created = 0;
-      for (const ep of endpoints) {
-        try {
-          await addEndpoint.mutateAsync({
-            collectionId: col.id,
-            method: ep.method as HttpMethod,
-            path: ep.path,
-            summary: ep.summary || ep.path,
-            description: ep.description || "",
-            parameters: (ep.parameters || []) as ApiParameter[],
-            requestBody: ep.request_body || undefined,
-            responseExample: ep.response_example || "{}",
-            tags: ep.tags || [],
-          });
-          created++;
-        } catch (e) {
-          console.warn("Failed to create endpoint:", ep.path, e);
-        }
+    for (let i = 0; i < fileArray.length; i++) {
+      const file = fileArray[i];
+      if (isBatch) {
+        setProgress(`${i + 1}/${fileArray.length}: ${file.name}`);
+        toast.loading(`Importing ${i + 1}/${fileArray.length}: ${file.name}`, { id: toastId });
       }
 
-      // Store original file
-      const filePath = `${col.id}/${file.name}`;
-      await supabase.storage.from("endpoint-docs").upload(filePath, file);
-
-      toast.success(`Imported "${collection.name}" with ${created} endpoints`, { id: toastId });
-      onImported?.(col.id);
-    } catch (e) {
-      console.error("Import error:", e);
-      toast.error(e instanceof Error ? e.message : "Failed to import spec", { id: toastId });
-    } finally {
-      setLoading(false);
-      if (fileRef.current) fileRef.current.value = "";
+      try {
+        const result = await importSingleFile(file);
+        results.push(result);
+      } catch (e) {
+        console.error(`Import error for ${file.name}:`, e);
+        errors.push(file.name);
+      }
     }
+
+    if (results.length > 0 && errors.length === 0) {
+      const totalEps = results.reduce((sum, r) => sum + r.endpoints, 0);
+      toast.success(
+        isBatch
+          ? `Imported ${results.length} APIs with ${totalEps} total endpoints`
+          : `Imported "${results[0].name}" with ${results[0].endpoints} endpoints`,
+        { id: toastId }
+      );
+    } else if (results.length > 0 && errors.length > 0) {
+      toast.warning(
+        `Imported ${results.length} APIs. Failed: ${errors.join(", ")}`,
+        { id: toastId }
+      );
+    } else {
+      toast.error(`Failed to import: ${errors.join(", ")}`, { id: toastId });
+    }
+
+    setLoading(false);
+    setProgress("");
+    if (fileRef.current) fileRef.current.value = "";
   };
 
   return (
@@ -87,10 +123,10 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
         ref={fileRef}
         type="file"
         accept=".json,.yaml,.yml"
+        multiple
         className="hidden"
         onChange={(e) => {
-          const file = e.target.files?.[0];
-          if (file) handleFile(file);
+          if (e.target.files?.length) handleFiles(e.target.files);
         }}
       />
       <Button
@@ -101,7 +137,7 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
         onClick={() => fileRef.current?.click()}
       >
         {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Upload className="w-4 h-4" />}
-        {loading ? "Importing..." : "Import Spec"}
+        {loading ? (progress || "Importing...") : "Import Spec"}
       </Button>
     </>
   );
