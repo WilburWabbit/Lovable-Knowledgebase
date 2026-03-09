@@ -1,13 +1,15 @@
 import { ApiCollection } from "@/data/sampleSpecs";
-import { BookOpen, ArrowRight } from "lucide-react";
+import { BookOpen, ArrowRight, Plus } from "lucide-react";
 import { SeedButton } from "./SeedButton";
+import { Button } from "@/components/ui/button";
 
 interface WelcomeViewProps {
   collections: ApiCollection[];
   onSelectCollection: (id: string) => void;
+  onNewCollection: () => void;
 }
 
-export function WelcomeView({ collections, onSelectCollection }: WelcomeViewProps) {
+export function WelcomeView({ collections, onSelectCollection, onNewCollection }: WelcomeViewProps) {
   const totalEndpoints = collections.reduce((acc, c) => acc + c.endpoints.length, 0);
 
   return (
@@ -25,6 +27,15 @@ export function WelcomeView({ collections, onSelectCollection }: WelcomeViewProp
           <>Your centralized API documentation hub.<br />Get started by loading sample specs or adding your own.</>
         )}
       </p>
+
+      {collections.length === 0 && (
+        <div className="flex items-center justify-center gap-3 mb-10">
+          <SeedButton />
+          <Button variant="outline" className="gap-1.5" onClick={onNewCollection}>
+            <Plus className="w-4 h-4" /> New Collection
+          </Button>
+        </div>
+      )}
 
       {collections.length > 0 && (
         <div className="grid gap-3">

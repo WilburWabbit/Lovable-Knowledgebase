@@ -1,11 +1,17 @@
 import { ApiEndpoint, ApiCollection } from "@/data/sampleSpecs";
 import { MethodBadge } from "./MethodBadge";
-import { Copy, Check } from "lucide-react";
+import { Copy, Check, Pencil } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { DeleteConfirm } from "./DeleteConfirm";
+import { useDeleteEndpoint } from "@/hooks/useApiData";
+import { toast } from "sonner";
 
 interface EndpointDetailProps {
   endpoint: ApiEndpoint;
   collection: ApiCollection;
+  onEdit: () => void;
+  onDeleted: () => void;
 }
 
 function CodeBlock({ code, label }: { code: string; label: string }) {
@@ -35,15 +41,33 @@ function CodeBlock({ code, label }: { code: string; label: string }) {
   );
 }
 
-export function EndpointDetail({ endpoint, collection }: EndpointDetailProps) {
+export function EndpointDetail({ endpoint, collection, onEdit, onDeleted }: EndpointDetailProps) {
+  const deleteEndpoint = useDeleteEndpoint();
+
   return (
     <div className="max-w-3xl mx-auto">
       {/* Header */}
       <div className="mb-8">
-        <div className="flex items-center gap-2 mb-2 text-xs text-muted-foreground">
-          <span>{collection.name}</span>
-          <span>/</span>
-          <span className="font-mono">v{collection.version}</span>
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <span>{collection.name}</span>
+            <span>/</span>
+            <span className="font-mono">v{collection.version}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Button variant="outline" size="sm" className="h-7 gap-1.5 text-xs" onClick={onEdit}>
+              <Pencil className="w-3 h-3" /> Edit
+            </Button>
+            <DeleteConfirm
+              title="Delete endpoint?"
+              description={`Delete ${endpoint.method} ${endpoint.path}?`}
+              onConfirm={async () => {
+                await deleteEndpoint.mutateAsync(endpoint.id);
+                toast.success("Endpoint deleted");
+                onDeleted();
+              }}
+            />
+          </div>
         </div>
         <div className="flex items-center gap-3 mb-3">
           <MethodBadge method={endpoint.method} />

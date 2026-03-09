@@ -1,4 +1,4 @@
-import { Search, BookOpen, ChevronRight } from "lucide-react";
+import { Search, BookOpen, ChevronRight, Plus } from "lucide-react";
 import { ApiCollection } from "@/data/sampleSpecs";
 
 interface AppSidebarProps {
@@ -9,6 +9,7 @@ interface AppSidebarProps {
   onSearchChange: (q: string) => void;
   onSelectCollection: (id: string) => void;
   onSelectEndpoint: (collectionId: string, endpointId: string) => void;
+  onNewCollection: () => void;
 }
 
 export function AppSidebar({
@@ -19,6 +20,7 @@ export function AppSidebar({
   onSearchChange,
   onSelectCollection,
   onSelectEndpoint,
+  onNewCollection,
 }: AppSidebarProps) {
   return (
     <aside className="w-72 shrink-0 h-screen bg-sidebar text-sidebar-foreground flex flex-col border-r border-sidebar-border">
@@ -28,10 +30,17 @@ export function AppSidebar({
           <div className="w-8 h-8 rounded-lg bg-sidebar-accent flex items-center justify-center">
             <BookOpen className="w-4 h-4 text-sidebar-primary" />
           </div>
-          <div>
+          <div className="flex-1 min-w-0">
             <h1 className="text-sm font-semibold text-sidebar-primary tracking-tight">API Knowledge Base</h1>
             <p className="text-[10px] text-sidebar-muted tracking-wide uppercase">Source of Truth</p>
           </div>
+          <button
+            onClick={onNewCollection}
+            className="w-7 h-7 rounded-md bg-sidebar-accent hover:bg-sidebar-ring/20 flex items-center justify-center transition-colors"
+            title="New collection"
+          >
+            <Plus className="w-3.5 h-3.5 text-sidebar-primary" />
+          </button>
         </div>
         <div className="relative">
           <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-sidebar-muted" />
