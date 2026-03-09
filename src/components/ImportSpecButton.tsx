@@ -176,7 +176,7 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
       isBatch ? `Importing ${fileArray.length} specs...` : "Parsing API spec..."
     );
 
-    const results: { name: string; endpoints: number }[] = [];
+    const results: { name: string; endpoints: number; mode: "created" | "updated" }[] = [];
     const errors: string[] = [];
 
     for (let i = 0; i < fileArray.length; i++) {
