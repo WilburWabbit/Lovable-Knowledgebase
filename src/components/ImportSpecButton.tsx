@@ -57,10 +57,10 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
       if (domainName && domainName.length > 1) {
         const systemName = domainName.charAt(0).toUpperCase() + domainName.slice(1);
         // Find or create parent collection for this system
-        const { data: existingParents } = await supabase
+        const { data: existingParents } = await (supabase
           .from("api_collections")
-          .select("id, name")
-          .is("parent_id" as any, null)
+          .select("id, name") as any)
+          .is("parent_id", null)
           .ilike("name", systemName)
           .limit(1);
 
