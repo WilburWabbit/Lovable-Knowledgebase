@@ -100,6 +100,47 @@ export type Database = {
           },
         ]
       }
+      endpoint_documents: {
+        Row: {
+          created_at: string
+          endpoint_id: string
+          file_format: string
+          file_name: string
+          file_path: string
+          file_size: number
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          endpoint_id: string
+          file_format: string
+          file_name: string
+          file_path: string
+          file_size?: number
+          id?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          endpoint_id?: string
+          file_format?: string
+          file_name?: string
+          file_path?: string
+          file_size?: number
+          id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "endpoint_documents_endpoint_id_fkey"
+            columns: ["endpoint_id"]
+            isOneToOne: false
+            referencedRelation: "api_endpoints"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
