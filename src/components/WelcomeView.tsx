@@ -19,13 +19,18 @@ export function WelcomeView({ collections, onSelectCollection }: WelcomeViewProp
         API Knowledge Base
       </h1>
       <p className="text-muted-foreground mb-10 text-lg">
-        Your source of truth for {totalEndpoints} endpoints across {collections.length} APIs.
-        <br />
-        Select a collection to get started.
+        {collections.length > 0 ? (
+          <>Your source of truth for {totalEndpoints} endpoints across {collections.length} APIs.<br />Select a collection to get started.</>
+        ) : (
+          <>Your centralized API documentation hub.<br />Get started by loading sample specs or adding your own.</>
+        )}
       </p>
 
-      <div className="grid gap-3">
-        {collections.map((col) => (
+      {collections.length === 0 && (
+        <div className="mb-10">
+          <SeedButton />
+        </div>
+      )}
           <button
             key={col.id}
             onClick={() => onSelectCollection(col.id)}
