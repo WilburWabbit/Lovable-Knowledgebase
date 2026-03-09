@@ -25,7 +25,9 @@ export interface ApiCollection {
   description: string;
   baseUrl: string;
   version: string;
+  parentId?: string | null;
   endpoints: ApiEndpoint[];
+  children?: ApiCollection[];
 }
 
 export const sampleCollections: ApiCollection[] = [

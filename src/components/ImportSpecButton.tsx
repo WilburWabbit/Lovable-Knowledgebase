@@ -47,12 +47,62 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
 
     const { collection, endpoints } = data;
 
-    // Check if a collection with the same name already exists
-    const { data: existingCols } = await supabase
-      .from("api_collections")
-      .select("id, name")
-      .eq("name", collection.name)
-      .limit(1);
+    // Detect system/parent from base_url domain
+    let parentId: string | null = null;
+    try {
+      const hostname = new URL(collection.base_url).hostname; // e.g. "api.ebay.com"
+      const parts = hostname.split(".");
+      // Extract system name from domain: "api.ebay.com" → "eBay", "api.stripe.com" → "Stripe"
+      const domainName = parts.length >= 2 ? parts[parts.length - 2] : null;
+      if (domainName && domainName.length > 1) {
+        const systemName = domainName.charAt(0).toUpperCase() + domainName.slice(1);
+        // Find or create parent collection for this system
+        const { data: existingParents } = await (supabase
+          .from("api_collections")
+          .select("id, name") as any)
+          .is("parent_id", null)
+          .ilike("name", systemName)
+          .limit(1);
+
+        if (existingParents?.length) {
+          parentId = existingParents[0].id;
+        } else {
+          // Create parent system collection
+          const { data: newParent } = await supabase
+            .from("api_collections")
+            .insert({
+              name: systemName,
+              description: `${systemName} APIs`,
+              base_url: `https://${parts.slice(-2).join(".")}`,
+              version: "1.0.0",
+            })
+            .select("id")
+            .single();
+          if (newParent) parentId = newParent.id;
+        }
+      }
+    } catch {
+      // If URL parsing fails, no parent
+    }
+
+    // Check if a collection with the same name already exists (under the same parent)
+    let existingCols: any[] | null = null;
+    if (parentId) {
+      const { data } = await (supabase
+        .from("api_collections")
+        .select("id, name") as any)
+        .eq("name", collection.name)
+        .eq("parent_id", parentId)
+        .limit(1);
+      existingCols = data;
+    } else {
+      const { data } = await supabase
+        .from("api_collections")
+        .select("id, name")
+        .eq("name", collection.name)
+        .limit(1);
+      existingCols = data;
+    }
 
     const existingCol = existingCols?.[0];
     let colId: string;
@@ -135,6 +185,7 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
         description: collection.description,
         baseUrl: collection.base_url,
         version: collection.version,
+        parentId,
       });
       colId = col.id;
 
