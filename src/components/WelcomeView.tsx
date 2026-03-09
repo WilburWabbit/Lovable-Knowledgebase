@@ -4,6 +4,15 @@ import { SeedButton } from "./SeedButton";
 import { ImportSpecButton } from "./ImportSpecButton";
 import { Button } from "@/components/ui/button";
 
+function countEndpoints(col: ApiCollection): number {
+  return col.endpoints.length + (col.children ?? []).reduce((sum, c) => sum + countEndpoints(c), 0);
+}
+
+function countApis(col: ApiCollection): number {
+  const isParent = (col.children?.length ?? 0) > 0;
+  return (isParent ? 0 : 1) + (col.children ?? []).reduce((sum, c) => sum + countApis(c), 0);
+}
+
 interface WelcomeViewProps {
   collections: ApiCollection[];
   onSelectCollection: (id: string) => void;
@@ -11,7 +20,7 @@ interface WelcomeViewProps {
 }
 
 export function WelcomeView({ collections, onSelectCollection, onNewCollection }: WelcomeViewProps) {
-  const totalEndpoints = collections.reduce((acc, c) => acc + c.endpoints.length, 0);
+  const totalEndpoints = collections.reduce((acc, c) => acc + countEndpoints(c), 0);
 
   return (
     <div className="max-w-2xl mx-auto text-center">
