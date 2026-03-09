@@ -1,4 +1,5 @@
 import { Search, BookOpen, ChevronRight, Plus } from "lucide-react";
+import { ImportSpecButton } from "./ImportSpecButton";
 import { ApiCollection } from "@/data/sampleSpecs";
 
 interface AppSidebarProps {
@@ -34,6 +35,11 @@ export function AppSidebar({
             <h1 className="text-sm font-semibold text-sidebar-primary tracking-tight">API Knowledge Base</h1>
             <p className="text-[10px] text-sidebar-muted tracking-wide uppercase">Source of Truth</p>
           </div>
+          <ImportSpecButton
+            variant="ghost"
+            size="icon"
+            onImported={onSelectCollection}
+          />
           <button
             onClick={onNewCollection}
             className="w-7 h-7 rounded-md bg-sidebar-accent hover:bg-sidebar-ring/20 flex items-center justify-center transition-colors"
