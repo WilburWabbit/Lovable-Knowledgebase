@@ -1,5 +1,6 @@
 import { ApiCollection } from "@/data/sampleSpecs";
 import { BookOpen, ArrowRight } from "lucide-react";
+import { SeedButton } from "./SeedButton";
 
 interface WelcomeViewProps {
   collections: ApiCollection[];
