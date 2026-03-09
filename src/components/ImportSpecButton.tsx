@@ -5,6 +5,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAddCollection, useAddEndpoint } from "@/hooks/useApiData";
 import { toast } from "sonner";
 import { HttpMethod, ApiParameter } from "@/data/sampleSpecs";
+import { Json } from "@/integrations/supabase/types";
+import { useQueryClient } from "@tanstack/react-query";
 
 interface ImportSpecButtonProps {
   variant?: "default" | "outline" | "ghost";
