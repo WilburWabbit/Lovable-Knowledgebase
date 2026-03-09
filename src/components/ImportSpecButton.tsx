@@ -86,17 +86,23 @@ export function ImportSpecButton({ variant = "outline", size = "default", onImpo
     }
 
     // Check if a collection with the same name already exists (under the same parent)
-    const existingQuery = supabase
-      .from("api_collections")
-      .select("id, name")
-      .eq("name", collection.name)
-      .limit(1);
-
+    let existingCols: any[] | null = null;
     if (parentId) {
-      existingQuery.eq("parent_id" as any, parentId);
+      const { data } = await supabase
+        .from("api_collections")
+        .select("id, name")
+        .eq("name", collection.name)
+        .eq("parent_id" as any, parentId)
+        .limit(1);
+      existingCols = data;
+    } else {
+      const { data } = await supabase
+        .from("api_collections")
+        .select("id, name")
+        .eq("name", collection.name)
+        .limit(1);
+      existingCols = data;
     }
-
-    const { data: existingCols } = await existingQuery;
 
     const existingCol = existingCols?.[0];
     let colId: string;
