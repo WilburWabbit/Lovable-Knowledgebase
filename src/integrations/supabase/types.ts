@@ -14,7 +14,92 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      api_collections: {
+        Row: {
+          base_url: string
+          created_at: string
+          description: string
+          id: string
+          name: string
+          updated_at: string
+          version: string
+        }
+        Insert: {
+          base_url?: string
+          created_at?: string
+          description?: string
+          id?: string
+          name: string
+          updated_at?: string
+          version?: string
+        }
+        Update: {
+          base_url?: string
+          created_at?: string
+          description?: string
+          id?: string
+          name?: string
+          updated_at?: string
+          version?: string
+        }
+        Relationships: []
+      }
+      api_endpoints: {
+        Row: {
+          collection_id: string
+          created_at: string
+          description: string
+          id: string
+          method: string
+          parameters: Json
+          path: string
+          request_body: string | null
+          response_example: string
+          sort_order: number
+          summary: string
+          tags: string[]
+          updated_at: string
+        }
+        Insert: {
+          collection_id: string
+          created_at?: string
+          description?: string
+          id?: string
+          method: string
+          parameters?: Json
+          path: string
+          request_body?: string | null
+          response_example?: string
+          sort_order?: number
+          summary?: string
+          tags?: string[]
+          updated_at?: string
+        }
+        Update: {
+          collection_id?: string
+          created_at?: string
+          description?: string
+          id?: string
+          method?: string
+          parameters?: Json
+          path?: string
+          request_body?: string | null
+          response_example?: string
+          sort_order?: number
+          summary?: string
+          tags?: string[]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "api_endpoints_collection_id_fkey"
+            columns: ["collection_id"]
+            isOneToOne: false
+            referencedRelation: "api_collections"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
