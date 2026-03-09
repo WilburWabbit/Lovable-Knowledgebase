@@ -27,7 +27,7 @@ export function AppSidebar({
     <aside className="w-72 shrink-0 h-screen bg-sidebar text-sidebar-foreground flex flex-col border-r border-sidebar-border">
       {/* Header */}
       <div className="p-5 border-b border-sidebar-border">
-        <div className="flex items-center gap-2.5 mb-4">
+        <div className="flex items-center gap-2.5 mb-3">
           <div className="w-8 h-8 rounded-lg bg-sidebar-accent flex items-center justify-center">
             <BookOpen className="w-4 h-4 text-sidebar-primary" />
           </div>
@@ -35,20 +35,22 @@ export function AppSidebar({
             <h1 className="text-sm font-semibold text-sidebar-primary tracking-tight">API Knowledge Base</h1>
             <p className="text-[10px] text-sidebar-muted tracking-wide uppercase">Source of Truth</p>
           </div>
-          <div className="flex items-center gap-1.5">
-            <ImportSpecButton
-              variant="ghost"
-              size="icon"
-              onImported={onSelectCollection}
-            />
-            <button
-              onClick={onNewCollection}
-              className="w-7 h-7 rounded-md bg-sidebar-accent hover:bg-sidebar-ring/20 flex items-center justify-center transition-colors shrink-0"
-              title="New collection"
-            >
-              <Plus className="w-3.5 h-3.5 text-sidebar-primary" />
-            </button>
-          </div>
+        </div>
+        <div className="flex gap-2 mb-3">
+          <ImportSpecButton
+            variant="outline"
+            size="sm"
+            onImported={onSelectCollection}
+          />
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={onNewCollection}
+            className="gap-1.5"
+          >
+            <Plus className="w-3.5 h-3.5" />
+            New Collection
+          </Button>
         </div>
         <div className="relative">
           <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-sidebar-muted" />
