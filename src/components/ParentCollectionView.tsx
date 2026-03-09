@@ -73,7 +73,7 @@ export function ParentCollectionView({
             </div>
             <div className="flex items-center gap-3">
               <span className="text-xs font-mono text-muted-foreground">
-                {child.endpoints.length} endpoints
+                {countEndpoints(child)} endpoints
               </span>
               <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 transition-all" />
             </div>

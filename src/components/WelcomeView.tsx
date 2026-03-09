@@ -62,7 +62,7 @@ export function WelcomeView({ collections, onSelectCollection, onNewCollection }
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-xs font-mono text-muted-foreground">
-                  {col.endpoints.length} endpoints
+                  {countEndpoints(col)} endpoints
                 </span>
                 <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 transition-all" />
               </div>
