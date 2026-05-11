@@ -1,0 +1,30 @@
+{
+  "id": "b2a3ba0d-0f9f-492b-871a-931b71a9a4d5",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/advertising_eligibility",
+  "summary": "Get Advertising Eligibility",
+  "description": "This method allows developers to check the seller eligibility status for eBay advertising programs.",
+  "parameters": [
+    {
+      "name": "program_types",
+      "type": "string",
+      "required": false,
+      "description": "A comma-separated list of eBay advertising programs."
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier of the eBay marketplace for which the seller eligibility status shall be checked."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"advertisingEligibility\": [{\"programType\": \"string\", \"reason\": \"string\", \"status\": \"string\"}]}",
+  "tags": [
+    "advertising_eligibility"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:43.897186+00:00",
+  "updated_at": "2026-03-09T11:23:43.897186+00:00"
+}

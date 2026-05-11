@@ -1,0 +1,30 @@
+{
+  "id": "70200af1-5980-4d86-a478-d9c6191e02d2",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/sales_tax/{countryCode}/{jurisdictionId}",
+  "summary": "Get Sales Tax",
+  "description": "Gets the current sales tax table entry for a specific jurisdiction.",
+  "parameters": [
+    {
+      "name": "countryCode",
+      "type": "string",
+      "required": true,
+      "description": "Country code."
+    },
+    {
+      "name": "jurisdictionId",
+      "type": "string",
+      "required": true,
+      "description": "Jurisdiction ID."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"salesTaxPercentage\": \"string\"}",
+  "tags": [
+    "sales_tax"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:52.403547+00:00",
+  "updated_at": "2026-03-09T11:23:52.403547+00:00"
+}

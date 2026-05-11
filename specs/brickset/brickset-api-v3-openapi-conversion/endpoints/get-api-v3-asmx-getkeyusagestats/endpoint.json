@@ -1,0 +1,24 @@
+{
+  "id": "78b6d752-02b9-42ac-816d-84f6fa56a6b4",
+  "collection_id": "7885fb8b-3863-413b-80d2-9f6e131f7098",
+  "method": "GET",
+  "path": "/api/v3.asmx/getKeyUsageStats",
+  "summary": "Get key usage stats for the last 30 days.",
+  "description": "Brickset notes that only calls to getSets count against key usage.",
+  "parameters": [
+    {
+      "name": "apiKey",
+      "type": "string",
+      "required": true,
+      "description": "Brickset API key."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"status\": \"success\", \"matches\": 1, \"apiKeyUsage\": [{\"dateStamp\": \"2023-01-01T00:00:00Z\", \"count\": 10}]}",
+  "tags": [
+    "General"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:45:36.010971+00:00",
+  "updated_at": "2026-03-09T11:45:36.010971+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "cd302112-ae3e-4cc6-833d-93b22baa7f4d",
+  "name": "Metadata API",
+  "description": "The Metadata API has operations that retrieve configuration details pertaining to the different eBay marketplaces. In addition to marketplace information, the API also has operations that get information that helps sellers list items on eBay.",
+  "base_url": "https://api.ebay.com/sell/metadata/v1",
+  "version": "v1.6.0",
+  "created_at": "2026-03-09T11:21:06.745689+00:00",
+  "updated_at": "2026-03-09T11:36:02.280936+00:00",
+  "parent_id": "84b9a32d-ff51-4c69-b802-7fd4c36e700b"
+}

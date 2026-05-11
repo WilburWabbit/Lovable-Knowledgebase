@@ -1,0 +1,30 @@
+{
+  "id": "8eb59b02-8e95-41c7-940b-96d8ce3608c3",
+  "collection_id": "261fe55d-11a3-41d8-b4fc-ebf23c45e373",
+  "method": "POST",
+  "path": "/v3/company/{realmId}/account",
+  "summary": "Create or update an account",
+  "description": "Create a new Account or update an existing one.\n\nCreate:\n  - Omit `Id` and `SyncToken`\n  - `Name` and `AccountType` are typically required\n\nUpdate:\n  - Include `Id` and `SyncToken`\n  - Use `sparse: true` for sparse updates\n\nSoft delete / deactivate:\n  - Perform an update with `Active: false`\n",
+  "parameters": [
+    {
+      "name": "realmId",
+      "type": "string",
+      "required": true,
+      "description": "QuickBooks company ID returned as `realmId` during OAuth authorisation."
+    },
+    {
+      "name": "minorversion",
+      "type": "integer",
+      "required": false,
+      "description": "Optional Intuit minor version. Intuit retires older minor versions over time, so pin only when you need specific behaviour."
+    }
+  ],
+  "request_body": "{\n  \"AccountType\": \"Accounts Receivable\",\n  \"Name\": \"AR4\"\n}",
+  "response_example": "{\n  \"Account\": {\n    \"Id\": \"94\",\n    \"SyncToken\": \"3\",\n    \"Name\": \"AR4\",\n    \"AccountType\": \"Accounts Receivable\",\n    \"Active\": true,\n    \"FullyQualifiedName\": \"Parent:Account1:AR4\",\n    \"MetaData\": {\n      \"CreateTime\": \"2016-08-18T00:18:04-07:00\",\n      \"LastUpdatedTime\": \"2016-08-18T00:18:04-07:00\"\n    }\n  },\n  \"time\": \"2015-07-08T09:21:46.310-07:00\"\n}",
+  "tags": [
+    "Account"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:17:55.293371+00:00",
+  "updated_at": "2026-03-09T12:17:55.293371+00:00"
+}

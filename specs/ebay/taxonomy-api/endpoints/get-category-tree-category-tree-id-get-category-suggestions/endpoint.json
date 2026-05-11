@@ -1,0 +1,30 @@
+{
+  "id": "aca9849a-9600-4d84-8929-5bba943a156a",
+  "collection_id": "d93650fd-2088-4604-9793-91de2f2cd869",
+  "method": "GET",
+  "path": "/category_tree/{category_tree_id}/get_category_suggestions",
+  "summary": "Get Suggested Categories",
+  "description": "This call returns an array of category tree leaf nodes in the specified category tree that are considered by eBay to most closely correspond to the query string q.",
+  "parameters": [
+    {
+      "name": "category_tree_id",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier of the eBay category tree for which suggested nodes are being requested."
+    },
+    {
+      "name": "q",
+      "type": "string",
+      "required": true,
+      "description": "A quoted string that describes or characterizes the item being offered for sale."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"categoryTreeId\": \"100\",\n  \"categorySuggestions\": [\n    {\n      \"category\": { \"categoryId\": \"123\", \"categoryName\": \"Suggested Category\" },\n      \"categoryTreeNodeLevel\": 3\n    }\n  ]\n}",
+  "tags": [
+    "category_tree"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:32:38.007695+00:00",
+  "updated_at": "2026-03-09T11:32:38.007695+00:00"
+}

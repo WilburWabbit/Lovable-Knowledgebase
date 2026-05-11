@@ -1,0 +1,36 @@
+{
+  "id": "8899d7b3-094f-4e00-8faf-e3a6c5a04886",
+  "collection_id": "8ebc5689-9598-43ec-a0f7-ec8e306de568",
+  "method": "GET",
+  "path": "/find_eligible_items",
+  "summary": "findEligibleItems",
+  "description": "This method evaluates a seller's current listings and returns the set of IDs that are eligible for a seller-initiated discount offer to a buyer. A listing ID is returned only when one or more buyers have shown an 'interest' in the listing.",
+  "parameters": [
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "This query parameter specifies the maximum number of items to return from the result set on a page in the paginated response. Minimum: 1, Maximum: 200, Default: 10"
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "This query parameter specifies the number of results to skip in the result set before returning the first result in the paginated response. Default: 0"
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "The eBay marketplace on which you want to search for eligible listings."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"eligibleItems\": [\n    {\n      \"listingId\": \"123456789012\"\n    }\n  ],\n  \"href\": \"https://api.ebay.com/sell/negotiation/v1/find_eligible_items?limit=10&offset=0\",\n  \"limit\": 10,\n  \"next\": \"https://api.ebay.com/sell/negotiation/v1/find_eligible_items?limit=10&offset=10\",\n  \"offset\": 0,\n  \"prev\": \"\",\n  \"total\": 1\n}",
+  "tags": [
+    "offer"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:20:43.356204+00:00",
+  "updated_at": "2026-03-09T11:20:43.356204+00:00"
+}

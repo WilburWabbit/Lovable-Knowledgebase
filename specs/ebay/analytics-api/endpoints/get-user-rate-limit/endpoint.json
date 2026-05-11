@@ -1,0 +1,30 @@
+{
+  "id": "99e69fda-4a0c-4add-82a2-cb5de04d8ad5",
+  "collection_id": "8d1903fe-edf4-45ab-8427-3e44aa8ce62a",
+  "method": "GET",
+  "path": "/user_rate_limit/",
+  "summary": "getUserRateLimits",
+  "description": "This method retrieves the call limit and utilization data for an application user. The call-limit data is returned for all RESTful APIs and the legacy Trading API that limit calls on a per-user basis. By default, this method returns utilization data for all RESTful APIs resources and the legacy Trading API calls that limit request access by user. Use the api_name and api_context query parameters to filter the response to only the desired APIs.",
+  "parameters": [
+    {
+      "name": "api_context",
+      "type": "string",
+      "required": false,
+      "description": "This optional query parameter filters the result to include only the specified API context. Valid values: buy, sell, commerce, developer, tradingapi"
+    },
+    {
+      "name": "api_name",
+      "type": "string",
+      "required": false,
+      "description": "This optional query parameter filters the result to include only the APIs specified. Example values: browse, inventory, taxonomy, tradingapi"
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"rateLimits\":[{\"apiContext\":\"sell\",\"apiName\":\"inventory\",\"apiVersion\":\"v1\",\"resources\":[{\"name\":\"getInventoryItem\",\"rates\":[{\"limit\":2000,\"remaining\":1950,\"reset\":\"2018-08-04T07:09:00.000Z\",\"timeWindow\":86400}]}]}]}",
+  "tags": [
+    "user_rate_limit"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:24:00.012677+00:00",
+  "updated_at": "2026-03-09T11:24:00.012677+00:00"
+}

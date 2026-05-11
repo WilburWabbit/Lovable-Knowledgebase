@@ -1,0 +1,30 @@
+{
+  "id": "89470c1f-f9df-4b7d-8ea3-22303e24846f",
+  "collection_id": "39229b63-49cb-4a0a-87e4-ddea499f52de",
+  "method": "PATCH",
+  "path": "/products/v1/accounts/{account}/productInputs/{productInput}",
+  "summary": "Updates the existing product input in your Merchant Center account",
+  "description": "Updates the existing product input in your Merchant Center account. Derived from products_v1.accounts.productInputs. Original Google URI template: /products/v1/{productInput.name=accounts/*/productInputs/*}. Source summary: Updates the existing product input in your Merchant Center account.",
+  "parameters": [
+    {
+      "name": "account",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    },
+    {
+      "name": "productInput",
+      "type": "string",
+      "required": true,
+      "description": "Product input identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "products_v1"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:28:27.678937+00:00",
+  "updated_at": "2026-03-09T12:28:27.678937+00:00"
+}

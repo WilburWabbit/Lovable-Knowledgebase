@@ -1,0 +1,24 @@
+{
+  "id": "1c0d48ef-0957-45a6-aa06-f8e61ef769a5",
+  "collection_id": "ec1c4f8e-3458-4b5e-9bb3-21cacfb3c086",
+  "method": "GET",
+  "path": "/order/{orderId}/shipping_fulfillment",
+  "summary": "getShippingFulfillments",
+  "description": "Use this call to retrieve the contents of all fulfillments currently defined for a specified order based on the order's unique identifier, orderId.",
+  "parameters": [
+    {
+      "name": "orderId",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier of the order."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"total\": 1, \"fulfillments\": []}",
+  "tags": [
+    "shipping_fulfillment"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:30:34.542678+00:00",
+  "updated_at": "2026-03-09T11:30:34.542678+00:00"
+}

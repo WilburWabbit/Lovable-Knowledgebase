@@ -1,0 +1,24 @@
+{
+  "id": "1f0bd878-a78b-476c-8a17-6d03fadfb204",
+  "collection_id": "a947a538-f314-445c-8157-fa8b79ee044a",
+  "method": "GET",
+  "path": "/shipment/{shipmentId}/download_label_file",
+  "summary": "downloadLabelFile",
+  "description": "This method returns the shipping label file that was generated for the shipmentId value specified in the request. Call createFromShippingQuote to generate a shipment ID. Use the Accept HTTP header to specify the format of the returned file. The default file format is a PDF file.",
+  "parameters": [
+    {
+      "name": "shipmentId",
+      "type": "string",
+      "required": true,
+      "description": "This path parameter specifies the unique eBay-assigned ID of the shipment associated with the shipping label you want to download. The shipmentId value is generated and returned by a call to createFromShippingQuote."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "[\"base64encodedPDFData\"]",
+  "tags": [
+    "shipment"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:20:28.604166+00:00",
+  "updated_at": "2026-03-09T11:20:28.604166+00:00"
+}

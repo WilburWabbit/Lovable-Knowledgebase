@@ -1,0 +1,30 @@
+{
+  "id": "c504d3fd-179c-4f22-8204-524ce476a058",
+  "collection_id": "566a5ef5-b4b7-4f71-856c-072f5964836d",
+  "method": "GET",
+  "path": "/tagmanager/v2/accounts/{accountId}/containers/{containerId}",
+  "summary": "Gets a Container.",
+  "description": "Gets a Container.",
+  "parameters": [
+    {
+      "name": "accountId",
+      "type": "string",
+      "required": true,
+      "description": "Google Tag Manager account ID."
+    },
+    {
+      "name": "containerId",
+      "type": "string",
+      "required": true,
+      "description": "Google Tag Manager container ID."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"accountId\": \"string\", \"containerId\": \"string\", \"name\": \"string\", \"publicId\": \"string\"}",
+  "tags": [
+    "v2.accounts.containers"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:57:38.896191+00:00",
+  "updated_at": "2026-03-09T12:57:38.896191+00:00"
+}

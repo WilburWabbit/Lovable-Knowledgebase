@@ -1,0 +1,17 @@
+{
+  "id": "7cbdc2fd-b185-4aa0-8df0-d8db5c4bf7bb",
+  "collection_id": "e0c7a45f-c6b6-4e09-902c-848e3aac5a3e",
+  "method": "POST",
+  "path": "/bulk/batch",
+  "summary": "Batch requests",
+  "description": "Batch up to 50 requests into one bulk request to reduce request overhead.",
+  "parameters": [],
+  "request_body": "{\"key\": \"YOUR_API_KEY\", \"requests\": \"{\\\"requests\\\":[{\\\"endpoint\\\":\\\"catalog/search\\\",\\\"request_method\\\":\\\"GET\\\",\\\"params\\\":[{\\\"query\\\":\\\"Vendor\\\"}]}]}\"}",
+  "response_example": "{}",
+  "tags": [
+    "Bulk"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:46:18.177235+00:00",
+  "updated_at": "2026-03-09T11:46:18.177235+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "00cbcef2-86d0-47e8-89bb-3deb299790a9",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/privilege",
+  "summary": "Get Selling Privileges",
+  "description": "Retrieves the seller's current set of privileges.",
+  "parameters": [],
+  "request_body": "null",
+  "response_example": "{\"sellerRegistrationCompleted\": true, \"sellingLimit\": {\"quantity\": 0}}",
+  "tags": [
+    "privilege"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:49.044951+00:00",
+  "updated_at": "2026-03-09T11:23:49.044951+00:00"
+}

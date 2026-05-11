@@ -1,0 +1,24 @@
+{
+  "id": "8a8c04a3-e13f-4e66-81eb-febadb7ff7fd",
+  "collection_id": "87172e41-fa7d-41ec-9d2e-22a31a8d8a40",
+  "method": "POST",
+  "path": "/v1beta/properties/{propertyId}:checkCompatibility",
+  "summary": "This compatibility method lists dimensions and metrics that can be added to a report request and maintain compatibility.",
+  "description": "This compatibility method lists dimensions and metrics that can be added to a report request and maintain compatibility. Original Google API path template: `/v1beta/{property=properties/*}:checkCompatibility`",
+  "parameters": [
+    {
+      "name": "propertyId",
+      "type": "string",
+      "required": true,
+      "description": "Property identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "v1beta.properties"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:31:34.259339+00:00",
+  "updated_at": "2026-03-09T13:31:34.259339+00:00"
+}

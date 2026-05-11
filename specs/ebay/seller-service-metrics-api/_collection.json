@@ -1,0 +1,10 @@
+{
+  "id": "2bf1fee0-2a4d-4044-961f-50d2a9885786",
+  "name": "Seller Service Metrics API",
+  "description": "The Analytics API provides data and information about a seller and their eBay business. Its resources let sellers review listing performance, customer service metrics, and eBay seller performance ratings.",
+  "base_url": "https://api.ebay.com/sell/analytics/v1",
+  "version": "1.2.0",
+  "created_at": "2026-03-09T11:23:15.74558+00:00",
+  "updated_at": "2026-03-09T11:36:02.280936+00:00",
+  "parent_id": "84b9a32d-ff51-4c69-b802-7fd4c36e700b"
+}

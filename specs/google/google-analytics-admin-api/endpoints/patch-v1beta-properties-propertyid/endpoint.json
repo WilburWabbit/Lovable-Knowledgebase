@@ -1,0 +1,24 @@
+{
+  "id": "15ee6e4e-4eb4-4a56-82c7-d62cca3ef702",
+  "collection_id": "07d89899-a7df-4236-ba31-b0547dcd8e5c",
+  "method": "PATCH",
+  "path": "/v1beta/properties/{propertyId}",
+  "summary": "Updates a property.",
+  "description": "Updates a property. Original Google API path template: `/v1beta/{property.name=properties/*}`",
+  "parameters": [
+    {
+      "name": "propertyId",
+      "type": "string",
+      "required": true,
+      "description": "Property identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "v1beta.properties"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:12:33.016053+00:00",
+  "updated_at": "2026-03-09T13:12:33.016053+00:00"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "df8a15bb-8032-4ff0-8004-303a1afcd6f7",
+  "collection_id": "90de2455-dc2c-4649-b04d-2d513e143f77",
+  "method": "GET",
+  "path": "/charity_org",
+  "summary": "Search for charitable organizations",
+  "description": "This call is used to search for supported charitable organizations. It allows users to search for a specific charitable organization, or for multiple charitable organizations, from a particular charitable domain and/or geographical region, or by using search criteria. The call returns paginated search results containing the charitable organizations that match the specified criteria.",
+  "parameters": [
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "The number of items, from the result set, returned in a single page. Valid Values: 1-100. Default: 20"
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "The number of items that will be skipped in the result set. This is used with the limit field to control the pagination of the output. Valid Values: 0-10,000. Default: 0"
+    },
+    {
+      "name": "q",
+      "type": "string",
+      "required": false,
+      "description": "A query string that matches the keywords in name, mission statement, or description."
+    },
+    {
+      "name": "registration_ids",
+      "type": "string",
+      "required": false,
+      "description": "A comma-separated list of charitable organization registration IDs. Note: Do not specify this parameter for query-based searches. Specify either the q or registration_ids parameter, but not both. Maximum Limit: 20"
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "A header used to specify the eBay marketplace ID. Valid Values: EBAY_GB and EBAY_US"
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"charityOrgs\": [\n    {\n      \"charityOrgId\": \"12345\",\n      \"name\": \"Example Charity\",\n      \"missionStatement\": \"Helping people in need.\",\n      \"registrationId\": \"12-3456789\",\n      \"location\": {\n        \"address\": {\n          \"city\": \"San Jose\",\n          \"stateOrProvince\": \"CA\",\n          \"postalCode\": \"95125\",\n          \"country\": \"US\"\n        }\n      },\n      \"website\": \"https://www.example.org\",\n      \"logoImage\": {\n        \"imageUrl\": \"https://www.example.org/logo.png\",\n        \"height\": \"100\",\n        \"width\": \"100\"\n      }\n    }\n  ],\n  \"total\": 1,\n  \"limit\": 20,\n  \"offset\": 0,\n  \"href\": \"/charity_org?q=example\"\n}",
+  "tags": [
+    "charity_org"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:32:47.540305+00:00",
+  "updated_at": "2026-03-09T11:32:47.540305+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "231225f3-460c-4336-a5b7-8ccf76792682",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/return_policy/{return_policy_id}",
+  "summary": "Get Return Policy",
+  "description": "Retrieves details of a specific return policy.",
+  "parameters": [
+    {
+      "name": "return_policy_id",
+      "type": "string",
+      "required": true,
+      "description": "Policy ID."
+    }
+  ],
+  "request_body": "null,response_example:",
+  "response_example": "{\"returnPolicyId\": \"string\", \"name\": \"string\"}",
+  "tags": [
+    "return_policy"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:51.309855+00:00",
+  "updated_at": "2026-03-09T11:23:51.309855+00:00"
+}

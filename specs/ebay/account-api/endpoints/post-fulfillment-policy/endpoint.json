@@ -1,0 +1,17 @@
+{
+  "id": "528c71f3-cbe4-4e32-9d15-d4c2388e8031",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "POST",
+  "path": "/fulfillment_policy/",
+  "summary": "Create Fulfillment Policy",
+  "description": "This method creates a new fulfillment policy.",
+  "parameters": [],
+  "request_body": "{\"name\": \"string\", \"marketplaceId\": \"string\", \"categoryTypes\": [{\"name\": \"string\"}]}",
+  "response_example": "{\"fulfillmentPolicyId\": \"string\", \"warnings\": []}",
+  "tags": [
+    "fulfillment_policy"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:45.395936+00:00",
+  "updated_at": "2026-03-09T11:23:45.395936+00:00"
+}

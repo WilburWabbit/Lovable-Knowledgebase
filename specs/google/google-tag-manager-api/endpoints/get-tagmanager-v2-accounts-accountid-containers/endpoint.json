@@ -1,0 +1,30 @@
+{
+  "id": "18d47ecf-45bf-440a-a067-973365b62571",
+  "collection_id": "566a5ef5-b4b7-4f71-856c-072f5964836d",
+  "method": "GET",
+  "path": "/tagmanager/v2/accounts/{accountId}/containers",
+  "summary": "Lists all Containers that belongs to a GTM Account.",
+  "description": "Lists all Containers that belongs to a GTM Account.",
+  "parameters": [
+    {
+      "name": "accountId",
+      "type": "string",
+      "required": true,
+      "description": "Google Tag Manager account ID."
+    },
+    {
+      "name": "pageToken",
+      "type": "string",
+      "required": false,
+      "description": "Continuation token for pagination."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"container\": [], \"nextPageToken\": \"string\"}",
+  "tags": [
+    "v2.accounts.containers"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:57:38.284495+00:00",
+  "updated_at": "2026-03-09T12:57:38.284495+00:00"
+}

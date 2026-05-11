@@ -1,0 +1,24 @@
+{
+  "id": "0121568f-fe41-41de-9fe7-65dd53474a7e",
+  "collection_id": "ec1c4f8e-3458-4b5e-9bb3-21cacfb3c086",
+  "method": "POST",
+  "path": "/payment_dispute/{payment_dispute_id}/contest",
+  "summary": "Contest Payment Dispute",
+  "description": "This method is used if the seller wishes to contest a payment dispute initiated by the buyer.",
+  "parameters": [
+    {
+      "name": "payment_dispute_id",
+      "type": "string",
+      "required": true,
+      "description": "This is the unique identifier of the payment dispute."
+    }
+  ],
+  "request_body": "{\"revision\": 1, \"note\": \"string\"}",
+  "response_example": "null",
+  "tags": [
+    "payment_dispute"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:30:37.13433+00:00",
+  "updated_at": "2026-03-09T11:30:37.13433+00:00"
+}

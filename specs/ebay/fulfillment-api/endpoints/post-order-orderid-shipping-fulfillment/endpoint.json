@@ -1,0 +1,24 @@
+{
+  "id": "7a1d2314-8c66-4e23-9934-696002dbedab",
+  "collection_id": "ec1c4f8e-3458-4b5e-9bb3-21cacfb3c086",
+  "method": "POST",
+  "path": "/order/{orderId}/shipping_fulfillment",
+  "summary": "createShippingFulfillment",
+  "description": "When you group an order's line items into one or more packages, each package requires a corresponding plan for handling, addressing, and shipping; this is a shipping fulfillment.",
+  "parameters": [
+    {
+      "name": "orderId",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier of the order."
+    }
+  ],
+  "request_body": "{\"lineItems\": [{\"lineItemId\": \"string\", \"quantity\": 1}], \"shippingCarrierCode\": \"string\", \"trackingNumber\": \"string\"}",
+  "response_example": "{}",
+  "tags": [
+    "shipping_fulfillment"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:30:34.871629+00:00",
+  "updated_at": "2026-03-09T11:30:34.871629+00:00"
+}

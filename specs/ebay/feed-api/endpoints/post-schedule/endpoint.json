@@ -1,0 +1,17 @@
+{
+  "id": "e6c4420a-532b-4f43-bd38-6a3cbe73d829",
+  "collection_id": "77b703ae-545d-4843-8dd5-37504ffaa56c",
+  "method": "POST",
+  "path": "/schedule",
+  "summary": "createSchedule",
+  "description": "This method creates a schedule, which is a subscription to the specified schedule template.",
+  "parameters": [],
+  "request_body": "{ \"feedType\": \"string\", \"preferredTriggerHour\": \"11Z\", \"scheduleName\": \"My Schedule\", \"scheduleTemplateId\": \"string\" }",
+  "response_example": "{}",
+  "tags": [
+    "schedule"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:22:49.140642+00:00",
+  "updated_at": "2026-03-09T11:22:49.140642+00:00"
+}

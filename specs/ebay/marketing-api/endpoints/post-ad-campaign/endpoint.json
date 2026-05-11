@@ -1,0 +1,17 @@
+{
+  "id": "7b0ef96a-615b-4e3c-ac1b-dec88eb61616",
+  "collection_id": "2cce52ab-35f6-41c1-b393-4ed72771c5c2",
+  "method": "POST",
+  "path": "/ad_campaign",
+  "summary": "Create Campaign",
+  "description": "Creates a new Promoted Listings ad campaign. Identified items can be added by rule or specifically by listing ID.",
+  "parameters": [],
+  "request_body": "{\"campaignName\": \"Spring Sale\", \"startDate\": \"2023-04-01T00:00:00Z\", \"marketplaceId\": \"EBAY_US\", \"fundingStrategy\": {\"fundingModel\": \"COST_PER_SALE\", \"bidPercentage\": \"5.0\"}}",
+  "response_example": "{}",
+  "tags": [
+    "campaign"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:43.497719+00:00",
+  "updated_at": "2026-03-09T11:21:43.497719+00:00"
+}

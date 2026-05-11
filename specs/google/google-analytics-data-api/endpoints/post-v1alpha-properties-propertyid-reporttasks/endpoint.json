@@ -1,0 +1,24 @@
+{
+  "id": "563ae39c-f6f3-4e2f-9e7a-d3a3295cf3fa",
+  "collection_id": "87172e41-fa7d-41ec-9d2e-22a31a8d8a40",
+  "method": "POST",
+  "path": "/v1alpha/properties/{propertyId}/reportTasks",
+  "summary": "Initiates the creation of a report task.",
+  "description": "Initiates the creation of a report task. Original Google API path template: `/v1alpha/{parent=properties/*}/reportTasks`",
+  "parameters": [
+    {
+      "name": "propertyId",
+      "type": "string",
+      "required": true,
+      "description": "Property identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.properties.reportTasks"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:31:39.238822+00:00",
+  "updated_at": "2026-03-09T13:31:39.238822+00:00"
+}

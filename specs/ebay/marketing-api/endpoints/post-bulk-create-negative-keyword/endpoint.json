@@ -1,0 +1,17 @@
+{
+  "id": "e0df3c1e-795f-49a7-9c61-a64b3edbe4a6",
+  "collection_id": "2cce52ab-35f6-41c1-b393-4ed72771c5c2",
+  "method": "POST",
+  "path": "/bulk_create_negative_keyword",
+  "summary": "Bulk Create Negative Keywords",
+  "description": "Creates negative keywords in bulk for a CPC campaign.",
+  "parameters": [],
+  "request_body": "{\"requests\": [{\"campaignId\": \"123\", \"adGroupId\": \"456\", \"negativeKeywordText\": \"bad shoe\", \"negativeKeywordMatchType\": \"EXACT\"}]}",
+  "response_example": "{\"responses\": [{\"negativeKeywordId\": \"777\", \"statusCode\": 201}]}",
+  "tags": [
+    "negative_keyword"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:50.9092+00:00",
+  "updated_at": "2026-03-09T11:21:50.9092+00:00"
+}

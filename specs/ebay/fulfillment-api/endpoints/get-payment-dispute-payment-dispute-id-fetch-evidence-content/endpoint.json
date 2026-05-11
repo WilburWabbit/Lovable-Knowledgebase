@@ -1,0 +1,36 @@
+{
+  "id": "febd9b1d-51d1-4d1d-b054-05f8fd1c6c6c",
+  "collection_id": "ec1c4f8e-3458-4b5e-9bb3-21cacfb3c086",
+  "method": "GET",
+  "path": "/payment_dispute/{payment_dispute_id}/fetch_evidence_content",
+  "summary": "Get Payment Dispute Evidence File",
+  "description": "This call retrieves a specific evidence file for a payment dispute.",
+  "parameters": [
+    {
+      "name": "payment_dispute_id",
+      "type": "string",
+      "required": true,
+      "description": "The identifier of the payment dispute."
+    },
+    {
+      "name": "evidence_id",
+      "type": "string",
+      "required": true,
+      "description": "The identifier of the evidential file set."
+    },
+    {
+      "name": "file_id",
+      "type": "string",
+      "required": true,
+      "description": "The identifier of an evidential file."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "[\"binary content\"]",
+  "tags": [
+    "payment_dispute"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:30:37.443567+00:00",
+  "updated_at": "2026-03-09T11:30:37.443567+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "7175d8c9-58fd-49fc-925e-aa5227fd9199",
+  "collection_id": "cd302112-ae3e-4cc6-833d-93b22baa7f4d",
+  "method": "GET",
+  "path": "/marketplace/{marketplace_id}/get_hazardous_materials_labels",
+  "summary": "getHazardousMaterialsLabels",
+  "description": "This method returns hazardous materials label information for the specified eBay marketplace. The information includes IDs, descriptions, and URLs (as applicable) for the available signal words, statements, and pictograms. The returned statements are localized for the default langauge of the marketplace. If a marketplace does not support hazardous materials label information, an error is returned. This information is used by the seller to add hazardous materials label related information to their listings.",
+  "parameters": [
+    {
+      "name": "marketplace_id",
+      "type": "string",
+      "required": true,
+      "description": "A path parameter that specifies the eBay marketplace for which hazardous materials label information shall be retrieved. Tip: See Request components for a list of valid eBay marketplace IDs."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"pictograms\": [\n    {\n      \"pictogramDescription\": \"string\",\n      \"pictogramId\": \"string\",\n      \"pictogramUrl\": \"string\"\n    }\n  ],\n  \"signalWords\": [\n    {\n      \"signalWordDescription\": \"string\",\n      \"signalWordId\": \"string\"\n    }\n  ],\n  \"statements\": [\n    {\n      \"statementDescription\": \"string\",\n      \"statementId\": \"string\"\n    }\n  ]\n}",
+  "tags": [
+    "marketplace"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:07.855885+00:00",
+  "updated_at": "2026-03-09T11:21:07.855885+00:00"
+}

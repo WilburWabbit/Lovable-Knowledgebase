@@ -1,0 +1,48 @@
+{
+  "id": "25ab8b37-8f5d-4e31-979b-d98cb0affd66",
+  "collection_id": "ec1c4f8e-3458-4b5e-9bb3-21cacfb3c086",
+  "method": "GET",
+  "path": "/order",
+  "summary": "getOrders",
+  "description": "Use this call to search for and retrieve one or more orders based on their creation date, last modification date, or fulfillment status using the filter parameter. You can alternatively specify a list of orders using the orderIds parameter. Include the optional fieldGroups query parameter set to TAX_BREAKDOWN to return a breakdown of the taxes and fees.",
+  "parameters": [
+    {
+      "name": "fieldGroups",
+      "type": "string",
+      "required": false,
+      "description": "The response type associated with the order. The only presently supported value is TAX_BREAKDOWN."
+    },
+    {
+      "name": "filter",
+      "type": "string",
+      "required": false,
+      "description": "One or more comma-separated criteria for narrowing down the collection of orders returned by this call."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "The number of orders to return per page of the result set."
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "Specifies the number of orders to skip in the result set before returning the first order in the paginated response."
+    },
+    {
+      "name": "orderIds",
+      "type": "string",
+      "required": false,
+      "description": "A comma-separated list of the unique identifiers of the orders to retrieve (maximum 50)."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"total\": 1, \"limit\": 50, \"offset\": 0, \"orders\": []}",
+  "tags": [
+    "order"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:30:33.923616+00:00",
+  "updated_at": "2026-03-09T11:30:33.923616+00:00"
+}

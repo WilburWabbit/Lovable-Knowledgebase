@@ -1,0 +1,30 @@
+{
+  "id": "703f072b-b826-4d1c-82ad-fdc0933672f6",
+  "collection_id": "946d51cd-007b-4c36-9b6b-700fad38ae1f",
+  "method": "GET",
+  "path": "/collection/minifigs",
+  "summary": "Get my minifigs",
+  "description": "Returns the authenticated user's entire minifigure collection. The reference says identical minifig numbers are returned as separate objects when they represent distinct inventory instances.",
+  "parameters": [
+    {
+      "name": "currency",
+      "type": "string",
+      "required": false,
+      "description": "Optional ISO 4217 currency code. Defaults to USD when omitted."
+    },
+    {
+      "name": "User-Agent",
+      "type": "header",
+      "required": true,
+      "description": "BrickEconomy docs state that User-Agent is required on all requests."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"data\":{\"minifigs_count\":23,\"minifigs_unique_count\":22,\"current_value\":554.04,\"currency\":\"USD\",\"minifigs\":[{\"minifig_number\":\"scd003\",\"name\":\"Shaggy Rogers\",\"aquired_date\":\"2023-12-29\",\"collection\":\"Investments\",\"paid_price\":4.91,\"current_value\":7.67,\"growth\":156.52}],\"periods\":[{\"value\":587.28,\"date\":\"2024-01-01\",\"minifigs_count\":23}]}}",
+  "tags": [
+    "Collection"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:44:48.373788+00:00",
+  "updated_at": "2026-03-09T11:44:48.373788+00:00"
+}

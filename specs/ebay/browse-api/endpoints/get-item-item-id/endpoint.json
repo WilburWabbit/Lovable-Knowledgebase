@@ -1,0 +1,30 @@
+{
+  "id": "ff9c45c3-6ae6-4b8f-8cf3-31ec01f968ce",
+  "collection_id": "0c086a7a-67d7-41ea-be84-862f04021521",
+  "method": "GET",
+  "path": "/item/{item_id}",
+  "summary": "Retrieve details of a specific item",
+  "description": "This method retrieves the details of a specific item, such as description, price, category, etc.",
+  "parameters": [
+    {
+      "name": "fieldgroups",
+      "type": "string",
+      "required": false,
+      "description": "Control what is returned. Valid Values: PRODUCT or COMPACT."
+    },
+    {
+      "name": "item_id",
+      "type": "string",
+      "required": true,
+      "description": "The eBay RESTful identifier of an item."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{ \"itemId\": \"v1|272394640372|0\", \"title\": \"Example Item\", \"price\": { \"value\": \"20.00\", \"currency\": \"USD\" } }",
+  "tags": [
+    "item"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:43.45859+00:00",
+  "updated_at": "2026-03-09T11:33:43.45859+00:00"
+}

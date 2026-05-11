@@ -1,0 +1,30 @@
+{
+  "id": "e7958a47-1d61-4b7e-9636-5474e5fb4e68",
+  "collection_id": "0c086a7a-67d7-41ea-be84-862f04021521",
+  "method": "GET",
+  "path": "/item/",
+  "summary": "Retrieve details of specific items in bulk",
+  "description": "This method retrieves the details of specific items that the buyer needs to make a purchasing decision. Note: This is a (Limited Release). For this method, only a subset of fields are returned.",
+  "parameters": [
+    {
+      "name": "item_ids",
+      "type": "string",
+      "required": false,
+      "description": "A list of item IDs. comma separated values. Maximum allowed itemIDs: 20"
+    },
+    {
+      "name": "item_group_ids",
+      "type": "string",
+      "required": false,
+      "description": "A list of item group IDs. comma separated values. Maximum allowed itemGroupIDs: 10"
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{ \"items\": [ { \"itemId\": \"v1|272394640372|0\", \"title\": \"Example Item\", \"price\": { \"value\": \"10.00\", \"currency\": \"USD\" } } ], \"total\": 1 }",
+  "tags": [
+    "item"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:42.4894+00:00",
+  "updated_at": "2026-03-09T11:33:42.4894+00:00"
+}

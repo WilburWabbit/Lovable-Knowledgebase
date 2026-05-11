@@ -1,0 +1,24 @@
+{
+  "id": "3db58ecb-e73e-4ece-9e5e-21cb8f755f41",
+  "collection_id": "07d89899-a7df-4236-ba31-b0547dcd8e5c",
+  "method": "DELETE",
+  "path": "/v1alpha/properties/{propertyId}",
+  "summary": "Marks target Property as soft-deleted (ie: \"trashed\") and returns it.",
+  "description": "Marks target Property as soft-deleted (ie: \"trashed\") and returns it. Original Google API path template: `/v1alpha/{name=properties/*}`",
+  "parameters": [
+    {
+      "name": "propertyId",
+      "type": "string",
+      "required": true,
+      "description": "Property identifier."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.properties"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:12:29.688688+00:00",
+  "updated_at": "2026-03-09T13:12:29.688688+00:00"
+}

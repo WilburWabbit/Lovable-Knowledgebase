@@ -1,0 +1,17 @@
+{
+  "id": "d7e43a84-69bb-4911-a972-9540f43f666b",
+  "collection_id": "2cce52ab-35f6-41c1-b393-4ed72771c5c2",
+  "method": "POST",
+  "path": "/item_price_markdown",
+  "summary": "Create Item Price Markdown Promotion",
+  "description": "Creates a markdown promotion with direct discount on items. Buyer does not need to meet a threshold.",
+  "parameters": [],
+  "request_body": "{\"name\": \"Flash Sale\", \"startDate\": \"2023-05-01T00:00:00Z\", \"endDate\": \"2023-05-05T00:00:00Z\", \"marketplaceId\": \"EBAY_US\", \"discountRules\": [{\"discountBenefit\": {\"percentageOffItem\": \"20\"}}]}",
+  "response_example": "{}",
+  "tags": [
+    "item_price_markdown"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:51.15631+00:00",
+  "updated_at": "2026-03-09T11:21:51.15631+00:00"
+}

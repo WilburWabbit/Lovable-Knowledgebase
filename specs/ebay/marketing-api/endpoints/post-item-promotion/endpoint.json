@@ -1,0 +1,17 @@
+{
+  "id": "12b3a4b1-16bc-49a5-be99-68f270fa922c",
+  "collection_id": "2cce52ab-35f6-41c1-b393-4ed72771c5c2",
+  "method": "POST",
+  "path": "/item_promotion",
+  "summary": "Create Item Promotion",
+  "description": "Creates an item promotion where a discount is applied when buyer meets certain criteria (threshold).",
+  "parameters": [],
+  "request_body": "{\"name\": \"Summer Discount\", \"marketplaceId\": \"EBAY_US\", \"promotionType\": \"ORDER_DISCOUNT\", \"discountRules\": [{\"discountBenefit\": {\"percentageOffOrder\": \"10\"}, \"discountSpecification\": {\"minAmount\": {\"value\": \"50\", \"currency\": \"USD\"}}}]}",
+  "response_example": "{}",
+  "tags": [
+    "item_promotion"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:51.4024+00:00",
+  "updated_at": "2026-03-09T11:21:51.4024+00:00"
+}

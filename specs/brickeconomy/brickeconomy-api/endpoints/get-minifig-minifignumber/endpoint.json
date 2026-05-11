@@ -1,0 +1,36 @@
+{
+  "id": "b67cbfbf-8182-4825-9842-81286505c799",
+  "collection_id": "946d51cd-007b-4c36-9b6b-700fad38ae1f",
+  "method": "GET",
+  "path": "/minifig/{minifigNumber}",
+  "summary": "Get a minifig",
+  "description": "Returns a LEGO minifigure object. The reference says some response fields may be omitted depending on the minifig state.",
+  "parameters": [
+    {
+      "name": "minifigNumber",
+      "type": "string",
+      "required": true,
+      "description": "Minifigure number to look up, for example sw0509."
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "required": false,
+      "description": "Optional ISO 4217 currency code. Defaults to USD when omitted."
+    },
+    {
+      "name": "User-Agent",
+      "type": "header",
+      "required": true,
+      "description": "BrickEconomy docs state that User-Agent is required on all requests."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"data\":{\"minifig_number\":\"sw0451\",\"name\":\"Han Solo\",\"description\":\"Han Solo, reddish brown legs with holster pattern, vest with pockets\",\"set_count\":2,\"sets\":[\"10236-1\",\"75003-1\"],\"theme\":\"Star Wars\",\"year\":2013,\"released_date\":\"December 2012\",\"current_value_new\":7.27,\"currency\":\"USD\",\"price_events_new\":[{\"date\":\"2024-01-14\",\"value\":7.26},{\"date\":\"2023-12-31\",\"value\":7.2}]}}",
+  "tags": [
+    "Minifigs"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:44:47.66405+00:00",
+  "updated_at": "2026-03-09T11:44:47.66405+00:00"
+}

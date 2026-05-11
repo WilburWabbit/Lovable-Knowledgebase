@@ -1,0 +1,10 @@
+{
+  "id": "90de2455-dc2c-4649-b04d-2d513e143f77",
+  "name": "Charity API",
+  "description": "The Charity API allows third-party developers to search for and access details on supported charitable organizations.",
+  "base_url": "https://api.ebay.com/commerce/charity/v1",
+  "version": "v1.2.1",
+  "created_at": "2026-03-09T11:32:47.13691+00:00",
+  "updated_at": "2026-03-09T11:36:02.280936+00:00",
+  "parent_id": "84b9a32d-ff51-4c69-b802-7fd4c36e700b"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "87172e41-fa7d-41ec-9d2e-22a31a8d8a40",
+  "name": "Google Analytics Data API",
+  "description": "OpenAPI conversion derived from the uploaded Google Analytics Data API markdown index.",
+  "base_url": "https://analyticsdata.googleapis.com",
+  "version": "v1alpha-v1beta-markdown-derived",
+  "created_at": "2026-03-09T13:31:32.889225+00:00",
+  "updated_at": "2026-03-09T13:31:32.889225+00:00",
+  "parent_id": "d558e7be-c738-4e53-9bd0-8e145e6bda35"
+}

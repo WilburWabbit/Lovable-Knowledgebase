@@ -1,0 +1,54 @@
+{
+  "id": "886f9e4d-de61-4375-a970-dbc7c635cdfd",
+  "collection_id": "77b703ae-545d-4843-8dd5-37504ffaa56c",
+  "method": "GET",
+  "path": "/order_task",
+  "summary": "getOrderTasks",
+  "description": "This method returns the details and status for an array of order tasks based on a specified feed_type or schedule_id.",
+  "parameters": [
+    {
+      "name": "date_range",
+      "type": "string",
+      "required": false,
+      "description": "The order tasks creation date range."
+    },
+    {
+      "name": "feed_type",
+      "type": "string",
+      "required": false,
+      "description": "The feed type associated with the task."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "The maximum number of order tasks per page."
+    },
+    {
+      "name": "look_back_days",
+      "type": "string",
+      "required": false,
+      "description": "The number of previous days in which to search for tasks."
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "The number of order tasks to skip."
+    },
+    {
+      "name": "schedule_id",
+      "type": "string",
+      "required": false,
+      "description": "The schedule ID associated with the order task."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{ \"href\": \"string\", \"limit\": 0, \"next\": \"string\", \"offset\": 0, \"prev\": \"string\", \"tasks\": [ { \"completionDate\": \"string\", \"creationDate\": \"string\", \"detailHref\": \"string\", \"feedType\": \"string\", \"filterCriteria\": { \"creationDateRange\": { \"from\": \"string\", \"to\": \"string\" }, \"orderStatus\": \"string\" }, \"schemaVersion\": \"string\", \"status\": \"string\", \"taskId\": \"string\", \"uploadSummary\": { \"failureCount\": 0, \"successCount\": 0 } } ], \"total\": 0 }",
+  "tags": [
+    "order_task"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:22:47.994661+00:00",
+  "updated_at": "2026-03-09T11:22:47.994661+00:00"
+}

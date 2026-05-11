@@ -1,0 +1,24 @@
+{
+  "id": "0c58df29-e01b-4cf7-8ab2-ff4a45714a93",
+  "collection_id": "77b703ae-545d-4843-8dd5-37504ffaa56c",
+  "method": "GET",
+  "path": "/customer_service_metric_task/{task_id}",
+  "summary": "getCustomerServiceMetricTask",
+  "description": "Use this method to retrieve customer service metric task details for the specified task. The input is task_id.",
+  "parameters": [
+    {
+      "name": "task_id",
+      "type": "string",
+      "required": true,
+      "description": "Use this path parameter to specify the task ID value for the customer service metric task to retrieve."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{ \"completionDate\": \"string\", \"creationDate\": \"string\", \"detailHref\": \"string\", \"feedType\": \"string\", \"filterCriteria\": { \"customerServiceMetricType\": \"string\", \"evaluationMarketplaceId\": \"string\", \"listingCategories\": [ \"string\" ], \"shippingRegions\": [ \"string\" ] }, \"schemaVersion\": \"string\", \"status\": \"string\", \"taskId\": \"string\" }",
+  "tags": [
+    "customer_service_metric_task"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:22:46.987403+00:00",
+  "updated_at": "2026-03-09T11:22:46.987403+00:00"
+}

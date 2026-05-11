@@ -1,0 +1,30 @@
+{
+  "id": "3b94d03d-edb2-41d7-a565-a112c30ef002",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/custom_policy/",
+  "summary": "Get Custom Policies",
+  "description": "This method retrieves the list of custom policies specified by the policy_types query parameter for the selected eBay marketplace.",
+  "parameters": [
+    {
+      "name": "policy_types",
+      "type": "string",
+      "required": false,
+      "description": "This query parameter specifies the type of custom policies to be returned."
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "This header parameter specifies the eBay marketplace for the custom policy."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"customPolicies\": [{\"customPolicyId\": \"string\", \"label\": \"string\", \"name\": \"string\", \"policyType\": \"string\"}]}",
+  "tags": [
+    "custom_policy"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:44.172623+00:00",
+  "updated_at": "2026-03-09T11:23:44.172623+00:00"
+}

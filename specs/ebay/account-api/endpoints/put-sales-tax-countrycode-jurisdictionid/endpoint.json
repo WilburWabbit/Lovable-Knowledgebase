@@ -1,0 +1,30 @@
+{
+  "id": "97a5917a-521b-4389-b0db-1deadca1952f",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "PUT",
+  "path": "/sales_tax/{countryCode}/{jurisdictionId}",
+  "summary": "Create or Replace Sales Tax",
+  "description": "Creates or updates a sales tax table entry.",
+  "parameters": [
+    {
+      "name": "countryCode",
+      "type": "string",
+      "required": true,
+      "description": "Country code."
+    },
+    {
+      "name": "jurisdictionId",
+      "type": "string",
+      "required": true,
+      "description": "Jurisdiction ID."
+    }
+  ],
+  "request_body": "{\"salesTaxPercentage\": \"string\", \"shippingAndHandlingTaxed\": false}",
+  "response_example": "null",
+  "tags": [
+    "sales_tax"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:52.705915+00:00",
+  "updated_at": "2026-03-09T11:23:52.705915+00:00"
+}

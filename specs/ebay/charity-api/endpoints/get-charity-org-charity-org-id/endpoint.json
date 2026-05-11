@@ -1,0 +1,30 @@
+{
+  "id": "3a5e431e-ef5f-49e0-8257-520a38336ca8",
+  "collection_id": "90de2455-dc2c-4649-b04d-2d513e143f77",
+  "method": "GET",
+  "path": "/charity_org/{charity_org_id}",
+  "summary": "Retrieve a charitable organization by ID",
+  "description": "This call is used to retrieve detailed information about supported charitable organizations. It allows users to retrieve the details for a specific charitable organization using its charity organization ID.",
+  "parameters": [
+    {
+      "name": "charity_org_id",
+      "type": "string",
+      "required": true,
+      "description": "The unique ID of the charitable organization."
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "A header used to specify the eBay marketplace ID. Valid Values: EBAY_GB and EBAY_US"
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"charityOrgId\": \"12345\",\n  \"name\": \"Example Charity\",\n  \"description\": \"A detailed description of the charity.\",\n  \"missionStatement\": \"Our mission is to make a difference.\",\n  \"registrationId\": \"12-3456789\",\n  \"location\": {\n    \"address\": {\n      \"city\": \"San Jose\",\n      \"stateOrProvince\": \"CA\",\n      \"postalCode\": \"95125\",\n      \"country\": \"US\"\n    },\n    \"geoCoordinates\": {\n      \"latitude\": 37.3382,\n      \"longitude\": -121.8863\n    }\n  },\n  \"website\": \"https://www.example.org\",\n  \"logoImage\": {\n    \"imageUrl\": \"https://www.example.org/logo.png\",\n    \"height\": \"200\",\n    \"width\": \"200\"\n  }\n}",
+  "tags": [
+    "charity_org"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:32:47.870981+00:00",
+  "updated_at": "2026-03-09T11:32:47.870981+00:00"
+}

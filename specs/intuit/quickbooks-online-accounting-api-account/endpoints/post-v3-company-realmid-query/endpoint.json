@@ -1,0 +1,30 @@
+{
+  "id": "325416eb-e1f9-4f7b-8c41-4a5548559553",
+  "collection_id": "261fe55d-11a3-41d8-b4fc-ebf23c45e373",
+  "method": "POST",
+  "path": "/v3/company/{realmId}/query",
+  "summary": "Query accounts using POST",
+  "description": "Execute a QuickBooks SQL-like query selecting from `Account` by sending the query statement in the request body with content type `application/text`.\n\nExample body:\n  SELECT * FROM Account STARTPOSITION 1 MAXRESULTS 5\n",
+  "parameters": [
+    {
+      "name": "realmId",
+      "type": "string",
+      "required": true,
+      "description": "QuickBooks company ID returned as `realmId` during OAuth authorisation."
+    },
+    {
+      "name": "minorversion",
+      "type": "integer",
+      "required": false,
+      "description": "Optional Intuit minor version. Intuit retires older minor versions over time, so pin only when you need specific behaviour."
+    }
+  ],
+  "request_body": "\"SELECT * FROM Account STARTPOSITION 1 MAXRESULTS 5\"",
+  "response_example": "{\n  \"QueryResponse\": {\n    \"Account\": [\n      {\n        \"Id\": \"94\",\n        \"Name\": \"AR4\",\n        \"AccountType\": \"Accounts Receivable\"\n      }\n    ],\n    \"startPosition\": 1,\n    \"maxResults\": 5\n  },\n  \"time\": \"2013-04-03T10:22:55.766Z\"\n}",
+  "tags": [
+    "Account"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:17:56.392997+00:00",
+  "updated_at": "2026-03-09T12:17:56.392997+00:00"
+}

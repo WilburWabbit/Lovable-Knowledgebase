@@ -1,0 +1,10 @@
+{
+  "id": "2535e75e-0d8a-43ad-a958-bdcaae0acc99",
+  "name": "Listing API",
+  "description": "Enables a seller adding an ad or item on a Partner's site to automatically create an eBay listing draft using the item details from the Partner's site. After the listing draft is created, the seller logs into their eBay account and uses the listing experience to finish the listing and publish the item on eBay.",
+  "base_url": "https://api.ebay.com/sell/listing/v1_beta",
+  "version": "v1_beta.3.0",
+  "created_at": "2026-03-09T11:18:00.902022+00:00",
+  "updated_at": "2026-03-09T11:36:02.280936+00:00",
+  "parent_id": "84b9a32d-ff51-4c69-b802-7fd4c36e700b"
+}

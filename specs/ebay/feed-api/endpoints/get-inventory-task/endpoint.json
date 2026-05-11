@@ -1,0 +1,54 @@
+{
+  "id": "c14d1aa6-cb2b-46a6-9448-1399886af23e",
+  "collection_id": "77b703ae-545d-4843-8dd5-37504ffaa56c",
+  "method": "GET",
+  "path": "/inventory_task",
+  "summary": "getInventoryTasks",
+  "description": "This method searches for multiple tasks of a specific feed type, and includes date filters and pagination.",
+  "parameters": [
+    {
+      "name": "feed_type",
+      "type": "string",
+      "required": false,
+      "description": "The feed type associated with the inventory task."
+    },
+    {
+      "name": "schedule_id",
+      "type": "string",
+      "required": false,
+      "description": "The ID of the schedule for which to retrieve the latest result file."
+    },
+    {
+      "name": "look_back_days",
+      "type": "string",
+      "required": false,
+      "description": "The number of previous days in which to search for tasks.Default: 7."
+    },
+    {
+      "name": "date_range",
+      "type": "string",
+      "required": false,
+      "description": "Specifies the range of task creation dates used to filter the results."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "The maximum number of tasks that can be returned on each page."
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "The number of tasks to skip in the result set."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{ \"href\": \"string\", \"limit\": 0, \"next\": \"string\", \"offset\": 0, \"prev\": \"string\", \"tasks\": [ { \"completionDate\": \"string\", \"creationDate\": \"string\", \"detailHref\": \"string\", \"feedType\": \"string\", \"filterCriteria\": { \"listingFormat\": \"string\" }, \"schemaVersion\": \"string\", \"status\": \"string\", \"taskId\": \"string\", \"uploadSummary\": { \"failureCount\": 0, \"successCount\": 0 } } ], \"total\": 0 }",
+  "tags": [
+    "inventory_task"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:22:47.239058+00:00",
+  "updated_at": "2026-03-09T11:22:47.239058+00:00"
+}

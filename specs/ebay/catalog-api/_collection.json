@@ -1,0 +1,10 @@
+{
+  "id": "f2de864c-bc2f-41f2-9689-3bff0c7ba098",
+  "name": "Catalog API",
+  "description": "The Catalog API allows users to search for and locate an eBay catalog product that is a direct match for the product that they wish to sell. Listing against an eBay catalog product helps insure that all listings (based off of that catalog product) have complete and accurate information. In addition to helping to create high-quality listings, another benefit to the seller of using catalog information to create listings is that much of the details of the listing will be prefilled, including the listing title, the listing description, the item specifics, and a stock image for the product (if available). Sellers will not have to enter item specifics themselves, and the overall listing process is a lot faster and easier.",
+  "base_url": "https://api.ebay.com/commerce/catalog/v1_beta",
+  "version": "v1_beta.5.0",
+  "created_at": "2026-03-09T11:32:56.372588+00:00",
+  "updated_at": "2026-03-09T11:36:02.280936+00:00",
+  "parent_id": "84b9a32d-ff51-4c69-b802-7fd4c36e700b"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "102d9478-4336-4090-b706-3be0c23cd6bd",
+  "collection_id": "87172e41-fa7d-41ec-9d2e-22a31a8d8a40",
+  "method": "GET",
+  "path": "/v1alpha/properties/{propertyId}/reportTasks",
+  "summary": "Lists all report tasks for a property.",
+  "description": "Lists all report tasks for a property. Original Google API path template: `/v1alpha/{parent=properties/*}/reportTasks`",
+  "parameters": [
+    {
+      "name": "propertyId",
+      "type": "string",
+      "required": true,
+      "description": "Property identifier."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.properties.reportTasks"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:31:39.492787+00:00",
+  "updated_at": "2026-03-09T13:31:39.492787+00:00"
+}

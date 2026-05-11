@@ -1,0 +1,10 @@
+{
+  "id": "3569d9d6-2069-4480-9150-2ef5edb1e450",
+  "name": "Recommendation API",
+  "description": "The Recommendation API returns information that sellers can use to optimize the configuration of their listings on eBay. Currently, the API contains a single method, findListingRecommendations. This method provides information that sellers can use to configure Promoted Listings ad campaigns to maximize the visibility of their items in the eBay marketplace.",
+  "base_url": "https://api.ebay.com/sell/recommendation/v1",
+  "version": "1.1.0",
+  "created_at": "2026-03-09T11:20:35.194548+00:00",
+  "updated_at": "2026-03-09T11:36:02.280936+00:00",
+  "parent_id": "84b9a32d-ff51-4c69-b802-7fd4c36e700b"
+}

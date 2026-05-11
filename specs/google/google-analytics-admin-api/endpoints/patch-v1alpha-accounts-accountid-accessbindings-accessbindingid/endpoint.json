@@ -1,0 +1,30 @@
+{
+  "id": "83937b06-e4f3-4c20-a309-ba2e827c1da4",
+  "collection_id": "07d89899-a7df-4236-ba31-b0547dcd8e5c",
+  "method": "PATCH",
+  "path": "/v1alpha/accounts/{accountId}/accessBindings/{accessBindingId}",
+  "summary": "Updates an access binding on an account or property.",
+  "description": "Updates an access binding on an account or property. Original Google API path template: `/v1alpha/{accessBinding.name=accounts/*/accessBindings/*}`",
+  "parameters": [
+    {
+      "name": "accountId",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    },
+    {
+      "name": "accessBindingId",
+      "type": "string",
+      "required": true,
+      "description": "Access binding identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.accounts.accessBindings"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:12:26.782957+00:00",
+  "updated_at": "2026-03-09T13:12:26.782957+00:00"
+}

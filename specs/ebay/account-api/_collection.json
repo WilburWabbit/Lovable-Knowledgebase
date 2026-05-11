@@ -1,0 +1,10 @@
+{
+  "id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "name": "Account API",
+  "description": "The Account API gives sellers the ability to configure their eBay seller accounts, including the seller's policies (eBay business policies and seller-defined custom policies), opt in and out of eBay seller programs, configure sales tax tables, and get account information.",
+  "base_url": "https://api.ebay.com/sell/account/v1",
+  "version": "v1.9.0",
+  "created_at": "2026-03-09T11:23:43.596991+00:00",
+  "updated_at": "2026-03-09T11:36:02.280936+00:00",
+  "parent_id": "84b9a32d-ff51-4c69-b802-7fd4c36e700b"
+}

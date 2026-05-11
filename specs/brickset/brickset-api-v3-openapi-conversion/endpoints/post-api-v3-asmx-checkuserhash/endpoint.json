@@ -1,0 +1,17 @@
+{
+  "id": "08218343-f8f4-4e1d-9ce3-1415d30842ac",
+  "collection_id": "7885fb8b-3863-413b-80d2-9f6e131f7098",
+  "method": "POST",
+  "path": "/api/v3.asmx/checkUserHash",
+  "summary": "Check whether a user hash is valid.",
+  "description": "Verifies a userHash previously returned by login.",
+  "parameters": [],
+  "request_body": "{\"apiKey\": \"string\", \"userHash\": \"string\"}",
+  "response_example": "{\"status\": \"success\"}",
+  "tags": [
+    "General"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:45:35.740484+00:00",
+  "updated_at": "2026-03-09T11:45:35.740484+00:00"
+}

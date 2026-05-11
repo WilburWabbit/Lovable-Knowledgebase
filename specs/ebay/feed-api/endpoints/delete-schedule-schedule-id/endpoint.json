@@ -1,0 +1,24 @@
+{
+  "id": "de15109b-78b3-42fb-b3cb-fb5ff764da6b",
+  "collection_id": "77b703ae-545d-4843-8dd5-37504ffaa56c",
+  "method": "DELETE",
+  "path": "/schedule/{schedule_id}",
+  "summary": "deleteSchedule",
+  "description": "This method deletes an existing schedule. Specify the schedule to delete using the schedule_id path parameter.",
+  "parameters": [
+    {
+      "name": "schedule_id",
+      "type": "string",
+      "required": true,
+      "description": "The schedule_id of the schedule to delete."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "null",
+  "tags": [
+    "schedule"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:22:49.405878+00:00",
+  "updated_at": "2026-03-09T11:22:49.405878+00:00"
+}

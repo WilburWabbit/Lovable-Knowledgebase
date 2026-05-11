@@ -1,0 +1,17 @@
+{
+  "id": "69bbb878-a6cc-4f7d-9ad6-302c49aa85ce",
+  "collection_id": "0c086a7a-67d7-41ea-be84-862f04021521",
+  "method": "POST",
+  "path": "/shopping_cart/update_quantity",
+  "summary": "Update item quantity in shopping cart",
+  "description": "Updates the quantity of a specific item in the eBay member's cart.",
+  "parameters": [],
+  "request_body": "{ \"cartItemId\": \"5001\", \"quantity\": 2 }",
+  "response_example": "{ \"cartItems\": [ { \"cartItemId\": \"5001\", \"quantity\": 2 } ] }",
+  "tags": [
+    "shopping_cart"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:45.745495+00:00",
+  "updated_at": "2026-03-09T11:33:45.745495+00:00"
+}

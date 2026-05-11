@@ -1,0 +1,42 @@
+{
+  "id": "85f0ea26-ffac-4272-908c-334fcb0d3a5b",
+  "collection_id": "11516d5d-0eec-4d6b-a54c-557bdbd07442",
+  "method": "GET",
+  "path": "/merchandised_product",
+  "summary": "Returns an array of products based on the category and metric specified.",
+  "description": "This method returns an array of products based on the category and metric specified. This includes details of the product, such as the eBay product ID (EPID), title, and user reviews and ratings for the product. You can use the epid returned by this method in the Browse API search method to retrieve items for this product. Restrictions: To test getMerchandisedProducts in Sandbox, you must use category ID 9355 and the response will be mock data. For a list of supported sites and other restrictions, see API Restrictions.",
+  "parameters": [
+    {
+      "name": "aspect_filter",
+      "type": "string",
+      "required": false,
+      "description": "The aspect name/value pairs used to further refine product results. For example: /buy/marketing/v1_beta/merchandised_product?category_id=31388&metric_name=BEST_SELLING&aspect_filter=Brand:Canon. You can use the Browse API search method with the fieldgroups=ASPECT_REFINEMENTS field to return the aspects of a product."
+    },
+    {
+      "name": "category_id",
+      "type": "string",
+      "required": true,
+      "description": "This query parameter limits the products returned to a specific eBay category. The list of eBay category IDs is not published and category IDs are not all the same across all the eBay maketplace. Maximum: 1. Required: 1."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "This value specifies the maximum number of products to return in a result set. Note: Maximum value means the method will return up to that many products per set, but it can be less than this value. Default: 8. Maximum: 100."
+    },
+    {
+      "name": "metric_name",
+      "type": "string",
+      "required": true,
+      "description": "This value filters the result set by the specified metric. Only products in this metric are returned. Currently, the only metric supported is BEST_SELLING. Default: BEST_SELLING. Maximum: 1. Required: 1."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"merchandisedProducts\": [\n    {\n      \"averageRating\": \"4.5\",\n      \"epid\": \"219504846\",\n      \"image\": {\n        \"imageUrl\": \"https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/V9AAAOSw9VZd3m9~/$_57.JPG?set_id=8800005007\",\n        \"height\": 1600,\n        \"width\": 1600\n      },\n      \"marketPriceDetails\": [\n        {\n          \"conditionGroup\": \"NEW\",\n          \"conditionIds\": [\"1000\"],\n          \"estimatedStartPrice\": {\n            \"currency\": \"USD\",\n            \"value\": \"450.00\"\n          }\n        }\n      ],\n      \"ratingAspects\": [\n        {\n          \"count\": 50,\n          \"description\": \"Is it a good value?\",\n          \"name\": \"Value\",\n          \"ratingAspectDistributions\": [\n            {\n              \"count\": 45,\n              \"percentage\": \"90\",\n              \"value\": \"TRUE\"\n            }\n          ]\n        }\n      ],\n      \"ratingCount\": 100,\n      \"reviewCount\": 25,\n      \"title\": \"Canon EOS Rebel T6 Digital SLR Camera\"\n    }\n  ],\n  \"warnings\": []\n}",
+  "tags": [
+    "merchandised_product"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:04.465592+00:00",
+  "updated_at": "2026-03-09T11:33:04.465592+00:00"
+}

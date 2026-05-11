@@ -1,0 +1,10 @@
+{
+  "id": "7885fb8b-3863-413b-80d2-9f6e131f7098",
+  "name": "Brickset API v3 (OpenAPI conversion)",
+  "description": "OpenAPI description of the Brickset API v3 ASMX HTTP interface. This specification models the documented HTTP GET and application/x-www-form-urlencoded POST forms exposed at /api/v3.asmx/{method}. The underlying ASMX service also publishes SOAP 1.1 and SOAP 1.2 bindings in WSDL; each operation here carries its original SOAP action in an x-soapAction vendor extension. Parameters named params or Params are JSON-encoded strings. Companion schemas under components.schemas describe the expected JSON object shapes that should be stringified and sent in those fields.",
+  "base_url": "https://brickset.com",
+  "version": "1.07",
+  "created_at": "2026-03-09T11:45:33.869494+00:00",
+  "updated_at": "2026-03-09T11:45:33.869494+00:00",
+  "parent_id": "133922ef-5c21-4264-bfe7-690574fb261a"
+}

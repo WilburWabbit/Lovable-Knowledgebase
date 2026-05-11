@@ -1,0 +1,30 @@
+{
+  "id": "a0e6109e-ada0-44f1-a7d1-39a7bc935a34",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/payments_program/{marketplace_id}/{payments_program_type}/onboarding",
+  "summary": "Get Payments Program Onboarding Status",
+  "description": "Retrieves a seller's onboarding status for a payments program.",
+  "parameters": [
+    {
+      "name": "marketplace_id",
+      "type": "string",
+      "required": true,
+      "description": "Marketplace ID."
+    },
+    {
+      "name": "payments_program_type",
+      "type": "string",
+      "required": true,
+      "description": "Program type."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"onboardingStatus\": \"COMPLETE\", \"steps\": []}",
+  "tags": [
+    "onboarding"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:48.804958+00:00",
+  "updated_at": "2026-03-09T11:23:48.804958+00:00"
+}

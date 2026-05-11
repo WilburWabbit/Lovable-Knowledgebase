@@ -1,0 +1,24 @@
+{
+  "id": "ffe48858-6677-4b90-b0bf-5b66f9569d73",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/return_policy",
+  "summary": "Get Return Policies",
+  "description": "Retrieves all return policies for a marketplace.",
+  "parameters": [
+    {
+      "name": "marketplace_id",
+      "type": "string",
+      "required": true,
+      "description": "eBay marketplace ID."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"returnPolicies\": [], \"total\": 0}",
+  "tags": [
+    "return_policy"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:50.314337+00:00",
+  "updated_at": "2026-03-09T11:23:50.314337+00:00"
+}

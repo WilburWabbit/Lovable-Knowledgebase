@@ -1,0 +1,36 @@
+{
+  "id": "c18965d4-7c6e-4c4c-bfa2-cb639bc56ef7",
+  "collection_id": "dd386235-a795-4756-90ce-49b9d7e27a96",
+  "method": "GET",
+  "path": "/event",
+  "summary": "getEvents",
+  "description": "This method returns paginated results containing all eBay events for the specified marketplace.",
+  "parameters": [
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "The maximum number of items, from the current result set, returned on a single page. Default: 20 Maximum Value: 100"
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "The number of items that will be skipped in the result set. This is used with the limit field to control the pagination of the output."
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "A header used to specify the eBay marketplace ID."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"events\": [\n    {\n      \"eventId\": \"123\",\n      \"title\": \"Summer Sale\",\n      \"startDate\": \"2023-06-01T00:00:00Z\"\n    }\n  ],\n  \"total\": 1,\n  \"limit\": 20,\n  \"offset\": 0\n}",
+  "tags": [
+    "event"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:24.961572+00:00",
+  "updated_at": "2026-03-09T11:33:24.961572+00:00"
+}

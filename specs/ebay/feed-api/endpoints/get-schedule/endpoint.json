@@ -1,0 +1,36 @@
+{
+  "id": "3967c885-4bbb-451e-947d-e70da94dd562",
+  "collection_id": "77b703ae-545d-4843-8dd5-37504ffaa56c",
+  "method": "GET",
+  "path": "/schedule",
+  "summary": "getSchedules",
+  "description": "This method retrieves an array containing the details and status of all schedules based on the specified feed_type.",
+  "parameters": [
+    {
+      "name": "feed_type",
+      "type": "string",
+      "required": true,
+      "description": "The feedType associated with the schedule."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "The maximum number of schedules per page."
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "The number of schedules to skip."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{ \"href\": \"string\", \"limit\": 0, \"next\": \"string\", \"offset\": 0, \"prev\": \"string\", \"schedules\": [ { \"creationDate\": \"string\", \"feedType\": \"string\", \"lastModifiedDate\": \"string\", \"preferredTriggerDayOfMonth\": 0, \"preferredTriggerDayOfWeek\": \"string\", \"preferredTriggerHour\": \"string\", \"scheduleEndDate\": \"string\", \"scheduleId\": \"string\", \"scheduleName\": \"string\", \"scheduleStartDate\": \"string\", \"scheduleTemplateId\": \"string\", \"schemaVersion\": \"string\", \"status\": \"string\", \"statusReason\": \"string\" } ], \"total\": 0 }",
+  "tags": [
+    "schedule"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:22:48.859033+00:00",
+  "updated_at": "2026-03-09T11:22:48.859033+00:00"
+}

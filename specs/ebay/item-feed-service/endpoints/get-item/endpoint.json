@@ -1,0 +1,54 @@
+{
+  "id": "290d8e74-a607-43a9-9b5f-8cc557ff86ee",
+  "collection_id": "ddef7d8d-4a19-4069-a415-7eb50c7c903c",
+  "method": "GET",
+  "path": "/item",
+  "summary": "getItemFeed",
+  "description": "This method lets you download a TSV_GZIP (tab separated value gzip) Item feed file. The feed file contains all the items from all the child categories of the specified category. There are two types of item feed files generated: Daily Item feed (NEWLY_LISTED) and Weekly Item Bootstrap feed (ALL_ACTIVE).",
+  "parameters": [
+    {
+      "name": "Accept",
+      "type": "string",
+      "required": true,
+      "description": "The formats that the client accepts for the response. Default: application/json,text/tab-separated-values"
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "The ID of the eBay marketplace where the item is hosted (e.g., EBAY_US)."
+    },
+    {
+      "name": "Range",
+      "type": "string",
+      "required": true,
+      "description": "This header specifies the range in bytes of the chunks of the gzip file being returned. Format: bytes=startpos-endpos. Maximum: 100 MB."
+    },
+    {
+      "name": "feed_scope",
+      "type": "string",
+      "required": true,
+      "description": "Specifies the type of feed file to return (NEWLY_LISTED or ALL_ACTIVE)."
+    },
+    {
+      "name": "category_id",
+      "type": "string",
+      "required": true,
+      "description": "An eBay top-level category ID of the items to be returned in the feed file."
+    },
+    {
+      "name": "date",
+      "type": "string",
+      "required": false,
+      "description": "The date of the daily Item feed file (yyyyMMdd). Required only when feed_scope=NEWLY_LISTED."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"items\": [{\"itemId\": \"v1|1**********2|4**********2\", \"title\": \"Example Item Title\", \"priceValue\": \"10.00\", \"priceCurrency\": \"USD\", \"availability\": \"AVAILABLE\"}]}",
+  "tags": [
+    "item"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:14.6576+00:00",
+  "updated_at": "2026-03-09T11:33:14.6576+00:00"
+}

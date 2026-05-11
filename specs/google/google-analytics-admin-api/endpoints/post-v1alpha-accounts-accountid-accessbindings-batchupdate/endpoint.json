@@ -1,0 +1,24 @@
+{
+  "id": "5d1e58a2-5ed0-4c86-8db2-bfb5e2806251",
+  "collection_id": "07d89899-a7df-4236-ba31-b0547dcd8e5c",
+  "method": "POST",
+  "path": "/v1alpha/accounts/{accountId}/accessBindings:batchUpdate",
+  "summary": "Updates information about multiple access bindings to an account or property.",
+  "description": "Updates information about multiple access bindings to an account or property. Original Google API path template: `/v1alpha/{parent=accounts/*}/accessBindings:batchUpdate`",
+  "parameters": [
+    {
+      "name": "accountId",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.accounts.accessBindings"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:12:27.873535+00:00",
+  "updated_at": "2026-03-09T13:12:27.873535+00:00"
+}

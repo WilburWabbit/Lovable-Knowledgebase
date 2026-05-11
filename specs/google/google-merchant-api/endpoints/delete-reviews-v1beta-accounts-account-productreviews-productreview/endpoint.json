@@ -1,0 +1,30 @@
+{
+  "id": "ac2f0f63-97b3-4f3e-9bea-01f028c4fda4",
+  "collection_id": "39229b63-49cb-4a0a-87e4-ddea499f52de",
+  "method": "DELETE",
+  "path": "/reviews/v1beta/accounts/{account}/productReviews/{productReview}",
+  "summary": "Deletes a product review",
+  "description": "Deletes a product review. Derived from reviews_v1beta.accounts.productReviews. Original Google URI template: /reviews/v1beta/{name=accounts/*/productReviews/*}. Source summary: Deletes a product review.",
+  "parameters": [
+    {
+      "name": "account",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    },
+    {
+      "name": "productReview",
+      "type": "string",
+      "required": true,
+      "description": "Product review identifier."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "reviews_v1beta"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:28:25.387741+00:00",
+  "updated_at": "2026-03-09T12:28:25.387741+00:00"
+}

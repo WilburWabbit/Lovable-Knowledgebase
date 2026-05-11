@@ -1,0 +1,36 @@
+{
+  "id": "fb312825-c6d1-47dd-b70d-be67ae734a41",
+  "collection_id": "261fe55d-11a3-41d8-b4fc-ebf23c45e373",
+  "method": "GET",
+  "path": "/v3/company/{realmId}/account/{accountId}",
+  "summary": "Read an account by ID",
+  "description": "Read an account by ID",
+  "parameters": [
+    {
+      "name": "realmId",
+      "type": "string",
+      "required": true,
+      "description": "QuickBooks company ID returned as `realmId` during OAuth authorisation."
+    },
+    {
+      "name": "accountId",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    },
+    {
+      "name": "minorversion",
+      "type": "integer",
+      "required": false,
+      "description": "Optional Intuit minor version. Intuit retires older minor versions over time, so pin only when you need specific behaviour."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"Account\": {\n    \"Id\": \"1\",\n    \"SyncToken\": \"0\",\n    \"Name\": \"Services\",\n    \"AccountType\": \"Revenue\",\n    \"Active\": true,\n    \"MetaData\": {\n      \"CreateTime\": \"2016-08-18T00:18:04-07:00\",\n      \"LastUpdatedTime\": \"2016-08-18T00:18:04-07:00\"\n    }\n  },\n  \"time\": \"2015-07-08T09:21:46.310-07:00\"\n}",
+  "tags": [
+    "Account"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:17:55.638744+00:00",
+  "updated_at": "2026-03-09T12:17:55.638744+00:00"
+}

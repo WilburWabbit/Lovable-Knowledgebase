@@ -1,0 +1,24 @@
+{
+  "id": "c22fa830-ba25-4d26-a4cc-d7ff6cacf396",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "POST",
+  "path": "/custom_policy/",
+  "summary": "Create Custom Policy",
+  "description": "This method creates a new custom policy in which a seller specifies their terms for complying with local governmental regulations.",
+  "parameters": [
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "This header parameter specifies the eBay marketplace for the custom policy."
+    }
+  ],
+  "request_body": "{\"description\": \"string\", \"label\": \"string\", \"name\": \"string\", \"policyType\": \"string\"}",
+  "response_example": "{}",
+  "tags": [
+    "custom_policy"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:44.437901+00:00",
+  "updated_at": "2026-03-09T11:23:44.437901+00:00"
+}

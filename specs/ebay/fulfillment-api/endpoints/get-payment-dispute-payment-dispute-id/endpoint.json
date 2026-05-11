@@ -1,0 +1,24 @@
+{
+  "id": "5c45b583-34de-41dd-a8e1-f653de2d0f90",
+  "collection_id": "ec1c4f8e-3458-4b5e-9bb3-21cacfb3c086",
+  "method": "GET",
+  "path": "/payment_dispute/{payment_dispute_id}",
+  "summary": "Get Payment Dispute Details",
+  "description": "This method retrieves detailed information on a specific payment dispute.",
+  "parameters": [
+    {
+      "name": "payment_dispute_id",
+      "type": "string",
+      "required": true,
+      "description": "This is the unique identifier of the payment dispute."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"paymentDisputeId\": \"string\", \"amount\": {\"value\": \"10.00\", \"currency\": \"USD\"}}",
+  "tags": [
+    "payment_dispute"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:30:35.797891+00:00",
+  "updated_at": "2026-03-09T11:30:35.797891+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "809a8938-f07f-493f-9a87-86cf2723d6c1",
+  "collection_id": "07d89899-a7df-4236-ba31-b0547dcd8e5c",
+  "method": "POST",
+  "path": "/v1alpha/accounts/{accountId}:runAccessReport",
+  "summary": "Returns a customized report of data access records.",
+  "description": "Returns a customized report of data access records. Original Google API path template: `/v1alpha/{entity=accounts/*}:runAccessReport`",
+  "parameters": [
+    {
+      "name": "accountId",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.accounts"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:12:28.396247+00:00",
+  "updated_at": "2026-03-09T13:12:28.396247+00:00"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "70e55846-065f-41fc-82bf-92926cade3f9",
+  "collection_id": "ddef7d8d-4a19-4069-a415-7eb50c7c903c",
+  "method": "GET",
+  "path": "/item_group",
+  "summary": "getItemGroupFeed",
+  "description": "This method lets you download a TSV_GZIP (tab separated value gzip) Item Group feed file. An item group is an item that has various aspect differences, such as color, size, storage capacity, etc. It contains variation information for items returned in the Item feed file.",
+  "parameters": [
+    {
+      "name": "Accept",
+      "type": "string",
+      "required": true,
+      "description": "The formats that the client accepts for the response."
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "The ID of the eBay marketplace where the item is hosted."
+    },
+    {
+      "name": "Range",
+      "type": "string",
+      "required": false,
+      "description": "Range in bytes for partial download."
+    },
+    {
+      "name": "feed_scope",
+      "type": "string",
+      "required": true,
+      "description": "Specifies the type of file to return (NEWLY_LISTED or ALL_ACTIVE)."
+    },
+    {
+      "name": "category_id",
+      "type": "string",
+      "required": true,
+      "description": "An eBay top-level category ID."
+    },
+    {
+      "name": "date",
+      "type": "string",
+      "required": false,
+      "description": "Date of the feed file (yyyyMMdd)."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"itemGroups\": [{\"itemGroupId\": \"v1|1**********2|0\", \"title\": \"Example Group Title\", \"variesByLocalizedAspects\": \"Q29sb3I=|U2l6ZQ==\"}]}",
+  "tags": [
+    "item_group"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:14.933213+00:00",
+  "updated_at": "2026-03-09T11:33:14.933213+00:00"
+}

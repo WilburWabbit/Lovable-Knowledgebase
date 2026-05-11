@@ -1,0 +1,10 @@
+{
+  "id": "307b4f8b-3d3c-4acb-837d-59c645bc37b6",
+  "name": "Brickeconomy",
+  "description": "Brickeconomy APIs",
+  "base_url": "https://brickeconomy.com",
+  "version": "1.0.0",
+  "created_at": "2026-03-09T11:44:46.390776+00:00",
+  "updated_at": "2026-03-09T11:44:46.390776+00:00",
+  "parent_id": null
+}

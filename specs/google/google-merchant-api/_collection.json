@@ -1,0 +1,10 @@
+{
+  "id": "39229b63-49cb-4a0a-87e4-ddea499f52de",
+  "name": "Google Merchant API",
+  "description": "Generated from the Google Merchant API REST resource index. This specification captures the published REST paths, HTTP methods, tags, and summaries across the Merchant API sub-APIs listed in the index. Because the source markdown/index does not include full request and response schemas for every method, request bodies and success responses use a generic RawJson schema.",
+  "base_url": "https://merchantapi.googleapis.com",
+  "version": "2026-03-09",
+  "created_at": "2026-03-09T12:28:23.473974+00:00",
+  "updated_at": "2026-03-09T13:02:32.562826+00:00",
+  "parent_id": "d558e7be-c738-4e53-9bd0-8e145e6bda35"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "133922ef-5c21-4264-bfe7-690574fb261a",
+  "name": "Brickset",
+  "description": "Brickset APIs",
+  "base_url": "https://brickset.com",
+  "version": "1.0.0",
+  "created_at": "2026-03-09T11:45:33.567466+00:00",
+  "updated_at": "2026-03-09T11:45:33.567466+00:00",
+  "parent_id": null
+}

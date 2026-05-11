@@ -1,0 +1,30 @@
+{
+  "id": "725887d4-95c0-45b3-b22d-35c75bd58feb",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/custom_policy/{custom_policy_id}",
+  "summary": "Get Custom Policy",
+  "description": "This method retrieves the custom policy specified by the custom_policy_id path parameter.",
+  "parameters": [
+    {
+      "name": "custom_policy_id",
+      "type": "string",
+      "required": true,
+      "description": "Unique custom policy identifier."
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "eBay marketplace header."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"customPolicyId\": \"string\", \"description\": \"string\", \"label\": \"string\", \"name\": \"string\", \"policyType\": \"string\"}",
+  "tags": [
+    "custom_policy"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:44.695726+00:00",
+  "updated_at": "2026-03-09T11:23:44.695726+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "87653f34-7b42-4962-8225-45e4cfba397e",
+  "collection_id": "39229b63-49cb-4a0a-87e4-ddea499f52de",
+  "method": "GET",
+  "path": "/accounts/v1/accounts/{account}",
+  "summary": "Retrieves an account from your Merchant Center account",
+  "description": "Retrieves an account from your Merchant Center account. Derived from accounts_v1.accounts. Original Google URI template: /accounts/v1/{name=accounts/*}. Source summary: Retrieves an account from your Merchant Center account.",
+  "parameters": [
+    {
+      "name": "account",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "accounts_v1"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:28:29.252345+00:00",
+  "updated_at": "2026-03-09T12:28:29.252345+00:00"
+}

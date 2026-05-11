@@ -1,0 +1,24 @@
+{
+  "id": "c75e9961-e08b-4c06-bb29-b95c102f8fa2",
+  "collection_id": "07d89899-a7df-4236-ba31-b0547dcd8e5c",
+  "method": "GET",
+  "path": "/v1alpha/accounts/{accountId}",
+  "summary": "Lookup for a single Account.",
+  "description": "Lookup for a single Account. Original Google API path template: `/v1alpha/{name=accounts/*}`",
+  "parameters": [
+    {
+      "name": "accountId",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.accounts"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:12:25.137959+00:00",
+  "updated_at": "2026-03-09T13:12:25.137959+00:00"
+}

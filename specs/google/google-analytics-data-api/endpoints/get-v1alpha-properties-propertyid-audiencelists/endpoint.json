@@ -1,0 +1,24 @@
+{
+  "id": "608e5e55-cb78-4c05-a49f-9463c924167f",
+  "collection_id": "87172e41-fa7d-41ec-9d2e-22a31a8d8a40",
+  "method": "GET",
+  "path": "/v1alpha/properties/{propertyId}/audienceLists",
+  "summary": "Lists all audience lists for a property.",
+  "description": "Lists all audience lists for a property. Original Google API path template: `/v1alpha/{parent=properties/*}/audienceLists`",
+  "parameters": [
+    {
+      "name": "propertyId",
+      "type": "string",
+      "required": true,
+      "description": "Property identifier."
+    }
+  ],
+  "request_body": "null,response_example:",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.properties.audienceLists"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:31:37.659081+00:00",
+  "updated_at": "2026-03-09T13:31:37.659081+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "5ba9e316-a8d2-432f-a29b-0259a704a958",
+  "collection_id": "07d89899-a7df-4236-ba31-b0547dcd8e5c",
+  "method": "GET",
+  "path": "/v1alpha/accounts",
+  "summary": "Returns all accounts accessible by the caller.",
+  "description": "Returns all accounts accessible by the caller. Original Google API path template: `/v1alpha/accounts`",
+  "parameters": [],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.accounts"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:12:24.599451+00:00",
+  "updated_at": "2026-03-09T13:12:24.599451+00:00"
+}

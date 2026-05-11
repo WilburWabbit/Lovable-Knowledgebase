@@ -1,0 +1,17 @@
+{
+  "id": "52e51a97-c8cb-455d-923f-fe01a0a1f81a",
+  "collection_id": "77b703ae-545d-4843-8dd5-37504ffaa56c",
+  "method": "POST",
+  "path": "/order_task",
+  "summary": "createOrderTask",
+  "description": "This method creates an order download task with filter criteria for the order report.",
+  "parameters": [],
+  "request_body": "{ \"feedType\": \"LMS_ORDER_REPORT\", \"filterCriteria\": { \"creationDateRange\": { \"from\": \"2023-01-01T00:00:00Z\", \"to\": \"2023-01-10T00:00:00Z\" }, \"orderStatus\": \"COMPLETED\" }, \"schemaVersion\": \"1113\" }",
+  "response_example": "{}",
+  "tags": [
+    "order_task"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:22:48.28513+00:00",
+  "updated_at": "2026-03-09T11:22:48.28513+00:00"
+}

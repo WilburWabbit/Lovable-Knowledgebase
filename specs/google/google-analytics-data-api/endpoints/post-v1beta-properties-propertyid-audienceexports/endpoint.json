@@ -1,0 +1,24 @@
+{
+  "id": "34bf70f1-d69d-43c0-b1ee-6ff56e83802a",
+  "collection_id": "87172e41-fa7d-41ec-9d2e-22a31a8d8a40",
+  "method": "POST",
+  "path": "/v1beta/properties/{propertyId}/audienceExports",
+  "summary": "Creates an audience export for later retrieval.",
+  "description": "Creates an audience export for later retrieval. Original Google API path template: `/v1beta/{parent=properties/*}/audienceExports`",
+  "parameters": [
+    {
+      "name": "propertyId",
+      "type": "string",
+      "required": true,
+      "description": "Property identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "v1beta.properties.audienceExports"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:31:35.808067+00:00",
+  "updated_at": "2026-03-09T13:31:35.808067+00:00"
+}
