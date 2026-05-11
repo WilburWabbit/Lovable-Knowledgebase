@@ -1,0 +1,17 @@
+{
+  "id": "73d372c7-9cab-434b-b4c8-d0497ea85c5a",
+  "collection_id": "0c086a7a-67d7-41ea-be84-862f04021521",
+  "method": "POST",
+  "path": "/shopping_cart/remove_item",
+  "summary": "Remove item from shopping cart",
+  "description": "Removes a specific item from the eBay member's cart using cartItemId.",
+  "parameters": [],
+  "request_body": "{ \"cartItemId\": \"5001\" }",
+  "response_example": "{ \"cartItems\": [] }",
+  "tags": [
+    "shopping_cart"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:45.424876+00:00",
+  "updated_at": "2026-03-09T11:33:45.424876+00:00"
+}

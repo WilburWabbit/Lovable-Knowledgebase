@@ -1,0 +1,30 @@
+{
+  "id": "97fdd219-803c-47f5-b748-669cd0f6fdf1",
+  "collection_id": "7885fb8b-3863-413b-80d2-9f6e131f7098",
+  "method": "GET",
+  "path": "/api/v3.asmx/getCollection",
+  "summary": "Get a user's collection.",
+  "description": "Returns a user's entire collection as quickly and efficiently as possible.",
+  "parameters": [
+    {
+      "name": "apiKey",
+      "type": "string",
+      "required": true,
+      "description": "Brickset API key."
+    },
+    {
+      "name": "userHash",
+      "type": "string",
+      "required": true,
+      "description": "User hash returned by login."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"status\": \"success\", \"matches\": 1, \"sets\": [{\"setID\": 1, \"owned\": true}]}",
+  "tags": [
+    "Collection"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:45:38.003017+00:00",
+  "updated_at": "2026-03-09T11:45:38.003017+00:00"
+}

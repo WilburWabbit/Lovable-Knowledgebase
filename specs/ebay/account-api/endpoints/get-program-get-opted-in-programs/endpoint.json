@@ -1,0 +1,17 @@
+{
+  "id": "8f5a00e4-5d82-42c6-a5c8-36aa6410febd",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/program/get_opted_in_programs",
+  "summary": "Get Opted-In Programs",
+  "description": "Gets a list of the seller programs that the seller has opted-in to.",
+  "parameters": [],
+  "request_body": "null",
+  "response_example": "{\"programs\": []}",
+  "tags": [
+    "program"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:49.337669+00:00",
+  "updated_at": "2026-03-09T11:23:49.337669+00:00"
+}

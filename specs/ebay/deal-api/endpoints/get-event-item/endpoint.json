@@ -1,0 +1,54 @@
+{
+  "id": "034bcc35-8b8d-41c1-98de-e68fb14d005f",
+  "collection_id": "dd386235-a795-4756-90ce-49b9d7e27a96",
+  "method": "GET",
+  "path": "/event_item",
+  "summary": "getEventItems",
+  "description": "This method returns a paginated set of event items. The result set contains all event items associated with the specified search criteria and marketplace ID.",
+  "parameters": [
+    {
+      "name": "category_ids",
+      "type": "string",
+      "required": false,
+      "description": "The unique identifier of the eBay category for the search. Maximum Value: 1"
+    },
+    {
+      "name": "delivery_country",
+      "type": "string",
+      "required": false,
+      "description": "A filter for items that can be shipped to the specified country."
+    },
+    {
+      "name": "event_ids",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifiers for the eBay events. Maximum Value: 1"
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "The maximum number of items, from the current result set, returned on a single page. Default: 20"
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "The number of items that will be skipped in the result set. This is used with the limit field to control the pagination of the output."
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "A header used to specify the eBay marketplace ID."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"eventItems\": [\n    {\n      \"title\": \"Example Event Item\",\n      \"itemId\": \"987654321\",\n      \"price\": {\n        \"value\": \"15.00\",\n        \"currency\": \"USD\"\n      }\n    }\n  ],\n  \"total\": 1,\n  \"limit\": 20,\n  \"offset\": 0\n}",
+  "tags": [
+    "event_item"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:25.612683+00:00",
+  "updated_at": "2026-03-09T11:33:25.612683+00:00"
+}

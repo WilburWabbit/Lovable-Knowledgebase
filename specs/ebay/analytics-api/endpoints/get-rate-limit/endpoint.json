@@ -1,0 +1,30 @@
+{
+  "id": "4be4c92d-98ab-4ba5-9368-6c4ed810d5c5",
+  "collection_id": "8d1903fe-edf4-45ab-8427-3e44aa8ce62a",
+  "method": "GET",
+  "path": "/rate_limit/",
+  "summary": "getRateLimits",
+  "description": "This method retrieves the call limit and utilization data for an application. The data is retrieved for all RESTful APIs and the legacy Trading API. By default, this method returns utilization data for all RESTful API and the legacy Trading API resources. Use the api_name and api_context query parameters to filter the response to only the desired APIs.",
+  "parameters": [
+    {
+      "name": "api_context",
+      "type": "string",
+      "required": false,
+      "description": "This optional query parameter filters the result to include only the specified API context. Valid values: buy, sell, commerce, developer, tradingapi"
+    },
+    {
+      "name": "api_name",
+      "type": "string",
+      "required": false,
+      "description": "This optional query parameter filters the result to include only the APIs specified. Example values: browse, inventory, taxonomy, tradingapi"
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"rateLimits\":[{\"apiContext\":\"buy\",\"apiName\":\"browse\",\"apiVersion\":\"v1\",\"resources\":[{\"name\":\"item\",\"rates\":[{\"limit\":5000,\"remaining\":4999,\"reset\":\"2018-08-04T07:09:00.000Z\",\"timeWindow\":86400}]}]}]}",
+  "tags": [
+    "rate_limit"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:59.764765+00:00",
+  "updated_at": "2026-03-09T11:23:59.764765+00:00"
+}

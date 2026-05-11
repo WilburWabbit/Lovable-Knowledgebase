@@ -1,0 +1,30 @@
+{
+  "id": "9fa66a28-792d-43a0-a6f7-f3210fb313e7",
+  "collection_id": "ec1c4f8e-3458-4b5e-9bb3-21cacfb3c086",
+  "method": "GET",
+  "path": "/order/{orderId}/shipping_fulfillment/{fulfillmentId}",
+  "summary": "getShippingFulfillment",
+  "description": "Use this call to retrieve the contents of a fulfillment based on its unique identifier, fulfillmentId (combined with the associated order's orderId).",
+  "parameters": [
+    {
+      "name": "fulfillmentId",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier of the fulfillment."
+    },
+    {
+      "name": "orderId",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier of the order."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"fulfillmentId\": \"string\", \"shipmentTrackingNumber\": \"string\"}",
+  "tags": [
+    "shipping_fulfillment"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:30:35.174867+00:00",
+  "updated_at": "2026-03-09T11:30:35.174867+00:00"
+}

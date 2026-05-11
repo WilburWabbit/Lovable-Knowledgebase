@@ -1,0 +1,24 @@
+{
+  "id": "0a1d80c5-ad01-40ba-8462-11185f9803d6",
+  "collection_id": "77b703ae-545d-4843-8dd5-37504ffaa56c",
+  "method": "POST",
+  "path": "/customer_service_metric_task",
+  "summary": "createCustomerServiceMetricTask",
+  "description": "Use this method to create a customer service metrics download task with filter criteria for the customer service metrics report.",
+  "parameters": [
+    {
+      "name": "accept-language",
+      "type": "string",
+      "required": true,
+      "description": "Use this header to specify the natural language in which the authenticated user desires the response."
+    }
+  ],
+  "request_body": "{ \"feedType\": \"CUSTOMER_SERVICE_METRICS_REPORT\", \"filterCriteria\": { \"customerServiceMetricType\": \"ITEM_NOT_RECEIVED\", \"evaluationMarketplaceId\": \"EBAY_US\", \"listingCategories\": [\"1234\"], \"shippingRegions\": [\"DOMESTIC\"] }, \"schemaVersion\": \"1.0\" }",
+  "response_example": "{}",
+  "tags": [
+    "customer_service_metric_task"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:22:46.560488+00:00",
+  "updated_at": "2026-03-09T11:22:46.560488+00:00"
+}

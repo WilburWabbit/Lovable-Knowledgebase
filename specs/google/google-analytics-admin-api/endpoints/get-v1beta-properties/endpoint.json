@@ -1,0 +1,17 @@
+{
+  "id": "efe2b95c-1a15-4b7d-af93-4925767a5d94",
+  "collection_id": "07d89899-a7df-4236-ba31-b0547dcd8e5c",
+  "method": "GET",
+  "path": "/v1beta/properties",
+  "summary": "Returns child Properties under the specified parent Account.",
+  "description": "Returns child Properties under the specified parent Account. Original Google API path template: `/v1beta/properties`",
+  "parameters": [],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "v1beta.properties"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:12:32.309968+00:00",
+  "updated_at": "2026-03-09T13:12:32.309968+00:00"
+}

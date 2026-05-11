@@ -1,0 +1,42 @@
+{
+  "id": "a81ff4d3-fb60-4d70-a7a2-91e13491bbcd",
+  "collection_id": "2cce52ab-35f6-41c1-b393-4ed72771c5c2",
+  "method": "GET",
+  "path": "/ad_campaign/{campaign_id}/suggest_items",
+  "summary": "Suggest Items",
+  "description": "Retrieves suggested items for targeted ads in a campaign.",
+  "parameters": [
+    {
+      "name": "campaign_id",
+      "type": "string",
+      "required": true,
+      "description": "Unique campaign ID."
+    },
+    {
+      "name": "category_ids",
+      "type": "string",
+      "required": false,
+      "description": "Filter by category IDs."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "Max items to return."
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "Items to skip."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"suggestedItems\": [{\"listingId\": \"12345\"}]}",
+  "tags": [
+    "campaign"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:48.941166+00:00",
+  "updated_at": "2026-03-09T11:21:48.941166+00:00"
+}

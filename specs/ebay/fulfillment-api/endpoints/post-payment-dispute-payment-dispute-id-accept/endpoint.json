@@ -1,0 +1,24 @@
+{
+  "id": "b19375a5-51a5-4f81-adb1-9b6bbcbe64ed",
+  "collection_id": "ec1c4f8e-3458-4b5e-9bb3-21cacfb3c086",
+  "method": "POST",
+  "path": "/payment_dispute/{payment_dispute_id}/accept",
+  "summary": "Accept Payment Dispute",
+  "description": "This method is used if the seller wishes to accept a payment dispute.",
+  "parameters": [
+    {
+      "name": "payment_dispute_id",
+      "type": "string",
+      "required": true,
+      "description": "This is the unique identifier of the payment dispute."
+    }
+  ],
+  "request_body": "{\"revision\": 1, \"returnAddress\": {}}",
+  "response_example": "null",
+  "tags": [
+    "payment_dispute"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:30:36.196204+00:00",
+  "updated_at": "2026-03-09T11:30:36.196204+00:00"
+}

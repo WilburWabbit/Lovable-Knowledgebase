@@ -1,0 +1,24 @@
+{
+  "id": "87303952-10f9-474d-8bc6-73eb9b7d0c5a",
+  "collection_id": "7885fb8b-3863-413b-80d2-9f6e131f7098",
+  "method": "GET",
+  "path": "/api/v3.asmx/getThemes",
+  "summary": "Get theme summaries.",
+  "description": "Returns themes with their total number of sets and active years.",
+  "parameters": [
+    {
+      "name": "apiKey",
+      "type": "string",
+      "required": true,
+      "description": "Brickset API key."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"status\": \"success\", \"matches\": 1, \"themes\": [{\"theme\": \"Space\", \"setCount\": 100}]}",
+  "tags": [
+    "Sets"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:45:37.717548+00:00",
+  "updated_at": "2026-03-09T11:45:37.717548+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "14993fb7-3ea2-4293-86a0-4878d0484a94",
+  "collection_id": "e0c7a45f-c6b6-4e09-902c-848e3aac5a3e",
+  "method": "GET",
+  "path": "/catalog/list",
+  "summary": "List catalog items",
+  "description": "Get a list of all items in the Brick Owl catalog.",
+  "parameters": [
+    {
+      "name": "key",
+      "type": "string",
+      "required": true,
+      "description": "Brick Owl API key."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Optional item type filter."
+    },
+    {
+      "name": "brand",
+      "type": "string",
+      "required": false,
+      "description": "Optional brand filter."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "Catalog"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:46:18.489083+00:00",
+  "updated_at": "2026-03-09T11:46:18.489083+00:00"
+}

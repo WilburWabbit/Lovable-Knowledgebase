@@ -1,0 +1,36 @@
+{
+  "id": "4f33a37e-c86f-4005-85ec-5f307f2d43dd",
+  "collection_id": "77b703ae-545d-4843-8dd5-37504ffaa56c",
+  "method": "GET",
+  "path": "/schedule_template",
+  "summary": "getScheduleTemplates",
+  "description": "This method retrieves an array containing the details and status of all schedule templates based on the specified feed_type.",
+  "parameters": [
+    {
+      "name": "feed_type",
+      "type": "string",
+      "required": true,
+      "description": "The feed type of the schedule templates to retrieve."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "The maximum number of schedule templates per page."
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "The number of schedule templates to skip."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{ \"href\": \"string\", \"limit\": 0, \"next\": \"string\", \"offset\": 0, \"prev\": \"string\", \"scheduleTemplates\": [ { \"feedType\": \"string\", \"frequency\": \"string\", \"name\": \"string\", \"scheduleTemplateId\": \"string\", \"status\": \"string\", \"supportedConfigurations\": [ { \"defaultValue\": \"string\", \"property\": \"string\", \"usage\": \"string\" } ] } ], \"total\": 0 }",
+  "tags": [
+    "schedule"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:22:50.524719+00:00",
+  "updated_at": "2026-03-09T11:22:50.524719+00:00"
+}

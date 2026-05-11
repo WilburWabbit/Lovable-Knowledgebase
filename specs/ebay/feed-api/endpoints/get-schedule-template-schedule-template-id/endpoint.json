@@ -1,0 +1,24 @@
+{
+  "id": "723fd463-cc89-49d7-ab39-93da9f541332",
+  "collection_id": "77b703ae-545d-4843-8dd5-37504ffaa56c",
+  "method": "GET",
+  "path": "/schedule_template/{schedule_template_id}",
+  "summary": "getScheduleTemplate",
+  "description": "This method retrieves the details of the specified template. Specify the template using the schedule_template_id.",
+  "parameters": [
+    {
+      "name": "schedule_template_id",
+      "type": "string",
+      "required": true,
+      "description": "The ID of the template to retrieve."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{ \"feedType\": \"string\", \"frequency\": \"string\", \"name\": \"string\", \"scheduleTemplateId\": \"string\", \"status\": \"string\", \"supportedConfigurations\": [ { \"defaultValue\": \"string\", \"property\": \"string\", \"usage\": \"string\" } ] }",
+  "tags": [
+    "schedule"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:22:50.821423+00:00",
+  "updated_at": "2026-03-09T11:22:50.821423+00:00"
+}

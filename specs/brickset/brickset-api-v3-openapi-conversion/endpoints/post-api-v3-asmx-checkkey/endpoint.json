@@ -1,0 +1,17 @@
+{
+  "id": "61315203-2aff-4ce8-8fe8-72a06a308e90",
+  "collection_id": "7885fb8b-3863-413b-80d2-9f6e131f7098",
+  "method": "POST",
+  "path": "/api/v3.asmx/checkKey",
+  "summary": "Check whether an API key is valid.",
+  "description": "Returns success when the supplied apiKey is valid.",
+  "parameters": [],
+  "request_body": "{\"apiKey\": \"string\"}",
+  "response_example": "{\"status\": \"success\"}",
+  "tags": [
+    "General"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:45:34.581946+00:00",
+  "updated_at": "2026-03-09T11:45:34.581946+00:00"
+}

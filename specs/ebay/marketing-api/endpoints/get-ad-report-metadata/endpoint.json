@@ -1,0 +1,17 @@
+{
+  "id": "fd9cfde6-0e5a-47a7-8856-7af86aa61a4d",
+  "collection_id": "2cce52ab-35f6-41c1-b393-4ed72771c5c2",
+  "method": "GET",
+  "path": "/ad_report_metadata",
+  "summary": "Get Report Metadata",
+  "description": "Retrieves metadata for all Promoted Listings report types.",
+  "parameters": [],
+  "request_body": "null",
+  "response_example": "{\"reportMetadata\": [{\"reportType\": \"CAMPAIGN_PERFORMANCE_REPORT\"}]}",
+  "tags": [
+    "ad_report_metadata"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:50.311623+00:00",
+  "updated_at": "2026-03-09T11:21:50.311623+00:00"
+}

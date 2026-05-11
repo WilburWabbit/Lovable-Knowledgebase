@@ -1,0 +1,42 @@
+{
+  "id": "d8806c37-4b01-4beb-91ad-865b9bf1ff90",
+  "collection_id": "0c086a7a-67d7-41ea-be84-862f04021521",
+  "method": "GET",
+  "path": "/item/get_item_by_legacy_id",
+  "summary": "Retrieve item details using a legacy ID",
+  "description": "This method is a bridge between the eBay legacy APIs and the eBay Buy APIs. It lets you use legacy item ids to retrieve the details of a specific item and its RESTful item ID.",
+  "parameters": [
+    {
+      "name": "fieldgroups",
+      "type": "string",
+      "required": false,
+      "description": "Control what is returned. Only value supported is PRODUCT."
+    },
+    {
+      "name": "legacy_item_id",
+      "type": "string",
+      "required": true,
+      "description": "The legacy item ID of an item or a group parent."
+    },
+    {
+      "name": "legacy_variation_id",
+      "type": "string",
+      "required": false,
+      "description": "Legacy ID of a specific item variation."
+    },
+    {
+      "name": "legacy_variation_sku",
+      "type": "string",
+      "required": false,
+      "description": "Legacy SKU created by the seller."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{ \"itemId\": \"v1|110039490209|0\", \"title\": \"Example Item\", \"price\": { \"value\": \"15.00\", \"currency\": \"USD\" } }",
+  "tags": [
+    "item"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:42.807029+00:00",
+  "updated_at": "2026-03-09T11:33:42.807029+00:00"
+}

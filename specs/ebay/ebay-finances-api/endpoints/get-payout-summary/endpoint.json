@@ -1,0 +1,30 @@
+{
+  "id": "566109aa-02ab-4ddd-b199-bb35078f8309",
+  "collection_id": "ff8b1bc1-eb88-4879-81cd-31677269947f",
+  "method": "GET",
+  "path": "/payout_summary",
+  "summary": "Get Payout Summary",
+  "description": "This method is used to retrieve cumulative values for payouts in a particular state, or all states. The metadata in the response includes total payouts, the total number of monetary transactions, and the total dollar value of all payouts.",
+  "parameters": [
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": false,
+      "description": "Marketplace ID header."
+    },
+    {
+      "name": "filter",
+      "type": "string",
+      "required": false,
+      "description": "Filter by payoutDate and/or payoutStatus."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"payoutCount\": 10, \"transactionCount\": 50, \"amount\": {\"value\": \"1200.50\", \"currency\": \"USD\"}}",
+  "tags": [
+    "payout"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:59.502511+00:00",
+  "updated_at": "2026-03-09T11:33:59.502511+00:00"
+}

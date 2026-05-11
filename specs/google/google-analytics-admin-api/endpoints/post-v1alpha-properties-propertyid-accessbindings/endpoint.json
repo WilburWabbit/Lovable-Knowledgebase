@@ -1,0 +1,24 @@
+{
+  "id": "1b7aa57b-e376-429a-864e-83ddf09a84b3",
+  "collection_id": "07d89899-a7df-4236-ba31-b0547dcd8e5c",
+  "method": "POST",
+  "path": "/v1alpha/properties/{propertyId}/accessBindings",
+  "summary": "Creates an access binding on an account or property.",
+  "description": "Creates an access binding on an account or property. Original Google API path template: `/v1alpha/{parent=properties/*}/accessBindings`",
+  "parameters": [
+    {
+      "name": "propertyId",
+      "type": "string",
+      "required": true,
+      "description": "Property identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.properties.accessBindings"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:12:30.413089+00:00",
+  "updated_at": "2026-03-09T13:12:30.413089+00:00"
+}

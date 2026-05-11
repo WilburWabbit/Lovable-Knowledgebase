@@ -1,0 +1,17 @@
+{
+  "id": "92babbfd-c2d8-4d3c-9b45-4615d12e7789",
+  "collection_id": "0c086a7a-67d7-41ea-be84-862f04021521",
+  "method": "GET",
+  "path": "/shopping_cart/",
+  "summary": "Retrieve shopping cart contents",
+  "description": "This method retrieves all the items in the eBay member's cart.",
+  "parameters": [],
+  "request_body": "null",
+  "response_example": "{ \"cartItems\": [], \"cartSubtotal\": { \"value\": \"0.00\", \"currency\": \"USD\" } }",
+  "tags": [
+    "shopping_cart"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:44.766937+00:00",
+  "updated_at": "2026-03-09T11:33:44.766937+00:00"
+}

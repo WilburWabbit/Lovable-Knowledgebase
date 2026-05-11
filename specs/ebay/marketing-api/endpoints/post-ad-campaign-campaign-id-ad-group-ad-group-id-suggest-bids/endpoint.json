@@ -1,0 +1,30 @@
+{
+  "id": "fc8c07a3-e19b-40fd-a961-3418355365c8",
+  "collection_id": "2cce52ab-35f6-41c1-b393-4ed72771c5c2",
+  "method": "POST",
+  "path": "/ad_campaign/{campaign_id}/ad_group/{ad_group_id}/suggest_bids",
+  "summary": "Suggest Bids",
+  "description": "Retrieves suggested bids for input keywords and match types in a CPC campaign.",
+  "parameters": [
+    {
+      "name": "ad_group_id",
+      "type": "string",
+      "required": true,
+      "description": "Unique ad group ID."
+    },
+    {
+      "name": "campaign_id",
+      "type": "string",
+      "required": true,
+      "description": "Unique campaign ID."
+    }
+  ],
+  "request_body": "{\"keywords\": [{\"keywordText\": \"shoes\", \"matchType\": \"EXACT\"}]}",
+  "response_example": "{\"suggestedBids\": [{\"keywordText\": \"shoes\", \"matchType\": \"EXACT\", \"proposedBid\": {\"value\": \"0.75\", \"currency\": \"USD\"}}]}",
+  "tags": [
+    "ad_group"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:47.53134+00:00",
+  "updated_at": "2026-03-09T11:21:47.53134+00:00"
+}

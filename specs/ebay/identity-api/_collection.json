@@ -1,0 +1,10 @@
+{
+  "id": "1619f77b-001f-4fd1-92a3-5d23c39ca610",
+  "name": "Identity API",
+  "description": "Retrieves the authenticated user's account profile information. It can be used to let users log into your app or site using eBay, which frees you from needing to store and protect user's PII (Personal Identifiable Information) data.",
+  "base_url": "https://apiz.ebay.com/commerce/identity/v1",
+  "version": "v1.1.0",
+  "created_at": "2026-03-09T11:34:08.251347+00:00",
+  "updated_at": "2026-03-09T11:41:27.349261+00:00",
+  "parent_id": "84b9a32d-ff51-4c69-b802-7fd4c36e700b"
+}

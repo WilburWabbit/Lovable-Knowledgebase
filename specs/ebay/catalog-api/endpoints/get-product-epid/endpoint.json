@@ -1,0 +1,30 @@
+{
+  "id": "56c6b3c4-7b05-41b4-aeff-de2e0b270cb2",
+  "collection_id": "f2de864c-bc2f-41f2-9689-3bff0c7ba098",
+  "method": "GET",
+  "path": "/product/{epid}",
+  "summary": "getProduct",
+  "description": "This method retrieves details of the catalog product identified by the eBay product identifier (ePID) specified in the request. These details include the product's title and description, aspects and their values, associated images, applicable category IDs, and any recognized identifiers that apply to the product. For a new listing, you can use the search method to identify candidate products on which to base the listing, then use the getProduct method to present the full details of those candidate products to the seller to make a a final selection.",
+  "parameters": [
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": false,
+      "description": "This method also uses the X-EBAY-C-MARKETPLACE-ID header to identify the seller's eBay marketplace. It is required for all marketplaces except EBAY_US, which is the default. Note: This method is limited to EBAY_US, EBAY_AU, EBAY_CA, and EBAY_GB values."
+    },
+    {
+      "name": "epid",
+      "type": "string",
+      "required": true,
+      "description": "The ePID of the product being requested. This value can be discovered by issuing the search method and examining the value of the productSummaries.epid field for the desired returned product summary."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"epid\": \"123456\",\n  \"title\": \"Example Product Title\",\n  \"description\": \"Product description text.\",\n  \"brand\": \"BrandName\",\n  \"primaryCategoryId\": \"1234\",\n  \"image\": {\n    \"imageUrl\": \"https://example.com/image.jpg\",\n    \"width\": 500,\n    \"height\": 500\n  },\n  \"aspects\": [\n    {\n      \"localizedName\": \"Color\",\n      \"localizedValues\": [\"Black\"]\n    }\n  ],\n  \"gtin\": [\"01234567890123\"]\n}",
+  "tags": [
+    "product"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:32:56.649031+00:00",
+  "updated_at": "2026-03-09T11:32:56.649031+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "a6f1734f-00e4-41e2-9706-53707838d02c",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/return_policy/get_by_policy_name",
+  "summary": "Get Return Policy By Name",
+  "description": "Retrieves return policy by name.",
+  "parameters": [
+    {
+      "name": "marketplace_id",
+      "type": "string",
+      "required": true,
+      "description": "Marketplace ID."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "description": "Policy name."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"returnPolicyId\": \"string\", \"name\": \"string\"}",
+  "tags": [
+    "return_policy"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:50.828662+00:00",
+  "updated_at": "2026-03-09T11:23:50.828662+00:00"
+}

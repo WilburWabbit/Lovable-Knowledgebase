@@ -1,0 +1,24 @@
+{
+  "id": "d604005d-ba22-420c-9a74-b0a10019ca2f",
+  "collection_id": "87172e41-fa7d-41ec-9d2e-22a31a8d8a40",
+  "method": "POST",
+  "path": "/v1alpha/properties/{propertyId}/recurringAudienceLists",
+  "summary": "Creates a recurring audience list.",
+  "description": "Creates a recurring audience list. Original Google API path template: `/v1alpha/{parent=properties/*}/recurringAudienceLists`",
+  "parameters": [
+    {
+      "name": "propertyId",
+      "type": "string",
+      "required": true,
+      "description": "Property identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.properties.recurringAudienceLists"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:31:38.444399+00:00",
+  "updated_at": "2026-03-09T13:31:38.444399+00:00"
+}

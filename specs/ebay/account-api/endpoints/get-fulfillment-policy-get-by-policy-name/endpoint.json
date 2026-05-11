@@ -1,0 +1,30 @@
+{
+  "id": "5735c740-9dbf-4499-8954-877088e881e4",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/fulfillment_policy/get_by_policy_name",
+  "summary": "Get Fulfillment Policy By Name",
+  "description": "This method retrieves the details for a specific fulfillment policy by name.",
+  "parameters": [
+    {
+      "name": "marketplace_id",
+      "type": "string",
+      "required": true,
+      "description": "eBay marketplace ID."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "description": "Seller-defined name of the policy."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"fulfillmentPolicyId\": \"string\", \"name\": \"string\"}",
+  "tags": [
+    "fulfillment_policy"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:45.610539+00:00",
+  "updated_at": "2026-03-09T11:23:45.610539+00:00"
+}

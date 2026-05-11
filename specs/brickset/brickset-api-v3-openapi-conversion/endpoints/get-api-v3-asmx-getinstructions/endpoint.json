@@ -1,0 +1,30 @@
+{
+  "id": "a96f9f51-3fb9-48b9-9a58-15f9d0839261",
+  "collection_id": "7885fb8b-3863-413b-80d2-9f6e131f7098",
+  "method": "GET",
+  "path": "/api/v3.asmx/getInstructions",
+  "summary": "Get instructions for a set by set ID.",
+  "description": "Returns instruction URLs for the specified set ID.",
+  "parameters": [
+    {
+      "name": "apiKey",
+      "type": "string",
+      "required": true,
+      "description": "Brickset API key."
+    },
+    {
+      "name": "setID",
+      "type": "integer",
+      "required": true,
+      "description": "Internal set ID."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"status\": \"success\", \"matches\": 1, \"instructions\": [{\"URL\": \"https://example.com/manual.pdf\"}]}",
+  "tags": [
+    "Sets"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:45:37.437941+00:00",
+  "updated_at": "2026-03-09T11:45:37.437941+00:00"
+}

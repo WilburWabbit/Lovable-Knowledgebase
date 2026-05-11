@@ -1,0 +1,42 @@
+{
+  "id": "8535aaa4-5cce-4fee-a5ab-0deed8f6f5e7",
+  "collection_id": "e0c7a45f-c6b6-4e09-902c-848e3aac5a3e",
+  "method": "GET",
+  "path": "/catalog/id_lookup",
+  "summary": "Lookup BOIDs by external ID",
+  "description": "Retrieve possible BOIDs for another identifier such as a set number or design ID.",
+  "parameters": [
+    {
+      "name": "key",
+      "type": "string",
+      "required": true,
+      "description": "Brick Owl API key."
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "required": true,
+      "description": "Identifier to look up."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": true,
+      "description": "Item type filter."
+    },
+    {
+      "name": "id_type",
+      "type": "string",
+      "required": false,
+      "description": "Optional ID type filter."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "Catalog"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:46:19.347412+00:00",
+  "updated_at": "2026-03-09T11:46:19.347412+00:00"
+}

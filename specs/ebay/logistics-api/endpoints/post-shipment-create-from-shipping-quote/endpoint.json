@@ -1,0 +1,17 @@
+{
+  "id": "84f36a0d-285b-48f0-92e2-827128f57792",
+  "collection_id": "a947a538-f314-445c-8157-fa8b79ee044a",
+  "method": "POST",
+  "path": "/shipment/create_from_shipping_quote",
+  "summary": "createFromShippingQuote",
+  "description": "This method creates a shipment based on the shippingQuoteId and rateId values supplied in the request. The rate identified by the rateId value specifies the carrier and service for the package shipment, and the rate ID must be contained in the shipping quote identified by the shippingQuoteId value. Call createShippingQuote to retrieve a set of live shipping rates. When you create a shipment, eBay generates a shipping label that you can download and use to ship your package. In a createFromShippingQuote request, sellers can include a list of shipping options they want to add to the base service quoted in the selected rate. The list of available shipping options is specific to each quoted rate and if available, the options are listed in the rate container of the of the shipping quote. In addition to a configurable return-to location and other details about the shipment, the response to this method includes: The shipping carrier and service to be used for the package shipment, A list of selected shipping options, if any, The shipment tracking number, The total shipping cost (the sum cost of the base shipping service and any added options). When you create a shipment, your billing agreement account is charged the sum of the baseShippingCost and the total cost of any additional shipping options you might have selected. Use the URL returned in labelDownloadUrl field, or call downloadLabelFile with the shipmentId value from the response, to download a shipping label for your package. Important! Sellers must set up their payment method with eBay before they can use this method to create a shipment and the associated shipping label.",
+  "parameters": [],
+  "request_body": "{\n  \"additionalOptions\": [\n    {\n      \"additionalCost\": {\n        \"currency\": \"USD\",\n        \"value\": \"1.00\"\n      },\n      \"optionType\": \"INSURANCE\"\n    }\n  ],\n  \"labelCustomMessage\": \"Handle with care\",\n  \"labelSize\": \"4\\\"x6\\\"\",\n  \"rateId\": \"R-123-456\",\n  \"returnTo\": {\n    \"fullName\": \"John Doe\",\n    \"contactAddress\": {\n      \"addressLine1\": \"123 Main St\",\n      \"city\": \"San Jose\",\n      \"stateOrProvince\": \"CA\",\n      \"postalCode\": \"95125\",\n      \"countryCode\": \"US\"\n    }\n  },\n  \"shippingQuoteId\": \"Q-123-456\"\n}",
+  "response_example": "{\n  \"shipmentId\": \"S-123-456\",\n  \"shipmentTrackingNumber\": \"TRACK123456\",\n  \"labelDownloadUrl\": \"https://api.ebay.com/label/download\",\n  \"totalShippingCost\": {\n    \"currency\": \"USD\",\n    \"value\": \"15.00\"\n  }\n}",
+  "tags": [
+    "shipment"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:20:27.896648+00:00",
+  "updated_at": "2026-03-09T11:20:27.896648+00:00"
+}

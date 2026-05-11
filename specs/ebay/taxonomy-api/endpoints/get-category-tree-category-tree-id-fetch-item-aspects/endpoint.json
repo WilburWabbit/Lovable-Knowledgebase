@@ -1,0 +1,24 @@
+{
+  "id": "7be581d5-b712-4f92-9d34-8197b186f8ee",
+  "collection_id": "d93650fd-2088-4604-9793-91de2f2cd869",
+  "method": "GET",
+  "path": "/category_tree/{category_tree_id}/fetch_item_aspects",
+  "summary": "Get Aspects for All Leaf Categories in a Marketplace",
+  "description": "This call returns a complete list of aspects for all of the leaf categories that belong to an eBay marketplace.",
+  "parameters": [
+    {
+      "name": "category_tree_id",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier of the eBay category tree being requested."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"categoryTreeId\": \"100\",\n  \"categoryTreeVersion\": \"123\",\n  \"categoryAspects\": []\n}",
+  "tags": [
+    "category_tree"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:32:37.335082+00:00",
+  "updated_at": "2026-03-09T11:32:37.335082+00:00"
+}

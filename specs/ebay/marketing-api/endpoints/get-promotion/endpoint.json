@@ -1,0 +1,60 @@
+{
+  "id": "2b3550de-5b9b-4601-b92b-4c4131e2e9b4",
+  "collection_id": "2cce52ab-35f6-41c1-b393-4ed72771c5c2",
+  "method": "GET",
+  "path": "/promotion",
+  "summary": "Get Promotions",
+  "description": "Retrieves a list of a seller's promotions. Filter by status, type, or marketplace.",
+  "parameters": [
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "Max promotions to return."
+    },
+    {
+      "name": "marketplace_id",
+      "type": "string",
+      "required": true,
+      "description": "Marketplace ID."
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "Number of promotions to skip."
+    },
+    {
+      "name": "promotion_status",
+      "type": "string",
+      "required": false,
+      "description": "Filter by status."
+    },
+    {
+      "name": "promotion_type",
+      "type": "string",
+      "required": false,
+      "description": "Filter by type."
+    },
+    {
+      "name": "q",
+      "type": "string",
+      "required": false,
+      "description": "Keywords to search in title."
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": "Sort order."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"promotions\": [{\"promotionId\": \"123@EBAY_US\", \"name\": \"Sale\"}]}",
+  "tags": [
+    "promotion"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:51.637856+00:00",
+  "updated_at": "2026-03-09T11:21:51.637856+00:00"
+}

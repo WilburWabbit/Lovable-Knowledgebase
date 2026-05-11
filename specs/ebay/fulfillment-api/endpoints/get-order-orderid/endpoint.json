@@ -1,0 +1,30 @@
+{
+  "id": "9957b276-95f1-4049-a1ce-3d11ebaff2a4",
+  "collection_id": "ec1c4f8e-3458-4b5e-9bb3-21cacfb3c086",
+  "method": "GET",
+  "path": "/order/{orderId}",
+  "summary": "getOrder",
+  "description": "Use this call to retrieve the contents of an order based on its unique identifier, orderId.",
+  "parameters": [
+    {
+      "name": "fieldGroups",
+      "type": "string",
+      "required": false,
+      "description": "The response type associated with the order. The only presently supported value is TAX_BREAKDOWN."
+    },
+    {
+      "name": "orderId",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier of the order."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"orderId\": \"string\", \"orderFulfillmentStatus\": \"FULFILLED\"}",
+  "tags": [
+    "order"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:30:34.226181+00:00",
+  "updated_at": "2026-03-09T11:30:34.226181+00:00"
+}

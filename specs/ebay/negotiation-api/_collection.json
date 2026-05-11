@@ -1,0 +1,10 @@
+{
+  "id": "8ebc5689-9598-43ec-a0f7-ec8e306de568",
+  "name": "Negotiation API",
+  "description": "The Negotiations API gives sellers the ability to proactively send discount offers to buyers who have shown an 'interest' in their listings. Sellers can increase sales velocity by discounting prices either by a percentage or a new fixed price.",
+  "base_url": "https://api.ebay.com/sell/negotiation/v1",
+  "version": "v1.1.0",
+  "created_at": "2026-03-09T11:20:43.126026+00:00",
+  "updated_at": "2026-03-09T11:36:02.280936+00:00",
+  "parent_id": "84b9a32d-ff51-4c69-b802-7fd4c36e700b"
+}

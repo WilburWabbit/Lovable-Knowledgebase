@@ -1,0 +1,42 @@
+{
+  "id": "8e1f58f0-9935-48f3-8191-59a28f3d97b5",
+  "collection_id": "3569d9d6-2069-4480-9150-2ef5edb1e450",
+  "method": "POST",
+  "path": "/find",
+  "summary": "findListingRecommendations",
+  "description": "The find method currently returns information for a single recommendation type (AD) which contains information that sellers can use to configure Promoted Listings ad campaigns. The response from this method includes an array of the seller's listing IDs, where each element in the array contains recommendations related to the associated listing ID. For details on how to use this method, see Using the Recommendation API to help configure campaigns.",
+  "parameters": [
+    {
+      "name": "filter",
+      "type": "string",
+      "required": false,
+      "description": "Provide a list of key-value pairs to specify the criteria you want to use to filter the response. Currently, the only supported filter value is recommendationTypes and it supports only the (\\\"AD\\\") type. Example: filter=recommendationTypes:{AD}"
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "Use this query parameter to set the maximum number of ads to return on a page from the paginated response. Default: 10 Maximum: 500"
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "Specifies the number of ads to skip in the result set before returning the first ad in the paginated response. Default: 0"
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "Use this header to specify the eBay marketplace where you list the items for which you want to get recommendations."
+    }
+  ],
+  "request_body": "{\"listingIds\": [\"string\"]}",
+  "response_example": "{\n  \"href\": \"string\",\n  \"limit\": 10,\n  \"listingRecommendations\": [\n    {\n      \"listingId\": \"string\",\n      \"marketing\": {\n        \"ad\": {\n          \"bidPercentages\": [\n            {\n              \"basis\": \"TRENDING\",\n              \"value\": \"5.0\"\n            }\n          ],\n          \"promoteWithAd\": \"RECOMMENDED\"\n        },\n        \"message\": \"string\"\n      }\n    }\n  ],\n  \"next\": \"string\",\n  \"offset\": 0,\n  \"prev\": \"string\",\n  \"total\": 1\n}",
+  "tags": [
+    "listing_recommendation"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:20:35.714329+00:00",
+  "updated_at": "2026-03-09T11:20:35.714329+00:00"
+}

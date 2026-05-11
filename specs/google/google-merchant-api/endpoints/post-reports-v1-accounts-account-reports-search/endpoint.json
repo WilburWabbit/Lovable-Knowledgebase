@@ -1,0 +1,24 @@
+{
+  "id": "a2a097ad-ed32-4d6b-bc37-e604fac283fe",
+  "collection_id": "39229b63-49cb-4a0a-87e4-ddea499f52de",
+  "method": "POST",
+  "path": "/reports/v1/accounts/{account}/reports:search",
+  "summary": "Retrieves a report defined by a search query",
+  "description": "Retrieves a report defined by a search query. Derived from reports_v1.accounts.reports. Original Google URI template: /reports/v1/{parent=accounts/*}/reports:search. Source summary: Retrieves a report defined by a search query.",
+  "parameters": [
+    {
+      "name": "account",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "reports_v1"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:28:26.757369+00:00",
+  "updated_at": "2026-03-09T12:28:26.757369+00:00"
+}

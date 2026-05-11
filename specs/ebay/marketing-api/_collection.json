@@ -1,0 +1,10 @@
+{
+  "id": "2cce52ab-35f6-41c1-b393-4ed72771c5c2",
+  "name": "Marketing API",
+  "description": "The Marketing API offers two platforms that sellers can use to promote and advertise their products: Promoted Listings and Promotions Manager. Promoted Listings is an eBay ad service that lets sellers set up ad campaigns for the products they want to promote. Promotions Manager gives sellers a way to offer discounts on specific items. Marketing reports on both platforms provide performance data.",
+  "base_url": "https://api.ebay.com/sell/marketing/v1",
+  "version": "v1.15.0",
+  "created_at": "2026-03-09T11:21:42.926655+00:00",
+  "updated_at": "2026-03-09T11:36:02.280936+00:00",
+  "parent_id": "84b9a32d-ff51-4c69-b802-7fd4c36e700b"
+}

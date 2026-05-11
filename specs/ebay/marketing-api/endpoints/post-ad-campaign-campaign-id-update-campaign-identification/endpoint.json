@@ -1,0 +1,24 @@
+{
+  "id": "03897f52-8437-4987-95df-91146ebab282",
+  "collection_id": "2cce52ab-35f6-41c1-b393-4ed72771c5c2",
+  "method": "POST",
+  "path": "/ad_campaign/{campaign_id}/update_campaign_identification",
+  "summary": "Update Campaign Identification",
+  "description": "Updates campaign name, start date, and end date.",
+  "parameters": [
+    {
+      "name": "campaign_id",
+      "type": "string",
+      "required": true,
+      "description": "Unique campaign ID."
+    }
+  ],
+  "request_body": "{\"campaignName\": \"Updated Name\", \"startDate\": \"2023-04-01T00:00:00Z\", \"endDate\": \"2023-05-01T00:00:00Z\"}",
+  "response_example": "{}",
+  "tags": [
+    "campaign"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:49.781715+00:00",
+  "updated_at": "2026-03-09T11:21:49.781715+00:00"
+}

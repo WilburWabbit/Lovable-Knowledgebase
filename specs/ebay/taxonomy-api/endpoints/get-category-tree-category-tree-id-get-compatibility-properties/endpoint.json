@@ -1,0 +1,30 @@
+{
+  "id": "a7993c85-4dbd-4439-b840-f4ed97746db7",
+  "collection_id": "d93650fd-2088-4604-9793-91de2f2cd869",
+  "method": "GET",
+  "path": "/category_tree/{category_tree_id}/get_compatibility_properties",
+  "summary": "Get Compatibility Properties",
+  "description": "This call retrieves the compatible vehicle aspects that are used to define a motor vehicle that is compatible with a motor vehicle part or accessory.",
+  "parameters": [
+    {
+      "name": "category_tree_id",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier of category tree."
+    },
+    {
+      "name": "category_id",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier of an eBay category."
+    }
+  ],
+  "request_body": "null,response_example:",
+  "response_example": "{\n  \"compatibilityProperties\": [\n    { \"name\": \"Make\", \"localizedName\": \"Make\" },\n    { \"name\": \"Model\", \"localizedName\": \"Model\" }\n  ]\n}",
+  "tags": [
+    "category_tree"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:32:38.322331+00:00",
+  "updated_at": "2026-03-09T11:32:38.322331+00:00"
+}

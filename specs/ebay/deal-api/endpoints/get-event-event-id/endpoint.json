@@ -1,0 +1,30 @@
+{
+  "id": "c18aeca3-3f84-4edf-8b15-d31cc6ed0a63",
+  "collection_id": "dd386235-a795-4756-90ce-49b9d7e27a96",
+  "method": "GET",
+  "path": "/event/{event_id}",
+  "summary": "getEvent",
+  "description": "This method retrieves the details for an eBay event. The result set contains detailed information associated with the specified event ID, such as applicable coupons, start and end dates, and event terms.",
+  "parameters": [
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "A header used to specify the eBay marketplace ID."
+    },
+    {
+      "name": "event_id",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier for the eBay event."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"eventId\": \"123\",\n  \"title\": \"Summer Sale\",\n  \"startDate\": \"2023-06-01T00:00:00Z\",\n  \"endDate\": \"2023-08-01T00:00:00Z\",\n  \"description\": \"Big discounts on summer items.\"\n}",
+  "tags": [
+    "event"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:25.272515+00:00",
+  "updated_at": "2026-03-09T11:33:25.272515+00:00"
+}

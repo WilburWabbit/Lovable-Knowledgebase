@@ -1,0 +1,48 @@
+{
+  "id": "2838a9cf-0f94-45ce-afb7-b789b5b8ea21",
+  "collection_id": "ff8b1bc1-eb88-4879-81cd-31677269947f",
+  "method": "GET",
+  "path": "/transaction",
+  "summary": "Get Transactions",
+  "description": "The getTransactions method allows a seller to retrieve information about one or more of their monetary transactions (SALE, REFUND, CREDIT, etc.). Numerous input filters are available.",
+  "parameters": [
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": false,
+      "description": "Marketplace ID header."
+    },
+    {
+      "name": "filter",
+      "type": "string",
+      "required": false,
+      "description": "Filters such as transactionDate, transactionType, transactionStatus, buyerUsername, orderId, etc."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "Number of transactions per page. Max 1000."
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "Zero-based position of the first transaction in results."
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": "Sorting (not yet available, defaults to descending transaction date)."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"transactions\": [{\"transactionId\": \"12345\", \"transactionType\": \"SALE\", \"transactionStatus\": \"PAYOUT\", \"amount\": {\"value\": \"25.00\", \"currency\": \"USD\"}, \"transactionDate\": \"2023-01-01T12:00:00.000Z\"}], \"total\": 1, \"limit\": 20, \"offset\": 0}",
+  "tags": [
+    "transaction"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:34:00.15625+00:00",
+  "updated_at": "2026-03-09T11:34:00.15625+00:00"
+}

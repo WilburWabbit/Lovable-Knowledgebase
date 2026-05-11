@@ -1,0 +1,42 @@
+{
+  "id": "30268f42-0acd-4bc7-b132-0a88dc7922b4",
+  "collection_id": "7885fb8b-3863-413b-80d2-9f6e131f7098",
+  "method": "GET",
+  "path": "/api/v3.asmx/setCollection",
+  "summary": "Update a user's set collection details.",
+  "description": "Updates collection data for a specific set. params must be a JSON string shaped like SetCollectionParamsObject.",
+  "parameters": [
+    {
+      "name": "apiKey",
+      "type": "string",
+      "required": true,
+      "description": "Brickset API key."
+    },
+    {
+      "name": "userHash",
+      "type": "string",
+      "required": true,
+      "description": "User hash returned by login."
+    },
+    {
+      "name": "SetID",
+      "type": "integer",
+      "required": true,
+      "description": "Internal set ID."
+    },
+    {
+      "name": "params",
+      "type": "string",
+      "required": true,
+      "description": "JSON-encoded parameter object. Stringify an object shaped like SetCollectionParamsObject."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"status\": \"success\"}",
+  "tags": [
+    "Collection"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:45:38.294501+00:00",
+  "updated_at": "2026-03-09T11:45:38.294501+00:00"
+}

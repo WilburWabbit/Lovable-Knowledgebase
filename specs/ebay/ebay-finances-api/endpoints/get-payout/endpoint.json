@@ -1,0 +1,48 @@
+{
+  "id": "0023e2c9-68ad-4cf4-897b-0f603aad2011",
+  "collection_id": "ff8b1bc1-eb88-4879-81cd-31677269947f",
+  "method": "GET",
+  "path": "/payout",
+  "summary": "Get Payouts",
+  "description": "This method is used to retrieve the details of one or more seller payouts. By using the filter query parameter, users can retrieve payouts processed within a specific date range, and/or they can retrieve payouts in a specific state. There are also pagination and sort query parameters that allow users to control the payouts that are returned in the response. If no payouts match the input criteria, an empty payload is returned.",
+  "parameters": [
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": false,
+      "description": "This header identifies the seller's eBay marketplace. It is required for all marketplaces outside of the US."
+    },
+    {
+      "name": "filter",
+      "type": "string",
+      "required": false,
+      "description": "Filter payouts by payoutDate, lastAttemptedPayoutDate, or payoutStatus."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "The number of payouts to return per page. Max 200."
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "The actual position that the first payout returned on the current page has in the results set."
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": "Sort order for payouts (payoutDate or lastAttemptedPayoutDate)."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"payouts\": [{\"payoutId\": \"5000000001\", \"payoutStatus\": \"SUCCEEDED\", \"amount\": {\"value\": \"100.00\", \"currency\": \"USD\"}, \"payoutDate\": \"2023-01-01T10:00:00.000Z\", \"transactionCount\": 1}], \"total\": 1, \"limit\": 20, \"offset\": 0}",
+  "tags": [
+    "payout"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:58.870457+00:00",
+  "updated_at": "2026-03-09T11:33:58.870457+00:00"
+}

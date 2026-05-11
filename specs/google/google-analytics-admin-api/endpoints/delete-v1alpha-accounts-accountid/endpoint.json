@@ -1,0 +1,24 @@
+{
+  "id": "37ae2cba-bc54-435e-9369-51823711eb5c",
+  "collection_id": "07d89899-a7df-4236-ba31-b0547dcd8e5c",
+  "method": "DELETE",
+  "path": "/v1alpha/accounts/{accountId}",
+  "summary": "Marks target Account as soft-deleted (ie: \"trashed\") and returns it.",
+  "description": "Marks target Account as soft-deleted (ie: \"trashed\") and returns it. Original Google API path template: `/v1alpha/{name=accounts/*}`",
+  "parameters": [
+    {
+      "name": "accountId",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.accounts"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:12:24.88415+00:00",
+  "updated_at": "2026-03-09T13:12:24.88415+00:00"
+}

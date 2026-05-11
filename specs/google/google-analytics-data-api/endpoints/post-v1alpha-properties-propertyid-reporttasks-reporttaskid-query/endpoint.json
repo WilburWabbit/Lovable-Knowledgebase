@@ -1,0 +1,30 @@
+{
+  "id": "6d02f836-c1b9-4877-b55b-014c4b5e87ee",
+  "collection_id": "87172e41-fa7d-41ec-9d2e-22a31a8d8a40",
+  "method": "POST",
+  "path": "/v1alpha/properties/{propertyId}/reportTasks/{reportTaskId}:query",
+  "summary": "Retrieves a report task's content.",
+  "description": "Retrieves a report task's content. Original Google API path template: `/v1alpha/{name=properties/*/reportTasks/*}:query`",
+  "parameters": [
+    {
+      "name": "propertyId",
+      "type": "string",
+      "required": true,
+      "description": "Property identifier."
+    },
+    {
+      "name": "reportTaskId",
+      "type": "string",
+      "required": true,
+      "description": "Report task identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.properties.reportTasks"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:31:40.032931+00:00",
+  "updated_at": "2026-03-09T13:31:40.032931+00:00"
+}

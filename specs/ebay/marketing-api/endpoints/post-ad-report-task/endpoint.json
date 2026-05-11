@@ -1,0 +1,17 @@
+{
+  "id": "c1ebc001-7e59-439a-9a68-9ba0668c0574",
+  "collection_id": "2cce52ab-35f6-41c1-b393-4ed72771c5c2",
+  "method": "POST",
+  "path": "/ad_report_task",
+  "summary": "Create Report Task",
+  "description": "Creates a report task to generate a Promoted Listings report based on specified criteria.",
+  "parameters": [],
+  "request_body": "{\"reportType\": \"CAMPAIGN_PERFORMANCE_REPORT\", \"dateFrom\": \"2023-01-01T00:00:00Z\", \"dateTo\": \"2023-01-31T00:00:00Z\", \"marketplaceId\": \"EBAY_US\", \"reportFormat\": \"TSV_GZIP\", \"metricKeys\": [\"impressions\", \"clicks\"]}",
+  "response_example": "{}",
+  "tags": [
+    "ad_report_task"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:50.57619+00:00",
+  "updated_at": "2026-03-09T11:21:50.57619+00:00"
+}

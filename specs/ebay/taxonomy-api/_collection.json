@@ -1,0 +1,10 @@
+{
+  "id": "d93650fd-2088-4604-9793-91de2f2cd869",
+  "name": "Taxonomy API",
+  "description": "Use the Taxonomy API to discover the most appropriate eBay categories under which sellers can offer inventory items for sale, and the most likely categories under which buyers can browse or search for items to purchase. In addition, the Taxonomy API provides metadata about the required and recommended category aspects to include in listings, and also has two operations to retrieve parts compatibility information.",
+  "base_url": "https://api.ebay.com/commerce/taxonomy/v1",
+  "version": "v1.0.0",
+  "created_at": "2026-03-09T11:32:36.723451+00:00",
+  "updated_at": "2026-03-09T11:36:02.280936+00:00",
+  "parent_id": "84b9a32d-ff51-4c69-b802-7fd4c36e700b"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "483f87a0-009f-47ea-9414-169228150f4b",
+  "collection_id": "d93650fd-2088-4604-9793-91de2f2cd869",
+  "method": "GET",
+  "path": "/category_tree/{category_tree_id}/get_item_aspects_for_category",
+  "summary": "getItemAspectsForCategory",
+  "description": "This call returns a list of aspects that are appropriate or necessary for accurately describing items in the specified leaf category.",
+  "parameters": [
+    {
+      "name": "category_id",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier of the leaf category for which aspects are being requested."
+    },
+    {
+      "name": "category_tree_id",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier of the eBay category tree from which the specified category's aspects are being requested."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"aspects\": [\n    {\n      \"localizedAspectName\": \"Color\",\n      \"aspectConstraint\": {\n        \"aspectDataType\": \"STRING\",\n        \"aspectRequired\": true\n      }\n    }\n  ]\n}",
+  "tags": [
+    "category_tree"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:32:38.977595+00:00",
+  "updated_at": "2026-03-09T11:32:38.977595+00:00"
+}

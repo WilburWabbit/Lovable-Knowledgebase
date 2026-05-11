@@ -1,0 +1,30 @@
+{
+  "id": "1f61c7ce-8fa9-4c5a-8abe-36da2c48d788",
+  "collection_id": "ceff7301-49fc-4e45-9b18-ba89c23bb1f5",
+  "method": "GET",
+  "path": "/listing_violation_summary",
+  "summary": "Get Listing Violations Summary",
+  "description": "This call returns listing violation counts for a seller. A user can pass in one or more compliance types through the compliance_type query parameter. See ComplianceTypeEnum for more information on the supported listing compliance types. Listing violations are returned for multiple marketplaces if the seller sells on multiple eBay marketplaces. Note: Only a canned response, with counts for all listing compliance types, is returned in the Sandbox environment. Due to this limitation, the compliance_type query parameter (if used) will not have an effect on the response.",
+  "parameters": [
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": false,
+      "description": "Use this header to specify the eBay marketplace identifier. Supported values for this header can be found in the MarketplaceIdEnum type definition. Note that Version 1.4.0 of the Compliance API is only supported on the US, UK, Australia, Canada {English), and Germany sites."
+    },
+    {
+      "name": "compliance_type",
+      "type": "string",
+      "required": false,
+      "description": "A user passes in one or more compliance type values through this query parameter. See ComplianceTypeEnum for more information on the supported compliance types that can be passed in here. If more than one compliance type value is used, delimit these values with a comma. If no compliance type values are passed in, the listing count for all compliance types will be returned. Note: Only a canned response, with counts for all listing compliance types, is returned in the Sandbox environment. Due to this limitation, the compliance_type query parameter (if used) will not have an effect on the response."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"violationSummaries\": [\n    {\n      \"complianceType\": \"ASPECTS_ADOPTION\",\n      \"listingCount\": 5,\n      \"marketplaceId\": \"EBAY_US\"\n    }\n  ]\n}",
+  "tags": [
+    "listing_violation_summary"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:05.590328+00:00",
+  "updated_at": "2026-03-09T11:23:05.590328+00:00"
+}

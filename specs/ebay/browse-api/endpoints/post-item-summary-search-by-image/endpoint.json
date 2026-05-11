@@ -1,0 +1,66 @@
+{
+  "id": "d9f1f84e-cf34-4ee4-a962-71b3969b2310",
+  "collection_id": "0c086a7a-67d7-41ea-be84-862f04021521",
+  "method": "POST",
+  "path": "/item_summary/search_by_image",
+  "summary": "Search for items by image",
+  "description": "Experimental: Searches for eBay items based on a Base64 image.",
+  "parameters": [
+    {
+      "name": "aspect_filter",
+      "type": "string",
+      "required": false,
+      "description": "Filter by item aspects."
+    },
+    {
+      "name": "category_ids",
+      "type": "string",
+      "required": false,
+      "description": "Category IDs to limit results."
+    },
+    {
+      "name": "charity_ids",
+      "type": "string",
+      "required": false,
+      "description": "Limit results to specified charities."
+    },
+    {
+      "name": "fieldgroups",
+      "type": "string",
+      "required": false,
+      "description": "Control returned metadata."
+    },
+    {
+      "name": "filter",
+      "type": "string",
+      "required": false,
+      "description": "Field filters."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "Page limit."
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "Offset for pagination."
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": "Sort criteria."
+    }
+  ],
+  "request_body": "{ \"image\": \"SGVsbG8gd29ybGQh\" }",
+  "response_example": "{ \"itemSummaries\": [], \"total\": 0 }",
+  "tags": [
+    "search_by_image"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:44.461814+00:00",
+  "updated_at": "2026-03-09T11:33:44.461814+00:00"
+}

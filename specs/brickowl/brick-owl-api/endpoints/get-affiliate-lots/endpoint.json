@@ -1,0 +1,36 @@
+{
+  "id": "deac76ea-4301-4171-8d3a-54634372edbe",
+  "collection_id": "e0c7a45f-c6b6-4e09-902c-848e3aac5a3e",
+  "method": "GET",
+  "path": "/affiliate/lots",
+  "summary": "List affiliate store lots",
+  "description": "Retrieve the lots for a store that has opted in to your affiliate scheme.",
+  "parameters": [
+    {
+      "name": "key",
+      "type": "string",
+      "required": true,
+      "description": "Brick Owl API key."
+    },
+    {
+      "name": "store_id",
+      "type": "integer",
+      "required": true,
+      "description": "The store's unique ID."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Optional item type filter."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "Affiliate"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:46:17.888549+00:00",
+  "updated_at": "2026-03-09T11:46:17.888549+00:00"
+}

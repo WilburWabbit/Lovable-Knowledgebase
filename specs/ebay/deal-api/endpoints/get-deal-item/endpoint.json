@@ -1,0 +1,54 @@
+{
+  "id": "d208c92f-9651-4b74-a361-7dbd4dd12923",
+  "collection_id": "dd386235-a795-4756-90ce-49b9d7e27a96",
+  "method": "GET",
+  "path": "/deal_item",
+  "summary": "getDealItems",
+  "description": "This method retrieves a paginated set of deal items. The result set contains all deal items associated with the specified search criteria and marketplace ID.",
+  "parameters": [
+    {
+      "name": "category_ids",
+      "type": "string",
+      "required": false,
+      "description": "The unique identifier of the eBay category for the search."
+    },
+    {
+      "name": "commissionable",
+      "type": "string",
+      "required": false,
+      "description": "A filter for commissionable deals. Restriction: This filter is currently only supported for the US marketplace."
+    },
+    {
+      "name": "delivery_country",
+      "type": "string",
+      "required": false,
+      "description": "A filter for items that can be shipped to the specified country."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "The maximum number of items, from the current result set, returned on a single page."
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "The number of items that will be skipped in the result set. This is used with the limit field to control the pagination of the output."
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "A header used to specify the eBay marketplace ID."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"dealItems\": [\n    {\n      \"title\": \"Example Deal Item\",\n      \"itemId\": \"123456789\",\n      \"price\": {\n        \"value\": \"10.00\",\n        \"currency\": \"USD\"\n      }\n    }\n  ],\n  \"total\": 1,\n  \"limit\": 20,\n  \"offset\": 0\n}",
+  "tags": [
+    "deal_item"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:24.647976+00:00",
+  "updated_at": "2026-03-09T11:33:24.647976+00:00"
+}

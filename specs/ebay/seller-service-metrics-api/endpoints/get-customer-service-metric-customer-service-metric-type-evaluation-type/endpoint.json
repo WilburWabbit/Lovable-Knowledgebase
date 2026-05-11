@@ -1,0 +1,36 @@
+{
+  "id": "dcf1e052-a7f7-4c41-ad47-4260e7e8ef13",
+  "collection_id": "2bf1fee0-2a4d-4044-961f-50d2a9885786",
+  "method": "GET",
+  "path": "/customer_service_metric/{customer_service_metric_type}/{evaluation_type}",
+  "summary": "Get Customer Service Metric",
+  "description": "Use this method to retrieve a seller's performance and rating for the customer service metric based on type (e.g., ITEM_NOT_AS_DESCRIBED) and evaluation cycle (CURRENT or PROJECTED).",
+  "parameters": [
+    {
+      "name": "customer_service_metric_type",
+      "type": "string",
+      "required": true,
+      "description": "Type of customer service metrics (ITEM_NOT_AS_DESCRIBED, ITEM_NOT_RECEIVED)"
+    },
+    {
+      "name": "evaluation_type",
+      "type": "string",
+      "required": true,
+      "description": "Type of evaluation (CURRENT, PROJECTED)"
+    },
+    {
+      "name": "evaluation_marketplace_id",
+      "type": "string",
+      "required": true,
+      "description": "Marketplace ID to evaluate (e.g., EBAY_US)"
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"marketplaceId\": \"EBAY_US\",\n  \"evaluationCycle\": {\n    \"evaluationType\": \"CURRENT\",\n    \"evaluationDate\": \"2023-10-20T00:00:00.000Z\",\n    \"startDate\": \"2022-10-01T00:00:00.000Z\",\n    \"endDate\": \"2023-09-30T00:00:00.000Z\"\n  },\n  \"dimensionMetrics\": [\n    {\n      \"dimension\": {\n        \"dimensionKey\": \"LISTING_CATEGORY\",\n        \"name\": \"Fashion\",\n        \"value\": \"11450\"\n      },\n      \"metrics\": [\n        {\n          \"metricKey\": \"RATE\",\n          \"value\": \"0.015\",\n          \"benchmark\": {\n            \"rating\": \"AVERAGE\",\n            \"basis\": \"PEER_BENCHMARK\",\n            \"metadata\": {\n              \"average\": \"0.012\"\n            }\n          }\n        }\n      ]\n    }\n  ]\n}",
+  "tags": [
+    "customer_service_metric"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:16.010438+00:00",
+  "updated_at": "2026-03-09T11:23:16.010438+00:00"
+}

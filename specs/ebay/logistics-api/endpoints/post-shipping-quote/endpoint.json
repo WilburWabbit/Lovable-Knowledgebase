@@ -1,0 +1,24 @@
+{
+  "id": "b20ec6df-0244-4a4c-965a-dca806348c0f",
+  "collection_id": "a947a538-f314-445c-8157-fa8b79ee044a",
+  "method": "POST",
+  "path": "/shipping_quote",
+  "summary": "createShippingQuote",
+  "description": "The createShippingQuote method returns a shipping quote that contains a list of live rates. Each rate represents an offer made by a shipping carrier for a specific service and each offer has a live quote for the base service cost. Rates have a time window in which they are live, and rates expire when their purchase window ends. If offered by the carrier, rates can include shipping options (and their associated prices), and users can add any offered shipping option to the base service should they desire. Also, depending on the services required, rates can also include pickup and delivery windows. Each rate is for a single package and is based on the following information: The shipping origin, The shipping destination, The package size (weight and dimensions). Rates are identified by a unique eBay-assigned rateId and rates are based on price points, pickup and delivery time frames, and other user requirements. Because each rate offered must be compliant with the eBay shipping program, all rates reflect eBay-negotiated prices. The various rates returned in a shipping quote offer the user a choice from which they can choose a shipping service that best fits their needs. Select the rate for your shipment and using the associated rateId, call createFromShippingQuote to create a shipment and generate a shipping label that you can use to ship the package.",
+  "parameters": [
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "This header parameter specifies the eBay marketplace for the shipping quote that is being created. For a list of valid values, refer to the section Marketplace ID Values in the Using eBay RESTful APIs guide."
+    }
+  ],
+  "request_body": "{\n  \"orders\": [{ \"orderId\": \"12-34567-89012\", \"channel\": \"EBAY\" }],\n  \"packageSpecification\": {\n    \"dimensions\": { \"length\": \"10\", \"width\": \"8\", \"height\": \"5\", \"unit\": \"INCH\" },\n    \"weight\": { \"value\": \"2.5\", \"unit\": \"POUND\" }\n  },\n  \"shipFrom\": {\n    \"contactAddress\": { \"addressLine1\": \"123 Main St\", \"city\": \"San Jose\", \"stateOrProvince\": \"CA\", \"postalCode\": \"95125\", \"countryCode\": \"US\" }\n  },\n  \"shipTo\": {\n    \"contactAddress\": { \"addressLine1\": \"456 Oak Ave\", \"city\": \"Los Angeles\", \"stateOrProvince\": \"CA\", \"postalCode\": \"90001\", \"countryCode\": \"US\" }\n  }\n}",
+  "response_example": "{\n  \"shippingQuoteId\": \"Q-123-456\",\n  \"rates\": [\n    {\n      \"rateId\": \"R-123-456\",\n      \"shippingCarrierName\": \"USPS\",\n      \"shippingServiceName\": \"Priority Mail\",\n      \"baseShippingCost\": { \"value\": \"12.50\", \"currency\": \"USD\" }\n    }\n  ]\n}",
+  "tags": [
+    "shipping_quote"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:20:28.838871+00:00",
+  "updated_at": "2026-03-09T11:20:28.838871+00:00"
+}

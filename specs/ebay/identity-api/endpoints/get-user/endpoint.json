@@ -1,0 +1,17 @@
+{
+  "id": "70a20491-d42e-48b0-b0a4-72384ecfd585",
+  "collection_id": "1619f77b-001f-4fd1-92a3-5d23c39ca610",
+  "method": "GET",
+  "path": "/user/",
+  "summary": "getUser",
+  "description": "This method retrieves the account profile information for an authenticated user, which requires a User access token. What is returned is controlled by the scopes. For a business account you use the default scope commerce.identity.readonly, which returns all the fields in the businessAccount container. These are returned because this is all public information. For an individual account, the fields returned in the individualAccount container are based on the scope you use. Using the default scope, only public information, such as eBay user ID, are returned. For details about what each scope returns, see the Identity API Overview. URLs for this method Production URL: https://apiz.ebay.com/commerce/identity/v1/user/ Sandbox URL: https://apiz.sandbox.ebay.com/commerce/identity/v1/user/ In the Sandbox, this method returns mock data. Note: You must use the correct scope or scopes for the data you want returned.",
+  "parameters": [],
+  "request_body": "null",
+  "response_example": "{\n  \"accountType\": \"INDIVIDUAL\",\n  \"businessAccount\": {\n    \"address\": {\n      \"addressLine1\": \"2065 Hamilton Ave\",\n      \"addressLine2\": \"Suite 100\",\n      \"city\": \"San Jose\",\n      \"country\": \"US\",\n      \"county\": \"Santa Clara\",\n      \"postalCode\": \"95125\",\n      \"stateOrProvince\": \"CA\"\n    },\n    \"doingBusinessAs\": \"eBay Store\",\n    \"email\": \"business@example.com\",\n    \"name\": \"eBay Inc\",\n    \"primaryContact\": {\n      \"firstName\": \"John\",\n      \"lastName\": \"Doe\"\n    },\n    \"primaryPhone\": {\n      \"countryCode\": \"US\",\n      \"number\": \"408-555-1212\",\n      \"phoneType\": \"LAND_LINE\"\n    },\n    \"secondaryPhone\": {\n      \"countryCode\": \"US\",\n      \"number\": \"408-555-1213\",\n      \"phoneType\": \"MOBILE\"\n    },\n    \"website\": \"https://www.ebay.com\"\n  },\n  \"individualAccount\": {\n    \"email\": \"user@example.com\",\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"primaryPhone\": {\n      \"countryCode\": \"US\",\n      \"number\": \"408-555-0000\",\n      \"phoneType\": \"MOBILE\"\n    },\n    \"registrationAddress\": {\n      \"addressLine1\": \"123 Main St\",\n      \"city\": \"San Jose\",\n      \"country\": \"US\",\n      \"postalCode\": \"95125\",\n      \"stateOrProvince\": \"CA\"\n    }\n  },\n  \"registrationMarketplaceId\": \"EBAY_US\",\n  \"status\": \"CONFIRMED\",\n  \"userId\": \"123456789\",\n  \"username\": \"ebay_user_1\"\n}",
+  "tags": [
+    "user"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:34:08.542143+00:00",
+  "updated_at": "2026-03-09T11:34:08.542143+00:00"
+}

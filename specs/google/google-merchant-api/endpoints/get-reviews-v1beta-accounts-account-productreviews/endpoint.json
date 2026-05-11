@@ -1,0 +1,24 @@
+{
+  "id": "79e91563-abf5-4101-a5e6-99c685e54aee",
+  "collection_id": "39229b63-49cb-4a0a-87e4-ddea499f52de",
+  "method": "GET",
+  "path": "/reviews/v1beta/accounts/{account}/productReviews",
+  "summary": "Lists product reviews",
+  "description": "Lists product reviews. Derived from reviews_v1beta.accounts.productReviews. Original Google URI template: /reviews/v1beta/{parent=accounts/*}/productReviews. Source summary: Lists product reviews.",
+  "parameters": [
+    {
+      "name": "account",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "reviews_v1beta"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:28:26.438343+00:00",
+  "updated_at": "2026-03-09T12:28:26.438343+00:00"
+}

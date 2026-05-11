@@ -1,0 +1,17 @@
+{
+  "id": "bf0f9665-c698-46fc-b40c-28e5f97c7d64",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "POST",
+  "path": "/program/opt_out",
+  "summary": "Opt Out Of Program",
+  "description": "Opts the seller out of a seller program.",
+  "parameters": [],
+  "request_body": "{\"programType\": \"string\"}",
+  "response_example": "{}",
+  "tags": [
+    "program"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:49.818011+00:00",
+  "updated_at": "2026-03-09T11:23:49.818011+00:00"
+}

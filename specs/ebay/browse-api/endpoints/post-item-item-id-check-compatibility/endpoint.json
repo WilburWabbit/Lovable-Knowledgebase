@@ -1,0 +1,30 @@
+{
+  "id": "8ab9bfd1-f427-4170-93eb-41742e8c15b8",
+  "collection_id": "0c086a7a-67d7-41ea-be84-862f04021521",
+  "method": "POST",
+  "path": "/item/{item_id}/check_compatibility",
+  "summary": "Check item compatibility",
+  "description": "This method checks if a product (car, truck, motorcycle) is compatible with the specified item/part.",
+  "parameters": [
+    {
+      "name": "item_id",
+      "type": "string",
+      "required": true,
+      "description": "The eBay RESTful identifier of an item/part."
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "The ID of the eBay marketplace."
+    }
+  ],
+  "request_body": "{ \"compatibilityProperties\": [ { \"name\": \"Year\", \"value\": \"2019\" }, { \"name\": \"Make\", \"value\": \"Honda\" } ] }",
+  "response_example": "{ \"compatibilityStatus\": \"COMPATIBLE\" }",
+  "tags": [
+    "item"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:43.800232+00:00",
+  "updated_at": "2026-03-09T11:33:43.800232+00:00"
+}

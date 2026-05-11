@@ -1,0 +1,24 @@
+{
+  "id": "4cea089a-0f89-40f5-8bb5-74dbf2e61c2e",
+  "collection_id": "77b703ae-545d-4843-8dd5-37504ffaa56c",
+  "method": "GET",
+  "path": "/inventory_task/{task_id}",
+  "summary": "getInventoryTask",
+  "description": "This method retrieves the task details and status of the specified inventory-related task. The input is task_id.",
+  "parameters": [
+    {
+      "name": "task_id",
+      "type": "string",
+      "required": true,
+      "description": "The ID of the task."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{ \"completionDate\": \"string\", \"creationDate\": \"string\", \"detailHref\": \"string\", \"feedType\": \"string\", \"filterCriteria\": { \"listingFormat\": \"string\" }, \"schemaVersion\": \"string\", \"status\": \"string\", \"taskId\": \"string\", \"uploadSummary\": { \"failureCount\": 0, \"successCount\": 0 } }",
+  "tags": [
+    "inventory_task"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:22:47.741606+00:00",
+  "updated_at": "2026-03-09T11:22:47.741606+00:00"
+}

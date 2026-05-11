@@ -1,0 +1,30 @@
+{
+  "id": "cf31c170-977d-4137-8747-19d9e19717c9",
+  "collection_id": "39229b63-49cb-4a0a-87e4-ddea499f52de",
+  "method": "GET",
+  "path": "/reviews/v1beta/accounts/{account}/merchantReviews/{merchantReview}",
+  "summary": "Gets a merchant review",
+  "description": "Gets a merchant review. Derived from reviews_v1beta.accounts.merchantReviews. Original Google URI template: /reviews/v1beta/{name=accounts/*/merchantReviews/*}. Source summary: Gets a merchant review.",
+  "parameters": [
+    {
+      "name": "account",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    },
+    {
+      "name": "merchantReview",
+      "type": "string",
+      "required": true,
+      "description": "Merchant review identifier."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "reviews_v1beta"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:28:24.417735+00:00",
+  "updated_at": "2026-03-09T12:28:24.417735+00:00"
+}

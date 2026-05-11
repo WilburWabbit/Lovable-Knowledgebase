@@ -1,0 +1,30 @@
+{
+  "id": "6b4f389d-562c-4a8e-b1eb-cd6abc02ee36",
+  "collection_id": "7885fb8b-3863-413b-80d2-9f6e131f7098",
+  "method": "GET",
+  "path": "/api/v3.asmx/getAdditionalImages",
+  "summary": "Get additional images for a set.",
+  "description": "Returns additional image URLs for the specified set.",
+  "parameters": [
+    {
+      "name": "apiKey",
+      "type": "string",
+      "required": true,
+      "description": "Brickset API key."
+    },
+    {
+      "name": "setID",
+      "type": "integer",
+      "required": true,
+      "description": "Internal set ID."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"status\": \"success\", \"matches\": 1, \"additionalImages\": [{\"imageURL\": \"https://example.com/img.jpg\"}]}",
+  "tags": [
+    "Sets"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:45:37.134873+00:00",
+  "updated_at": "2026-03-09T11:45:37.134873+00:00"
+}

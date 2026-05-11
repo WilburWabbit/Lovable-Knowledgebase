@@ -1,0 +1,10 @@
+{
+  "id": "1545c75e-f9e0-4218-ac42-3cd43bfdac03",
+  "name": "Brickowl",
+  "description": "Brickowl APIs",
+  "base_url": "https://brickowl.com",
+  "version": "1.0.0",
+  "created_at": "2026-03-09T11:46:17.035068+00:00",
+  "updated_at": "2026-03-09T11:46:17.035068+00:00",
+  "parent_id": null
+}

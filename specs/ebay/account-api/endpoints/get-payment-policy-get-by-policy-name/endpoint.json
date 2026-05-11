@@ -1,0 +1,30 @@
+{
+  "id": "b76d3e17-4553-4902-9b4e-b4c74596a890",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/payment_policy/get_by_policy_name",
+  "summary": "Get Payment Policy By Name",
+  "description": "This method retrieves details of a payment policy by name.",
+  "parameters": [
+    {
+      "name": "marketplace_id",
+      "type": "string",
+      "required": true,
+      "description": "eBay marketplace ID."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "description": "Seller-defined name."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"paymentPolicyId\": \"string\", \"name\": \"string\"}",
+  "tags": [
+    "payment_policy"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:47.545306+00:00",
+  "updated_at": "2026-03-09T11:23:47.545306+00:00"
+}

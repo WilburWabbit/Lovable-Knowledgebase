@@ -1,0 +1,24 @@
+{
+  "id": "b2cadb7b-7481-49bd-a0d2-d64ef93546d9",
+  "collection_id": "ff8b1bc1-eb88-4879-81cd-31677269947f",
+  "method": "GET",
+  "path": "/seller_funds_summary",
+  "summary": "Get Seller Funds Summary",
+  "description": "This method retrieves all pending funds that have not yet been distributed through a seller payout. If there are no funds, a 204 status code is returned.",
+  "parameters": [
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": false,
+      "description": "Marketplace ID header."
+    }
+  ],
+  "request_body": "null, Dress example response, response_example:",
+  "response_example": "{\"availableFunds\": {\"value\": \"50.00\", \"currency\": \"USD\"}, \"processingFunds\": {\"value\": \"10.00\", \"currency\": \"USD\"}, \"onHoldFunds\": {\"value\": \"0.00\", \"currency\": \"USD\"}, \"totalFunds\": {\"value\": \"60.00\", \"currency\": \"USD\"}}",
+  "tags": [
+    "seller_funds_summary"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:59.836982+00:00",
+  "updated_at": "2026-03-09T11:33:59.836982+00:00"
+}

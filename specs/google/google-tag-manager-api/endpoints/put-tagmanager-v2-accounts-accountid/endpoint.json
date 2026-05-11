@@ -1,0 +1,30 @@
+{
+  "id": "7f0aead5-16bc-4bc0-a3b8-51416d025ea3",
+  "collection_id": "566a5ef5-b4b7-4f71-856c-072f5964836d",
+  "method": "PUT",
+  "path": "/tagmanager/v2/accounts/{accountId}",
+  "summary": "Updates a GTM Account.",
+  "description": "Updates a GTM Account.",
+  "parameters": [
+    {
+      "name": "accountId",
+      "type": "string",
+      "required": true,
+      "description": "Google Tag Manager account ID."
+    },
+    {
+      "name": "fingerprint",
+      "type": "string",
+      "required": false,
+      "description": "Optional optimistic concurrency token. When supplied, it must match the stored fingerprint."
+    }
+  ],
+  "request_body": "{\"name\": \"Updated Account Name\", \"shareData\": true}",
+  "response_example": "{\"accountId\": \"string\", \"name\": \"string\", \"path\": \"string\", \"fingerprint\": \"string\", \"shareData\": true, \"features\": {\"supportMultipleContainers\": true}, \"tagManagerUrl\": \"string\"}",
+  "tags": [
+    "v2.accounts"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:57:37.121418+00:00",
+  "updated_at": "2026-03-09T12:57:37.121418+00:00"
+}

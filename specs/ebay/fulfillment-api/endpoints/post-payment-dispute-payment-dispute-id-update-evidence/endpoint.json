@@ -1,0 +1,24 @@
+{
+  "id": "04343f63-818c-4f9b-9fb4-e60bea2486e7",
+  "collection_id": "ec1c4f8e-3458-4b5e-9bb3-21cacfb3c086",
+  "method": "POST",
+  "path": "/payment_dispute/{payment_dispute_id}/update_evidence",
+  "summary": "Update evidence",
+  "description": "This method is used by the seller to update an existing evidence set for a payment dispute with one or more evidence files.",
+  "parameters": [
+    {
+      "name": "payment_dispute_id",
+      "type": "string",
+      "required": true,
+      "description": "This is the unique identifier of the payment dispute."
+    }
+  ],
+  "request_body": "{\"evidenceId\": \"string\", \"evidenceType\": \"string\", \"files\": []}",
+  "response_example": "null",
+  "tags": [
+    "payment_dispute"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:30:37.761774+00:00",
+  "updated_at": "2026-03-09T11:30:37.761774+00:00"
+}

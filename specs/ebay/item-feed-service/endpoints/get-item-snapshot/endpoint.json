@@ -1,0 +1,48 @@
+{
+  "id": "a95a8ceb-8b49-46d9-8804-0058f39489a1",
+  "collection_id": "ddef7d8d-4a19-4069-a415-7eb50c7c903c",
+  "method": "GET",
+  "path": "/item_snapshot",
+  "summary": "getItemSnapshotFeed",
+  "description": "Downloads an Hourly Snapshot TSV_GZIP feed file containing details of all items that have changed within the specified day and hour for a specific category. Files are available with a 2-hour latency.",
+  "parameters": [
+    {
+      "name": "Accept",
+      "type": "string",
+      "required": true,
+      "description": "The formats that the client accepts for the response."
+    },
+    {
+      "name": "X-EBAY-C-MARKETPLACE-ID",
+      "type": "string",
+      "required": true,
+      "description": "The ID of the eBay marketplace where the item is hosted."
+    },
+    {
+      "name": "Range",
+      "type": "string",
+      "required": true,
+      "description": "Range in bytes for chunked download. Maximum 100 MB."
+    },
+    {
+      "name": "category_id",
+      "type": "string",
+      "required": true,
+      "description": "An eBay top-level category ID."
+    },
+    {
+      "name": "snapshot_date",
+      "type": "string",
+      "required": true,
+      "description": "The date and hour of the snapshot (UTC yyyy-MM-ddThh:00:00.000Z)."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"items\": [{\"itemId\": \"v1|1**********2|4**********2\", \"availability\": \"AVAILABLE\", \"changeMetadata\": \"PRICE_CHANGE\", \"itemSnapshotDate\": \"2023-10-01T12:00:00.000Z\"}]}",
+  "tags": [
+    "item_snapshot"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:33:15.564113+00:00",
+  "updated_at": "2026-03-09T11:33:15.564113+00:00"
+}

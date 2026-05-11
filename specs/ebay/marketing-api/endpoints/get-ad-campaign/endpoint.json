@@ -1,0 +1,60 @@
+{
+  "id": "5fbc0e6e-7b3c-4bae-b0d3-762bad02ebc1",
+  "collection_id": "2cce52ab-35f6-41c1-b393-4ed72771c5c2",
+  "method": "GET",
+  "path": "/ad_campaign",
+  "summary": "Get Campaigns",
+  "description": "This method retrieves the details for all of the seller's defined campaigns. Filter by name, status, or date range.",
+  "parameters": [
+    {
+      "name": "campaign_name",
+      "type": "string",
+      "required": false,
+      "description": "Specifies the campaign name."
+    },
+    {
+      "name": "campaign_status",
+      "type": "string",
+      "required": false,
+      "description": "Filter by campaign status."
+    },
+    {
+      "name": "end_date_range",
+      "type": "string",
+      "required": false,
+      "description": "Filter by campaign end date range."
+    },
+    {
+      "name": "funding_strategy",
+      "type": "string",
+      "required": false,
+      "description": "Filter by funding strategy (CPS or CPC)."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "Maximum number of campaigns to return."
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "Number of campaigns to skip."
+    },
+    {
+      "name": "start_date_range",
+      "type": "string",
+      "required": false,
+      "description": "Filter by campaign start date range."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"campaigns\": [{\"campaignId\": \"12345\", \"campaignName\": \"Spring Sale\", \"campaignStatus\": \"RUNNING\"}], \"total\": 1}",
+  "tags": [
+    "campaign"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:43.247248+00:00",
+  "updated_at": "2026-03-09T11:21:43.247248+00:00"
+}

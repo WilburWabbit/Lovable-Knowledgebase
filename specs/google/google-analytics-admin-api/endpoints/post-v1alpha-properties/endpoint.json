@@ -1,0 +1,17 @@
+{
+  "id": "3c4d1692-0376-445d-9aba-0175d3113f26",
+  "collection_id": "07d89899-a7df-4236-ba31-b0547dcd8e5c",
+  "method": "POST",
+  "path": "/v1alpha/properties",
+  "summary": "Creates a Google Analytics property with the specified location and attributes.",
+  "description": "Creates a Google Analytics property with the specified location and attributes. Original Google API path template: `/v1alpha/properties`",
+  "parameters": [],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.properties"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:12:29.134049+00:00",
+  "updated_at": "2026-03-09T13:12:29.134049+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "261fe55d-11a3-41d8-b4fc-ebf23c45e373",
+  "name": "QuickBooks Online Accounting API - Account",
+  "description": "OpenAPI description for the QuickBooks Online Account entity and Account query operations. Intuit uses the same POST /v3/company/{realmId}/account endpoint for both create and update. Soft delete for Account is performed by updating Active to false.",
+  "base_url": "https://quickbooks.api.intuit.com",
+  "version": "1.0.0",
+  "created_at": "2026-03-09T12:17:54.654774+00:00",
+  "updated_at": "2026-03-09T12:17:54.654774+00:00",
+  "parent_id": "d0cc5409-b111-4be2-a7d8-d4fd59fbad42"
+}

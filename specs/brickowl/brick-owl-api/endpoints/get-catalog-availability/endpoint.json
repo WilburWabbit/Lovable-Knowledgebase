@@ -1,0 +1,48 @@
+{
+  "id": "ca6f3144-9f4d-4eef-9221-bf7079a6602e",
+  "collection_id": "e0c7a45f-c6b6-4e09-902c-848e3aac5a3e",
+  "method": "GET",
+  "path": "/catalog/availability",
+  "summary": "Get item availability",
+  "description": "Retrieve pricing and availability information for a catalog item by BOID.",
+  "parameters": [
+    {
+      "name": "key",
+      "type": "string",
+      "required": true,
+      "description": "Brick Owl API key."
+    },
+    {
+      "name": "boid",
+      "type": "string",
+      "required": true,
+      "description": "A BOID."
+    },
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "description": "Optional minimum required quantity."
+    },
+    {
+      "name": "country",
+      "type": "string",
+      "required": true,
+      "description": "ISO2 shipping destination country code."
+    },
+    {
+      "name": "store_country",
+      "type": "string",
+      "required": false,
+      "description": "Optional ISO2 store country filter."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "Catalog"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:46:19.095237+00:00",
+  "updated_at": "2026-03-09T11:46:19.095237+00:00"
+}

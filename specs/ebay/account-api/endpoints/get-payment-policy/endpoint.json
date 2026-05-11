@@ -1,0 +1,24 @@
+{
+  "id": "35c2fb29-1b90-4753-bb85-6b56c14073e8",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/payment_policy",
+  "summary": "Get Payment Policies",
+  "description": "This method retrieves all the payment policies configured for the specified marketplace.",
+  "parameters": [
+    {
+      "name": "marketplace_id",
+      "type": "string",
+      "required": true,
+      "description": "eBay marketplace ID."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"paymentPolicies\": [], \"total\": 0}",
+  "tags": [
+    "payment_policy"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:47.006475+00:00",
+  "updated_at": "2026-03-09T11:23:47.006475+00:00"
+}

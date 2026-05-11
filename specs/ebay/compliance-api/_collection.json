@@ -1,0 +1,10 @@
+{
+  "id": "ceff7301-49fc-4e45-9b18-ba89c23bb1f5",
+  "name": "Compliance API",
+  "description": "Service for providing information to sellers about their listings being non-compliant, or at risk for becoming non-compliant, against eBay listing policies.",
+  "base_url": "https://api.ebay.com/sell/compliance/v1",
+  "version": "1.4.1",
+  "created_at": "2026-03-09T11:23:05.061603+00:00",
+  "updated_at": "2026-03-09T11:36:02.280936+00:00",
+  "parent_id": "84b9a32d-ff51-4c69-b802-7fd4c36e700b"
+}

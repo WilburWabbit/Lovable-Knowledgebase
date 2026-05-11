@@ -1,0 +1,24 @@
+{
+  "id": "3068c64f-3f0d-4daf-a021-3525e0533e76",
+  "collection_id": "77b703ae-545d-4843-8dd5-37504ffaa56c",
+  "method": "POST",
+  "path": "/task/{task_id}/upload_file",
+  "summary": "uploadFile",
+  "description": "This method associates the specified file with the specified task ID and uploads the input file.",
+  "parameters": [
+    {
+      "name": "task_id",
+      "type": "string",
+      "required": true,
+      "description": "The task_id associated with the file that will be uploaded."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "task"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:22:52.543394+00:00",
+  "updated_at": "2026-03-09T11:22:52.543394+00:00"
+}

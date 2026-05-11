@@ -1,0 +1,24 @@
+{
+  "id": "801eeca8-97e1-456c-b523-d9f20d7e61ac",
+  "collection_id": "07d89899-a7df-4236-ba31-b0547dcd8e5c",
+  "method": "GET",
+  "path": "/v1alpha/accounts/{accountId}/dataSharingSettings",
+  "summary": "Get data sharing settings on an account.",
+  "description": "Get data sharing settings on an account. Original Google API path template: `/v1alpha/{name=accounts/*/dataSharingSettings}`",
+  "parameters": [
+    {
+      "name": "accountId",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.accounts"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:12:28.131732+00:00",
+  "updated_at": "2026-03-09T13:12:28.131732+00:00"
+}

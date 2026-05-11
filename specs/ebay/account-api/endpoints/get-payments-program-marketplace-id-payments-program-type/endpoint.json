@@ -1,0 +1,30 @@
+{
+  "id": "2dc77981-a918-4057-b330-5894fc214123",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/payments_program/{marketplace_id}/{payments_program_type}",
+  "summary": "Get Payments Program Status",
+  "description": "Returns whether or not the user is opted-in to the specified payments program.",
+  "parameters": [
+    {
+      "name": "marketplace_id",
+      "type": "string",
+      "required": true,
+      "description": "Marketplace ID."
+    },
+    {
+      "name": "payments_program_type",
+      "type": "string",
+      "required": true,
+      "description": "Program type."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"status\": \"OPTED_IN\", \"marketplaceId\": \"string\"}",
+  "tags": [
+    "payments_program"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:48.527617+00:00",
+  "updated_at": "2026-03-09T11:23:48.527617+00:00"
+}

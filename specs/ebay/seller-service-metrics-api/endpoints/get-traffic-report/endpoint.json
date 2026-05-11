@@ -1,0 +1,42 @@
+{
+  "id": "a05f6060-2ff4-42a4-b79e-bb3897278af5",
+  "collection_id": "2bf1fee0-2a4d-4044-961f-50d2a9885786",
+  "method": "GET",
+  "path": "/traffic_report",
+  "summary": "Get Traffic Report Sync",
+  "description": "Returns a report detailing user traffic received by a seller's listings, including impressions, clicks, and sales conversion rates.",
+  "parameters": [
+    {
+      "name": "dimension",
+      "type": "string",
+      "required": false,
+      "description": "Dimension applied to report (DAY or LISTING)"
+    },
+    {
+      "name": "filter",
+      "type": "string",
+      "required": false,
+      "description": "Filters for marketplace_ids, date_range, listing_ids, traffic_source"
+    },
+    {
+      "name": "metric",
+      "type": "string",
+      "required": false,
+      "description": "Comma-separated list of metrics (e.g., CLICK_THROUGH_RATE, TRANSACTION)"
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": "Metric to sort by (e.g., -CLICK_THROUGH_RATE)"
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"startDate\": \"2023-09-01T00:00:00.000Z\",\n  \"endDate\": \"2023-09-30T23:59:59.000Z\",\n  \"lastUpdatedDate\": \"2023-10-01T12:00:00.000Z\",\n  \"header\": {\n    \"dimensionKeys\": [{\"key\": \"DAY\", \"localizedName\": \"Day\", \"dataType\": \"DATE\"}],\n    \"metrics\": [{\"key\": \"TRANSACTION\", \"localizedName\": \"Transactions\", \"dataType\": \"NUMBER\"}]\n  },\n  \"records\": [\n    {\n      \"dimensionValues\": [{\"value\": \"2023-09-15\", \"applicable\": true}],\n      \"metricValues\": [{\"value\": \"5\", \"applicable\": true}]\n    }\n  ]\n}",
+  "tags": [
+    "traffic_report"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:16.723087+00:00",
+  "updated_at": "2026-03-09T11:23:16.723087+00:00"
+}

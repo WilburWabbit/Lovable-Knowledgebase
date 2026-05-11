@@ -1,0 +1,24 @@
+{
+  "id": "0349f22e-c476-4047-ad66-49067d0eb219",
+  "collection_id": "39229b63-49cb-4a0a-87e4-ddea499f52de",
+  "method": "DELETE",
+  "path": "/accounts/v1/accounts/{account}",
+  "summary": "Deletes the specified account regardless of its type: standalone, advanced account or sub-account",
+  "description": "Deletes the specified account regardless of its type: standalone, advanced account or sub-account. Derived from accounts_v1.accounts. Original Google URI template: /accounts/v1/{name=accounts/*}. Source summary: Deletes the specified account regardless of its type: standalone, advanced account or sub-account.",
+  "parameters": [
+    {
+      "name": "account",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "accounts_v1"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:28:28.831132+00:00",
+  "updated_at": "2026-03-09T12:28:28.831132+00:00"
+}

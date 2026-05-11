@@ -1,0 +1,24 @@
+{
+  "id": "e5323c8c-c270-40e4-98f3-8bd3fbfcb8c2",
+  "collection_id": "87172e41-fa7d-41ec-9d2e-22a31a8d8a40",
+  "method": "POST",
+  "path": "/v1alpha/properties/{propertyId}:runFunnelReport",
+  "summary": "Returns a customized funnel report of your Google Analytics event data.",
+  "description": "Returns a customized funnel report of your Google Analytics event data. Original Google API path template: `/v1alpha/{property=properties/*}:runFunnelReport`",
+  "parameters": [
+    {
+      "name": "propertyId",
+      "type": "string",
+      "required": true,
+      "description": "Property identifier."
+    }
+  ],
+  "request_body": "{}",
+  "response_example": "{}",
+  "tags": [
+    "v1alpha.properties"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T13:31:37.109398+00:00",
+  "updated_at": "2026-03-09T13:31:37.109398+00:00"
+}

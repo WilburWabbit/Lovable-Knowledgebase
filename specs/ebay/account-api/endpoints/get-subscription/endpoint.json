@@ -1,0 +1,30 @@
+{
+  "id": "fdbe108c-e354-4429-8678-3d39d1ce7b80",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "GET",
+  "path": "/subscription",
+  "summary": "Get Subscriptions",
+  "description": "Retrieves a list of subscriptions associated with the seller account.",
+  "parameters": [
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "Limit."
+    },
+    {
+      "name": "continuation_token",
+      "type": "string",
+      "required": false,
+      "description": "Continuation token."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"subscriptions\": [], \"total\": 0}",
+  "tags": [
+    "subscription"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:52.977444+00:00",
+  "updated_at": "2026-03-09T11:23:52.977444+00:00"
+}

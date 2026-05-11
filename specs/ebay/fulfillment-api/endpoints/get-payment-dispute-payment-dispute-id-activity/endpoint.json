@@ -1,0 +1,24 @@
+{
+  "id": "39a6379e-270f-452c-91df-22677d723535",
+  "collection_id": "ec1c4f8e-3458-4b5e-9bb3-21cacfb3c086",
+  "method": "GET",
+  "path": "/payment_dispute/{payment_dispute_id}/activity",
+  "summary": "Get Payment Dispute Activity",
+  "description": "This method retrieve a log of activity for a payment dispute.",
+  "parameters": [
+    {
+      "name": "payment_dispute_id",
+      "type": "string",
+      "required": true,
+      "description": "This is the unique identifier of the payment dispute."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"activity\": []}",
+  "tags": [
+    "payment_dispute"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:30:36.51782+00:00",
+  "updated_at": "2026-03-09T11:30:36.51782+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "d1112235-cbac-4f87-a54f-499036f58d96",
+  "collection_id": "3796edbc-afbe-4842-b861-b5b3eb5c902a",
+  "method": "POST",
+  "path": "/program/opt_in",
+  "summary": "Opt In To Program",
+  "description": "Opts the seller in to an eBay seller program.",
+  "parameters": [],
+  "request_body": "{\"programType\": \"string\"}",
+  "response_example": "{}",
+  "tags": [
+    "program"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:23:49.582605+00:00",
+  "updated_at": "2026-03-09T11:23:49.582605+00:00"
+}

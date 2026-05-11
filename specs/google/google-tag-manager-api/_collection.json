@@ -1,0 +1,10 @@
+{
+  "id": "566a5ef5-b4b7-4f71-856c-072f5964836d",
+  "name": "Google Tag Manager API",
+  "description": "Generated from the published Google Tag Manager REST resource catalogue and Discovery documents, then normalised into explicit flat paths that OpenAPI tooling can consume. Google publishes Discovery-format descriptions rather than a first-party OpenAPI file. This spec includes both v1 and v2 resources and the current v2 workspaces.bulk_update method.",
+  "base_url": "https://tagmanager.googleapis.com",
+  "version": "2026-03-09-unofficial",
+  "created_at": "2026-03-09T12:57:36.29748+00:00",
+  "updated_at": "2026-03-09T12:57:36.29748+00:00",
+  "parent_id": "d558e7be-c738-4e53-9bd0-8e145e6bda35"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "68a8626b-73e3-49b3-8fff-0ea3f7fae83a",
+  "collection_id": "cd302112-ae3e-4cc6-833d-93b22baa7f4d",
+  "method": "GET",
+  "path": "/country/{countryCode}/sales_tax_jurisdiction",
+  "summary": "getSalesTaxJurisdictions",
+  "description": "This method retrieves all the sales tax jurisdictions for the country that you specify in the countryCode path parameter. Countries with valid sales tax jurisdictions are Canada and the US. The response from this call tells you the jurisdictions for which a seller can configure tax tables. Although setting up tax tables is optional, you can use the createOrReplaceSalesTax in the Account API call to configure the tax tables for the jurisdictions you sell to.",
+  "parameters": [
+    {
+      "name": "countryCode",
+      "type": "string",
+      "required": true,
+      "description": "This path parameter specifies the two-letter ISO 3166 country code for the country whose jurisdictions you want to retrieve. eBay provides sales tax jurisdiction information for Canada and the United States.Valid values for this path parameter are CA and US."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\n  \"salesTaxJurisdictions\": [\n    {\n      \"salesTaxJurisdictionId\": \"string\"\n    }\n  ]\n}",
+  "tags": [
+    "country"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:21:07.036701+00:00",
+  "updated_at": "2026-03-09T11:21:07.036701+00:00"
+}

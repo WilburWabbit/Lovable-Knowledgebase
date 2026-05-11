@@ -1,0 +1,30 @@
+{
+  "id": "c6848020-2bfa-4418-bac1-2e97ce41797f",
+  "collection_id": "39229b63-49cb-4a0a-87e4-ddea499f52de",
+  "method": "GET",
+  "path": "/quota/v1/accounts/{account}/limits/{limit}",
+  "summary": "Retrieves an account limit",
+  "description": "Retrieves an account limit. Derived from quota_v1.accounts.limits. Original Google URI template: /quota/v1/{name=accounts/*/limits/*}. Source summary: Retrieves an account limit.",
+  "parameters": [
+    {
+      "name": "account",
+      "type": "string",
+      "required": true,
+      "description": "Account identifier."
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": true,
+      "description": "Limit identifier."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{}",
+  "tags": [
+    "quota_v1"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T12:28:27.281766+00:00",
+  "updated_at": "2026-03-09T12:28:27.281766+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "33705227-a7e5-413d-a42d-063b6d0801ce",
+  "collection_id": "946d51cd-007b-4c36-9b6b-700fad38ae1f",
+  "method": "GET",
+  "path": "/collection/sets",
+  "summary": "Get my sets",
+  "description": "Returns the authenticated user's entire set collection. The reference says identical set numbers are returned as separate objects when they represent distinct inventory instances.",
+  "parameters": [
+    {
+      "name": "currency",
+      "type": "string",
+      "required": false,
+      "description": "Optional ISO 4217 currency code. Defaults to USD when omitted."
+    },
+    {
+      "name": "User-Agent",
+      "type": "header",
+      "required": true,
+      "description": "BrickEconomy docs state that User-Agent is required on all requests."
+    }
+  ],
+  "request_body": "null",
+  "response_example": "{\"data\":{\"sets_count\":828,\"sets_unique_count\":625,\"sets_new_count\":726,\"sets_used_count\":102,\"sets_pieces_count\":581548,\"sets_minifigs_count\":2591,\"current_value\":101124.68,\"currency\":\"USD\",\"sets\":[{\"retired\":true,\"set_number\":\"75144-1\",\"name\":\"Snowspeeder\",\"theme\":\"Star Wars\",\"subtheme\":\"Ultimate Collector Series\",\"year\":2017,\"pieces_count\":1703,\"minifigs_count\":2,\"retail_price\":199.99,\"released_date\":\"2017-01-01\",\"retired_date\":\"2019-01-01\",\"aquired_date\":\"2018-11-01\",\"collection\":\"Investments\",\"condition\":\"new\",\"paid_price\":199.99,\"current_value\":382.0,\"growth\":91.01}],\"periods\":[{\"value\":102554.69,\"date\":\"2024-01-25\",\"sets_count\":828,\"sets_count_new\":740,\"sets_count_used\":88}]}}",
+  "tags": [
+    "Collection"
+  ],
+  "sort_order": 0,
+  "created_at": "2026-03-09T11:44:48.033401+00:00",
+  "updated_at": "2026-03-09T11:44:48.033401+00:00"
+}
